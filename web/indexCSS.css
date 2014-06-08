@@ -1,0 +1,184 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30.03.2014, 14:09:20
+    Author     : seyma
+*/
+
+body {
+  font: normal 100.01%;
+ 
+}
+
+#head{
+    height: 250px; 
+    padding: 20px;
+    background-image:url('');
+    background-repeat: no-repeat;
+    padding-left:35%;
+    background-size:80% 100%;
+    background-position:50% 50%;
+}
+form { 
+    background-image:url(background.gif); 
+    padding:20px; 
+    margin-left: 900px; 
+}
+td, input { 
+    font-size:13px; 
+    font-family:Verdana,sans-serif; 
+    font-weight:bold; 
+}
+
+input, select { 
+    color:#696969; 
+}
+
+#tabelleLogin{
+    background-color:#F8F8ff; 
+    width:300px; 
+    border:6px solid #ddd; 
+    margin-top: 10px;
+    margin-left:-920px;
+   
+    
+}
+
+#anmelden, #registrieren { 
+    background-color:#aaa; 
+    color:#fff; 
+    width:200px; 
+    border:6px solid #ddd; 
+    
+}
+
+#kopfbereich {
+  height: 100px;
+  padding: 20px;
+  background-color: white;
+  width:1385px;
+
+}
+
+ #Tabelle1{
+     margin-top:  30px; 
+     margin-left:200px; 
+     width: 450px;
+ }
+ #seite{ 
+     background-color:#5381c5; 
+     width: 100%;
+ 
+ }
+
+ #hsLogo{
+     margin-left:850px; 
+     margin-top: 0px;
+     height: 120px;
+     width: 250px;
+ }
+ 
+  #prostud{
+     margin-left:-1100px; 
+     margin-top: -50px;
+     height: 100px;
+     width: 150px;
+     
+ }
+ #fussbereich {
+    clear: both;
+    padding: 20px;
+    background-color: black;
+    color:#ffffff;
+    text-align:center;
+    margin-left:30px; 
+    //width:1042px;
+    width:1120px;
+}
+#inhalt {
+    background-color:#F8F8ff;
+    margin-left:30px;
+    padding: 20px;
+    margin-top:50px;
+    height: 720px;
+    //width:730px;
+    width:810px;
+    
+}
+#info {
+    float: left;
+    width:300px; 
+    height: 750px;
+    padding: 5px;
+    background-color: 	 #F8F8ff;
+    border-left: 2px solid black;
+    margin-top: -760px;
+  // margin-left:800px;
+  margin-left:878px;
+
+}
+ ul#Navigation {
+    margin: 0; padding: 0.8em;
+    text-align: center;
+    border: 1px solid black;
+    background-color: silver;
+  }
+  ul#Navigation li {
+    list-style: none;
+    display: inline;
+    margin: 0.4em; padding: 0;
+  }
+
+  ul#Navigation a, ul#Navigation span {
+    padding: 0.2em 1em;
+    text-decoration: none; font-weight: bold;
+    border: 1px solid black;
+    border-left-color: white; border-top-color: white;
+    color: #000000; background-color: #ccc;
+  }
+  * html ul#Navigation a, * html ul#Navigation span {
+    width: 1em;    /* nur fuer IE 5.0x erforderlich */
+    width: auto;  /* sicherheitshalber fuer IE 6 zurueckgesetzt */
+  }
+  ul#Navigation a:hover, ul#Navigation span {
+    border-color: white;
+    border-left-color: black; border-top-color: black;
+    color: white; background-color: gray;
+  }
+  #text{    margin-top:0px; 
+   height: 550px;}
+  
+   #text1{   margin-top:-200px; 
+   height: 550px;background-color: #FF0000;}
+ 
+ #tabellesuchen{margin-left: 0px; margin-top: -200px;width: 300px;}
+ 
+ #senden{margin-left: -900px; margin-top: 30px;}
+  
+ #skill{margin-left: -900px;}
+ 
+ .start{margin-top: 200px;text-align: center;}
+ 
+ #formular{
+    background-color:#F8F8ff; 
+    width:380px; 
+    border:6px solid #ddd; 
+    margin-top: 100px;
+    margin-left:80px;
+     
+ }
+ 
+ #registrierung{
+    background-color:#aaa; 
+    color:#fff; 
+    width:200px; 
+    border:2px solid #ddd; 
+     
+ }
+ #passmsg {
+     font-size: 8pt;
+     color: #FF0000;
+ }
