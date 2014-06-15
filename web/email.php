@@ -4,12 +4,12 @@ session_start();
 if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
     header('Location: index.php');
 }
-?>
+
 
 include_once 'db_connection.php';
 $connection = new DbConnection();
 
-//echo $_SESSION["email"];
+
 ?>
 
 <?php

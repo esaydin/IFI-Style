@@ -13,23 +13,12 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>   
-        <link rel="stylesheet" type="text/css" href="css/main.css">
-    </head>
-    <body>
-        <div id="seite"> 
-            <div id="kopfbereich"> 
-                <img id="hsLogo" src="bilder/hsLogo.png"/>
-                <img id="prostud" src="bilder/prostud.png"/>
-            </div>
+      <?php include_once 'header.php'; ?>
 
             <div id='cssmenu'> 
                 <ul> 
                     <li class='active'><a href='page_auftraggeber.php'><span>Start</span></a></li> 
-                    <li><a href=''><span>Profil</span></a></li>
+                    <li><a href='profil_auftraggeber.php'><span>Profil</span></a></li>
                     <li><a href='suchestudenten.php'><span>Student suchen</span></a></li>
                     <li class='last'><a href='projektanlegen.php'><span>Projekt Anlegen</span></a>
                     </li>
@@ -67,9 +56,6 @@ and open the template in the editor.
                 </br>
                 <a href="page_auftraggeber.php">Startseite</a>
             </div>
-            <div id="fussbereich">
-                &copy; 2014 SearchProStud
-            </div>
-        </div>
-    </body>
-</html>
+            
+<!--Inkludieren vom Fussbereich-->
+<?php include_once 'footer.php'; ?>

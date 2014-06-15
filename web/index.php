@@ -7,7 +7,6 @@ include_once 'db_connection.php';
 $db = new DbConnection();
 
 //In diesem Abschnitt wird ein Loginversuch ausgeführt
-
 //Nach dem Füllen des Loginbereichs werden die Logindaten über die Postvaribale abgefangen
 if (!empty($_POST["benutzername"]) && !empty($_POST["kennwort"])) {
 
@@ -40,10 +39,9 @@ if (!empty($_POST["benutzername"]) && !empty($_POST["kennwort"])) {
             }
             //Seitenwechsel
             header('Location: ' . $page);
-            
         }
-    } 
-} 
+    }
+}
 ?>
 
 <?php include_once 'header.php'; ?>

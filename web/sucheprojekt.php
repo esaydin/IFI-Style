@@ -4,7 +4,7 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
     header('Location: index.php');
 }
 
-//hhh
+
 include_once 'db_connection.php';
 $connection = new DbConnection();
 ?>
@@ -14,7 +14,7 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<?php include_once 'header.php'; ?>
+      <?php include_once 'header.php'; ?>
 
             <div id='cssmenu'> 
                 <ul> 
@@ -25,8 +25,10 @@ and open the template in the editor.
                 </ul> 
             </div>
 
+
             <div id="inhalt">
-               <h1>Hier können Sie nach mehreren Projekten suchen:</h1>
+
+                <h1>Hier können Sie nach mehreren Projekten suchen:</h1>
                 <div id="text">
 
                     <form  method="post" action="ausgabe_student.php">
@@ -45,15 +47,17 @@ and open the template in the editor.
                     </form>
                 </div>
             </div>
-
+           
             <div id="info">
-              <?php
+                <?php
                 //echo $_SESSION['benutzername'] ;                 
 
                 echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
                 echo "<a href=\"logout.php\">Logout</a>";
                 ?>
                 </br>
-                <a href="page_student.php">Startseite</a
+                <a href="page_student.php">Startseite</a>
             </div>
-         <?php include_once 'footer.php'; ?>
+       
+            <!--Inkludieren vom Fussbereich-->
+<?php include_once 'footer.php'; ?>

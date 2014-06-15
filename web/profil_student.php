@@ -32,7 +32,7 @@ if (isset($_POST['senden'])) {
     }
 }
 
-//hhh==============================================================================
+//==============================================================================
 $sql = "SELECT * FROM benutzerskillzuordnung"
         . " WHERE idbenutzer = '" . $_SESSION['id'] . "';";
 $result = $connection->connection($sql);

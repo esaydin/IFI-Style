@@ -38,7 +38,7 @@ and open the template in the editor.
             <div id='cssmenu'> 
                 <ul> 
                     <li class='active'><a href='page_auftraggeber.php'><span>Start</span></a></li> 
-                    <li><a href=''><span>Profil</span></a></li>
+                    <li><a href='profil_auftraggeber'><span>Profil</span></a></li>
                     <li><a href='suchestudenten.php'><span>Suche Student</span></a></li>
                     <li class='last'><a href='projektanlegen.php'><span>Projekt Anlegen</span></a>
                     </li> 

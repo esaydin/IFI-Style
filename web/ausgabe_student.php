@@ -14,19 +14,29 @@ and open the template in the editor.
 <?php include_once 'header.php'; ?>
 
 <div id='cssmenu'> 
+                <ul> 
+                    <li class='active'><a href='page_student.php'><span>Start</span></a></li> 
+                    <li><a href='profil_student.php'><span>Profil</span></a></li>
+                    <li class='last'><a href='sucheprojekt.php'><span>Suche Projekt</span></a>
+                    </li> 
+                </ul> 
+            </div>
+
+
+<!--<div id='cssmenu'> 
     <ul> 
         <li class='active'><a href='page_student.php'><span>Start</span></a></li> 
         <li><a href='<?php
-            if ($_SESSION["idbenutzertyp"] == 1) {
-                echo "page_student.php";
-            } else {
-                echo "page_auftraggeber.php";
-            }
+           // if ($_SESSION["idbenutzertyp"] == 1) {
+             //   echo "page_student.php";
+           // } else {
+            //    echo "page_auftraggeber.php";
+           // }
             ?>'><span>Profil</span></a></li>
         <li class='last'><a href='sucheprojekt.php'><span>Suche Projekt</span></a>
         </li> 
     </ul> 
-</div>
+</div>-->
 
 <div id="inhalt">
     <h1>Gefundene Projekte:</h1>     
