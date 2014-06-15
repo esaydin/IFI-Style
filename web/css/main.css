@@ -216,6 +216,11 @@ ul#Navigation a:hover, ul#Navigation span {
     margin-left:120px;
 
 }
+#vorname,#nachname,#benutzername, #kennwort, #kennwortwdhl, #strasse, #hausnr, #plz, #ort, #email, #combo {
+    border-radius: 4px;
+    height: 30px;
+}
+
 
 #registrierung{
     background-color:#FFCC7F; 
@@ -248,6 +253,10 @@ ul#Navigation a:hover, ul#Navigation span {
 #passmsg {
     font-size: 8pt;
     color: #FF0000;
+}
+#hinweis {
+    font-size: 7pt;
+    
 }
 
 
