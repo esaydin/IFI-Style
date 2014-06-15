@@ -11,15 +11,15 @@ $db = new DbConnection();
     <head>
         <meta charset="UTF-8">
         <title></title>   
-        <link rel="stylesheet" type="text/css" href="indexCSS.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
     
     </head> 
     <body>
         <div id="seite"> 
            <div id="kopfbereich"> 
                <!-- <img id="header" src="Header.jpg"/>-->
-                <img id="hsLogo" src="hsLogo.png"/>
-                 <img id="prostud" src="prostud.png"/>
+                <img id="hsLogo" src="bilder/hsLogo.png"/>
+                 <img id="prostud" src="bilder/prostud.png"/>
             </div>
 
 <div id='cssmenu'> 

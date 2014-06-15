@@ -16,7 +16,7 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title></title>   
-        <link rel="stylesheet" type="text/css" href="indexCSS.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
     
     </head>
       
@@ -25,8 +25,8 @@ and open the template in the editor.
         <div id="seite"> 
             <div id="kopfbereich"> 
                
-                <img id="hsLogo" src="hsLogo.png"/>
-                 <img id="prostud" src="prostud.png"/>
+                <img id="hsLogo" src="bilder/hsLogo.png"/>
+                 <img id="prostud" src="bilder/prostud.png"/>
             </div>
 
 <div id='cssmenu'> 
