@@ -7,19 +7,7 @@ To change this license header, choose License Headers in Project Properties.
 To//hhh change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
-   
-    <head>
-        <meta charset="UTF-8">
-        <title></title>   
-        <link rel="stylesheet" type="text/css" href="css/main.css">
-    </head>
-    <body>
-        <div id="seite"> 
-            <div id="kopfbereich"> 
-                <img id="hsLogo" src="bilder/hsLogo.png"/>
-                <img id="prostud" src="bilder/prostud.png"/>
-            </div>
+<?php include_once 'header.php'; ?>
 
             <div id='cssmenu'> 
                 <ul> 
@@ -110,10 +98,4 @@ and open the template in the editor.
                 <a href="sucheprojekt.php">Zurück</a>
 
             </div>
-            <div id="fussbereich">
-                &copy; 2014 IFI-Style
-            </div>
-
-        </div>
-    </body>
-</html>
+        <?php include_once 'footer.php'; ?>

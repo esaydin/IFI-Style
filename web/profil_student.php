@@ -49,21 +49,7 @@ if (!is_bool($result)) {
 //==============================================================================
 ?>
 
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>   
-        <link rel="stylesheet" type="text/css" href="css/main.css">
-
-    </head>
-    <body>
-
-        <div id="seite"> 
-            <div id="kopfbereich"> 
-               <!-- <img id="header" src="Header.jpg"/>-->
-                <img id="hsLogo" src="bilder/hsLogo.png"/>
-                <img id="prostud" src="bilder/prostud.png"/>
-            </div>
+<?php include_once 'header.php'; ?>
 
             <div id='cssmenu'> 
                 <ul> <li class='active'><a href='page_student.php.'><span>Start</span></a></li> 
@@ -106,11 +92,4 @@ if (!is_bool($result)) {
                 echo "<a href=\"logout.php\">Logout</a>";
                 ?>
             </div>
-            
-
-            <div id="fussbereich">
-                &copy; 2014 IFI-Style
-            </div>
-        </div>
-    </body>
-</html>
+    <?php include_once 'footer.php'; ?>

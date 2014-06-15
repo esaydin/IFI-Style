@@ -5,21 +5,7 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
 }
 ?>
 
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>IFI-Style</title>
-        <script src="js/main.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/main.css">
-    </head>
-    <body>
-        <div id="seite"> 
-            <div id="kopfbereich"> 
-
-                <img id="hsLogo" src="bilder/hsLogo.png"/>
-                <img id="prostud" src="bilder/prostud.png"/>
-            </div>
-
+<?php include_once 'header.php'; ?>
 
             <div id="inhalt">
                 <!-- Formular für Registrierung,verweist auf Registrierungcheck-->
@@ -136,9 +122,4 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
             <div id="info">
             </div>
             <!--Footer mit Angabe von Gruppenname und Datum-->
-            <div id="fussbereich">
-                &copy; 2014 IFI-Style
-            </div>
-        </div>
-    </body>
-</html>
+          <?php include_once 'footer.php'; ?>

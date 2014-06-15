@@ -3,6 +3,7 @@
         <meta charset="UTF-8">
         <title></title>   
         <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script src="js/main.js"></script>
     </head>
     <body>
         <div id="seite"> 
