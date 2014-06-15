@@ -28,15 +28,16 @@ and open the template in the editor.
             </div>
 
             <div id='cssmenu'> 
-                <ul> <li class='active'><a href='page_student.php.'><span>Start</span></a></li> 
-                    <li><a href=''><span>Profil</span></a></li>
+                <ul> 
+                    <li class='active'><a href='page_student.php.'><span>Start</span></a></li> 
+                    <li><a href='profil_student.php'><span>Profil</span></a></li>
                     <li class='last'><a href='sucheprojekt.php'><span>Suche Projekt</span></a>
                     </li> 
                 </ul> 
             </div>
 
             <div id="inhalt">
-                <h1>Hier können Sie nach mehreren Projekten suchen:</h1>
+               <h1>Hier können Sie nach mehreren Projekten suchen:</h1>
                 <div id="text">
 
                     <form  method="post" action="ausgabe_student.php">
@@ -53,11 +54,11 @@ and open the template in the editor.
                         <?php } ?>
                         <input id="senden" type="submit" name="senden" value="Senden" id="senden">
                     </form>
-                </div
+                </div>
             </div>
 
             <div id="info">
-                <?php
+              <?php
                 //echo $_SESSION['benutzername'] ;                 
 
                 echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
@@ -66,10 +67,10 @@ and open the template in the editor.
                 </br>
                 <a href="page_student.php">Startseite</a
             </div>
-
             <div id="fussbereich">
-                &copy; 2014 SearchProStud
+                &copy; 2014 IFI-Style
             </div>
+
         </div>
     </body>
 </html>

@@ -88,7 +88,8 @@ and open the template in the editor.
                         <br> Skills in Projekte: <?php echo $value["skills"]; ?>
                         <br>
                         <form action="projekt_teilnehmen_hinzufuegen.php" method="post">
-                            <button id="teilnehmen"name="add">Teilnehmen</button>
+                            <input name="proname" value="<?php echo $value["titel"]; ?>" hidden>
+                            <button id="teilnehmen" name="add">Teilnehmen</button>
                         </form>
                         <br>
                         <?php

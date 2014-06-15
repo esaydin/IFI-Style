@@ -16,6 +16,7 @@ if (!empty($_POST["benutzername"]) && !empty($_POST["kennwort"])) {
             $_SESSION['id'] = $value['id'];
             $_SESSION['benutzername'] = $value['benutzername'];
             $_SESSION['vorname'] = $value['vorname'];
+            $_SESSION['nachname'] = $value['nachname'];
             $_SESSION['email'] = $value['email'];
 
             $page = "";

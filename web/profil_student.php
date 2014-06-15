@@ -6,14 +6,49 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
 
 include_once 'db_connection.php';
 $connection = new DbConnection();
+
+//==============================================================================
+$skillsAngelegt = false;
+
+if (isset($_POST['senden'])) {
+    $sql = "DELETE FROM benutzerskillzuordnung"
+            . " WHERE idbenutzer = '" . $_SESSION["id"] . "';";
+    $connection->connection($sql);
+    if (!empty($_POST["skill"])) {
+        // Projekt speichern
+        // projektskills speicher
+        foreach ($_POST["skill"] as $key => $value) {
+            $sql = "INSERT INTO benutzerskillzuordnung (idbenutzer, idskill)"
+                    . " SELECT " . $_SESSION["id"] . ", $value"
+                    . " FROM DUAL"
+                    . " WHERE NOT EXISTS ("
+                    . "   SELECT 1"
+                    . "   FROM benutzerskillzuordnung"
+                    . "   WHERE idbenutzer = '" . $_SESSION["id"] . "' AND idskill = '$value'"
+                    . " );";
+            $connection->connection($sql);
+        }
+        $skillsAngelegt = true;
+    }
+}
+
+//==============================================================================
+$sql = "SELECT * FROM benutzerskillzuordnung"
+        . " WHERE idbenutzer = '" . $_SESSION['id'] . "';";
+$result = $connection->connection($sql);
+$ids = "";
+if (!is_bool($result)) {
+    foreach ($result as $value) {
+        if (count($ids) == 0) {
+            $ids .= $value["idskill"];
+        } else {
+            $ids .= "," . $value["idskill"];
+        }
+    }
+}
+//==============================================================================
 ?>
 
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <meta charset="UTF-8">
@@ -21,7 +56,6 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="css/main.css">
 
     </head>
-
     <body>
 
         <div id="seite"> 
@@ -30,8 +64,6 @@ and open the template in the editor.
                 <img id="hsLogo" src="bilder/hsLogo.png"/>
                 <img id="prostud" src="bilder/prostud.png"/>
             </div>
-
-
 
             <div id='cssmenu'> 
                 <ul> <li class='active'><a href='page_student.php.'><span>Start</span></a></li> 
@@ -42,45 +74,36 @@ and open the template in the editor.
             </div>
 
             <div id="inhalt">
+
+                <?php
+                echo "Benutzername: " . $_SESSION["benutzername"] . "<br>"
+                . "Vorname: " . $_SESSION["vorname"] . "<br>"
+                . "Nachname: " . $_SESSION["nachname"] . "<br>"
+                . "E-Mail: " . $_SESSION["email"] . "<br>"
+                . "<hr>";
+                ?>
+
                 <form  method="post">
 
                     <?php
                     echo "<br>";
                     $sql = "SELECT * FROM skill";
                     $result = $connection->connection($sql);
-                    foreach ($result as $key => $value) {
-                        ?>
-                        <input id="skill" type="checkbox" name="skill[]" value="<?php echo $value['id']; ?>"> <?php echo $value['skill']; ?><br>
-                    <?php } ?>
+                    if (!is_bool($result)) {
+                        foreach ($result as $key => $value) {
+                            ?>
+                            <input id="skill" type="checkbox" name="skill[]" value="<?php echo $value['id']; ?>"
+                            <?php if (!is_bool(strpos($ids, $value['id']))) echo "checked"; ?>
+                                   > <?php echo $value['skill']; ?><br>
+                               <?php } ?>
+                           <?php } ?>
                     <input id="senden" type="submit" name="senden" value="Senden" id="senden">
                 </form>
             </div>
             <div id="info">
                 <?php
-                
                 echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
                 echo "<a href=\"logout.php\">Logout</a>";
-                ?>
-
-                <?php
-                $skillsAngelegt = false;
-
-                if (!empty($_POST["skill"])) {
-                    // Projekt speichern
-                    // projektskills speichern
-                    foreach ($_POST["skill"] as $key => $value) {
-                        $sql2 = "INSERT INTO benutzerskillzuordnung"
-                                . " VALUES ( (SELECT id FROM benutzer WHERE benutzername = '" . $_SESSION["benutzername"] . "'), '" . $value . "' )";
-                        $connection->connection($sql2);
-                    }
-
-                    $skillsAngelegt = true;
-                    echo '</br>';
-                    echo '</br>';
-                    echo '</br>';
-                    echo '</br>';
-                    echo"<span style ='font-family:sans-serif'>Daten wurden gespeichert</span>";
-                }
                 ?>
             </div>
 
