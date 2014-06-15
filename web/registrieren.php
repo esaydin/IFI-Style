@@ -25,10 +25,9 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
 
                 <form method="post" action="registrierungcheck.php" id="formular">
                     <table>
-                        <tr>
-                            <td>
-                                <input type="text" id="vorname" name="vorname" placeholder="*Vorname" value="" onKeyUp="validate()"/><br />
-                            </td><td></td>
+                        <td>
+                            <input type="text" id="vorname" name="vorname" placeholder="*Vorname" value="" onKeyUp="validate()"/><br />
+                        </td><td id="hinweis">A-Z, a-z, ü, ö, ä, ß</td>
                         </tr>
                         <tr>
                             <td>
@@ -40,7 +39,7 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
                             <td>
                                 <input type="text" id="benutzername" name="benutzername" placeholder="*Benutzername" value="" onKeyUp="validate()"/><br />
                             </td>
-                            <td id="umlaut"></td>
+                            <td id="hinweis">Nur a-z!</td>
                         </tr>
                         <tr>
                             <td>
