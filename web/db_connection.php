@@ -8,10 +8,10 @@ class DbConnection {
         $result = $link->query($sql);
         if ($result) {
 
-            if(is_bool($result)){
+            if (is_bool($result)) {
                 return true;
             }
-            
+
             $resultarray = array();
             while ($row = mysqli_fetch_assoc($result)) {
                 $resultarray[] = $row;
@@ -26,6 +26,5 @@ class DbConnection {
             return false;
         }
     }
-    
 
 }

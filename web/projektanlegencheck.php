@@ -1,7 +1,6 @@
 <?php
-
 session_start();
-if( empty($_SESSION['id']) || empty($_SESSION['benutzername']) ){
+if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
     //header('Location: index.php');
 }
 
@@ -23,7 +22,6 @@ if (!empty($_POST["titel"]) && !empty($_POST["projektbeschreibung"]) && !empty($
                     . " VALUES ( (SELECT id FROM projekt WHERE titel = '" . $_POST["titel"] . "'), '" . $value . "' )";
             $result = $connection->connection($sql2);
         }
-
         $projektAngelegt = true;
     }
 }
@@ -40,29 +38,28 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <title></title>   
         <link rel="stylesheet" type="text/css" href="css/main.css">
-    
+
     </head>
-      
+
     <body>
-       
         <div id="seite"> 
             <div id="kopfbereich"> 
-               
                 <img id="hsLogo" src="bilder/hsLogo.png"/>
-                 <img id="prostud" src="bilder/prostud.png"/>
+                <img id="prostud" src="bilder/prostud.png"/>
             </div>
 
-<div id='cssmenu'> 
-    <ul> <li class='active'>
-            <a href='page_auftraggeber.php.'><span>Start</span></a></li> 
-        <li><a href=''><span>Profil</span></a></li>
-        <li><a href='suchestudenten.php'><span>Suche Student</span></a></li>
-        <li class='last'><a href='projektanlegen.php'><span>Projekt Anlegen</span></a>
-        </li> </ul> 
-</div>
+            <div id='cssmenu'> 
+                <ul> 
+                    <li class='active'><a href='page_auftraggeber.php.'><span>Start</span></a></li> 
+                    <li><a href=''><span>Profil</span></a></li>
+                    <li><a href='suchestudenten.php'><span>Suche Student</span></a></li>
+                    <li class='last'><a href='projektanlegen.php'><span>Projekt Anlegen</span></a>
+                    </li> 
+                </ul> 
+            </div>
 
             <div id="inhalt">
-             <?php
+                <?php
                 if ($projektAngelegt) {
                     echo "Projekt angelegt";
                     echo "<br><br>" . "Titel: " . $_POST["titel"] . "<br>" . "Beschreibung: " . $_POST["projektbeschreibung"] . "<br>";
@@ -79,28 +76,20 @@ and open the template in the editor.
                 }
                 ?>
                 <br><a href="projektanlegen.php"> Zurück </a>  
-
-       
             </div>
-
             <div id="info">
-               
-          <?php //echo $_SESSION['benutzername'] ;                 
-
-                    echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
-                    echo "<a href=\"logout.php\">Logout</a>";
-                   
-              ?>
+                <?php
+                //echo $_SESSION['benutzername'] ;                 
+                echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
+                echo "<a href=\"logout.php\">Logout</a>";
+                ?>
                 </br>
                 <a href="projektanlegen.php"/>
-
             </div>
-
 
             <div id="fussbereich">
                 &copy; 2014 IFI-Style
             </div>
-
         </div>
     </body>
 </html>
