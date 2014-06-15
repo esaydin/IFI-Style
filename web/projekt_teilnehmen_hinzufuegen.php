@@ -37,10 +37,11 @@ and open the template in the editor.
             </div>
 
             <div id="inhalt">
+
                 <h1>Projektteilnahme beantragen</h1>
                 <form action="email.php" method="post">
                     <!-- Hier die eigentlichen Formularfelder eintragen. Die folgenden sind Beispielangaben. -->
-                    <dl>
+                    <dl> <?php if (isset($_POST["proname"])) echo $_POST["proname"]; ?>
                         <dt>Bemerkungen:</dt>
                         <dd><textarea name="Bemerkungen" rows="3" cols="20">Bemerkungen</textarea></dd>
                     </dl>
