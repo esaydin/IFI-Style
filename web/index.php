@@ -1,44 +1,49 @@
 <?php
+//Sitzung wird gestartet
 session_start();
-
+//Importieren der Datenbankverbindung
 include_once 'db_connection.php';
+//Datenbankobjekt wird erstellt
 $db = new DbConnection();
-#
+
+//In diesem Abschnitt wird ein Loginversuch ausgeführt
+
+//Nach dem Füllen des Loginbereichs werden die Logindaten über die Postvaribale abgefangen
 if (!empty($_POST["benutzername"]) && !empty($_POST["kennwort"])) {
 
     $sql = "SELECT id, benutzername, vorname, nachname, email, idbenutzertyp FROM benutzer WHERE benutzername = '" . $_POST["benutzername"] . "'"
             . " AND kennwort = '" . md5($_POST["kennwort"]) . "'";
-
+    //Ergebnisse von $sql werden in result gespeichert
     $result = $db->connection($sql);
 
+    //Überprüfung, ob result leer oder nicht leer ist
     if (!empty($result)) {
-        foreach ($result as $key => $value) {
+        //foreach geht die Zeile durch
+        //Bei einem erfolgreichen Login werden die Daten aus der Datenbank in die Session gespeichert, über Session kann mann
+        //kontrollieren, ob man eingeloggt ist oder nicht
+        foreach ($result as $key => $value) {// über value hat man Zugriff auf die Spalten
             $_SESSION['id'] = $value['id'];
             $_SESSION['benutzername'] = $value['benutzername'];
             $_SESSION['vorname'] = $value['vorname'];
             $_SESSION['nachname'] = $value['nachname'];
             $_SESSION['email'] = $value['email'];
+            $_SESSION['idbenutzertyp'] = $value['idbenutzertyp'];
 
+            //Wenn idbenutzertyp = 1 dann wird er auf page_student geleitet
             $page = "";
             if ($value['idbenutzertyp'] == 1) {
                 $page = "page_student.php";
             }
+            //Wenn idbenutzertyp = 2 dann wird er auf auftraggeber geleitet
             if ($value['idbenutzertyp'] == 2) {
                 $page = "page_auftraggeber.php";
             }
+            //Seitenwechsel
             header('Location: ' . $page);
-            //echo "<br>" . "Eingeloggt als: " . $value["vorname"] . "<br>";
-            //echo "<a href=\"logout.php\">Logout</a>";
+            
         }
-    } else {
-        //echo "<br>" . "Kein passender Login gefunden.";
-        //echo "<br><a href=\"index.php\"> Zurück </a>";
-    }
-} else {
-
-    //echo "<br>" . "Logindaten nicht vollständig";
-    //echo "<br>" . "<a href=\"index.php\"> Zurück </a>";
-}
+    } 
+} 
 ?>
 
 <?php include_once 'header.php'; ?>

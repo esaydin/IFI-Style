@@ -1,5 +1,5 @@
 <?php
-
+//Klasse zur Herstellung der Verbindung zur Datenbank
 class DbConnection {
 
     public function connection($sql) {

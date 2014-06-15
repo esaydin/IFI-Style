@@ -1,10 +1,3 @@
-<?php
-session_start();
-if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
-   
-}
-?>
-
 <?php include_once 'header.php'; ?>
 
             <div id="inhalt">
@@ -111,7 +104,7 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
                             </td>
                             <!--Link zur Startseite-->
                             <td colspan="2" align="right">
-                                <a href="http://localhost/ifi/IFI-Style/web/index.php">Zurück zur Startseite</a>
+                                <a href="http://localhost/IFI-Style/web/index.php">Zurück zur Startseite</a>
                             </td>
                         </tr> <br />
 

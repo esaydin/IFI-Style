@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
-    //header('Location: index.php');
+    header('Location: index.php');
 }
 
 //hhh
@@ -18,7 +18,7 @@ and open the template in the editor.
 
             <div id='cssmenu'> 
                 <ul> 
-                    <li class='active'><a href='page_student.php.'><span>Start</span></a></li> 
+                    <li class='active'><a href='page_student.php'><span>Start</span></a></li> 
                     <li><a href='profil_student.php'><span>Profil</span></a></li>
                     <li class='last'><a href='sucheprojekt.php'><span>Suche Projekt</span></a>
                     </li> 

@@ -1,7 +1,9 @@
+<!--Diese Klasse stellt die Seite für den Auftraggeber dar. Wenn man sich als Auftraggeber eingeloggt hat, wird man auf diese Seite weitergeleitet-->
 <?php
+//Sitzung wird gestartet, damit man weiss ob das Einloggen erfolt hat oder nicht
 session_start();
 if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
-    //header('Location: index.php');
+    header('Location: index.php');
 }
 ?>
 <!DOCTYPE html>
@@ -11,33 +13,36 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <?php include_once 'header.php'; ?>
-
+            <!--Navigationsbereich-->
             <div id='cssmenu'> 
                 <ul> 
-                    <li class='active'><a href='page_auftraggeber.php.'><span>Start</span></a></li> 
+                    <!--Reiter für Start, Profil, Student suchen und Projekt-->
+                    <li class='active'><a href='page_auftraggeber.php'><span>Start</span></a></li> 
                     <li><a href=''><span>Profil</span></a></li>
                     <li><a href='suchestudenten.php'><span>Student suchen</span></a></li>
                     <li class='last'><a href='projektanlegen.php'><span>Projekt Anlegen</span></a></li>
                 </ul> 
             </div>
 
+            <!-- Der Contentbereich-->
             <div id="inhalt">
                 <h1>Gefundene Studenten:</h1>     
                 <?php
+                //Speichervariable
                 if (empty($_POST['skill'])) {
                     header('Location: index.php');
                 }
-
+                //Datenbankverbindung wird hergestellt
                 include_once 'db_connection.php';
                 $db = new DbConnection();
                 $var = $_POST['skill'];
-                //print_r($var);
+                
 
                 $s = array();
                 $condition = join(',', $_POST['skill']); // bsp: html, php, bla
                 $skillanzahl = count($_POST['skill']);
 
-                // gruppen ids
+                // Und verknüpfung,alle ausgesuchten skills müssen im Projekt sein
                 if (isset($_POST['verknuepfung'])) {
                     $sql = "SELECT group_concat(tmp.id SEPARATOR ', ') As ids"//, tmp.titel, tmp.beschreibung, tmp.skills
                             . " FROM (
@@ -49,6 +54,7 @@ and open the template in the editor.
                         GROUP BY b.benutzername ORDER BY cnt DESC) As tmp
                         WHERE tmp.cnt = '$skillanzahl';";
                 } else {
+                    // oder verknüpfung, wenn nur eine Eigenschaft im Projekt vorhanden ist, reicht es zur Ausgabe
                     $sql = "SELECT group_concat(tmp.id SEPARATOR ', ') AS ids"
                             . " FROM (SELECT b.id"
                             . "   FROM benutzer b"
@@ -61,7 +67,6 @@ and open the template in the editor.
                 //echo $sql;
                 $result = $db->connection($sql);
 
-                //print_r($result);
 
                 $ids = $result[0];
                 $sql2 = "SELECT benutzer.benutzername, group_concat(skill.skill SEPARATOR ', ') AS skills"
@@ -72,8 +77,8 @@ and open the template in the editor.
                         . " GROUP BY benutzer.benutzername";
 
                 $result = $db->connection($sql2);
-                //print_r($result);
 
+                //Gibt die Skills mit den zugehörigen Benutzern aus.
                 if (!empty($result)) {
                     foreach ($result as $value) {
                         ?>
@@ -89,6 +94,7 @@ and open the template in the editor.
             <div id="info">
 
                 <?php
+                //
                 echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
                 echo "<a href=\"logout.php\">Logout</a>";
                 ?>

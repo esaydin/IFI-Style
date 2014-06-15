@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
+    header('Location: index.php');
+}
 
 include_once 'db_connection.php';
 $connection = new DbConnection();
@@ -14,7 +17,7 @@ and open the template in the editor.
 
             <div id='cssmenu'> 
                 <ul> 
-                    <li class='active'><a href='page_auftraggeber.php.'><span>Start</span></a></li> 
+                    <li class='active'><a href='page_auftraggeber.php'><span>Start</span></a></li> 
                     <li><a href=''><span>Profil</span></a></li>
                     <li><a href='suchestudenten.php'><span>Student suchen</span></a></li>
                     <li class='last'><a href='projektanlegen.php'><span>Projekt Anlegen</span></a>
