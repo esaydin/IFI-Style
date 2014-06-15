@@ -4,7 +4,7 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
     //header('Location: index.php');
 }
 
-
+//hhh
 include_once 'db_connection.php';
 $connection = new DbConnection();
 ?>

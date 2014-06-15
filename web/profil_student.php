@@ -32,7 +32,7 @@ if (isset($_POST['senden'])) {
     }
 }
 
-//==============================================================================
+//hhh==============================================================================
 $sql = "SELECT * FROM benutzerskillzuordnung"
         . " WHERE idbenutzer = '" . $_SESSION['id'] . "';";
 $result = $connection->connection($sql);
@@ -106,6 +106,7 @@ if (!is_bool($result)) {
                 echo "<a href=\"logout.php\">Logout</a>";
                 ?>
             </div>
+            
 
             <div id="fussbereich">
                 &copy; 2014 IFI-Style

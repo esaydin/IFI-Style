@@ -83,7 +83,7 @@ and open the template in the editor.
                                 <button style="background-color: #FFCC7F ">  Registrieren</button>
                             </a>
                         </td>
-                        <br />
+                          <br/>
                 </div>
             </div>
             <div id="fussbereich">
