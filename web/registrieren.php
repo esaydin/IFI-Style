@@ -25,10 +25,9 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
 
                 <form method="post" action="registrierungcheck.php" id="formular">
                     <table>
-                        <tr>
-                            <td>
-                                <input type="text" id="vorname" name="vorname" placeholder="*Vorname" value="" onKeyUp="validate()"/><br />
-                            </td><td></td>
+                        <td>
+                            <input type="text" id="vorname" name="vorname" placeholder="*Vorname" value="" onKeyUp="validate()"/><br />
+                        </td><td id="hinweis">Zeichenkette darf nur Buchstaben und Umlaute enthalten.</td>
                         </tr>
                         <tr>
                             <td>
@@ -40,12 +39,13 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
                             <td>
                                 <input type="text" id="benutzername" name="benutzername" placeholder="*Benutzername" value="" onKeyUp="validate()"/><br />
                             </td>
-                            <td id="umlaut"></td>
+                            <td id="hinweis">Zeichenkette darf nur Buchstaben und Ziffern enthalten</td>
                         </tr>
                         <tr>
                             <td>
                                 <input type="password" id="kennwort" name="kennwort" placeholder="*Kennwort" value="" onKeyUp="validate()"/><br />
-                            </td><td></td>
+                            </td>
+                            <td id="hinweis">Zeichenkette darf nur Buchstaben und Ziffern enthalten</td>
                         </tr>
                         <tr>
                             <td>
@@ -56,27 +56,28 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
                         <tr>
                             <td>
                                 <input type="text" id="strasse" name="strasse" placeholder=" Strasse" value="" onKeyUp="validate()"/><br />
-                            </td><td></td>
+                            </td>
+                            <td id="hinweis">Zeichenkette darf nur Buchstaben,Umlaute und Sonderzeichen(-| ) enthalten</td>
                         </tr>
                         <tr>
                             <td>
                                 <input type="text" id="hausnr" name="hausnr" placeholder=" Hausnummer" value="" onKeyUp="validate()"/><br />
-                            </td><td></td>
+                            </td><td id="hinweis">Zeichenkette darf nur Ziffern und Buchstaben enthalten</td>
                         </tr>
                         <tr>
                             <td>
                                 <input type="text" id="plz" name="plz" placeholder=" PLZ" value="" onKeyUp="validate()" /><br />
-                            </td><td></td>
+                            </td><td id="hinweis">Zeichenkette darf nur Ziffern enthalten</td>
                         </tr>
                         <tr>
                             <td>
                                 <input type="text" id="ort" name="ort" placeholder=" Ort" value="" onKeyUp="validate()"/>
-                            </td><td></td>
+                            </td><td id="hinweis">Zeichenkette darf nur Buchstaben enthalten</td>
                         </tr>
                         <tr>
                             <td>
                                 <input type="text" id="email" name="email" placeholder="*Email" value="" onKeyUP="validate()"/><br />
-                            </td><td></td>
+                            </td><td id="hinweis">Zeichenkette darf nur Buchstaben, Ziffern, Bindestrich (-) und Unterstrich (_) enthalten</td>
                         </tr>
                         <tr>
                             <td>
@@ -88,7 +89,7 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
                                 $result = $db->connection($sql);
                                 if ($result) {
                                     ?>
-                                    <select name="benutzer_typ">
+                                <select id="combo" name="benutzer_typ">
                                         <?php
                                         foreach ($result as $value) {
                                             ?>
@@ -115,7 +116,7 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
 
                             </td>
                             <td colspan="2" align="right">
-                                <a href="http://localhost/ProjektSearchProStud/index.php">Zurück zur Startseite</a>
+                                <a href="http://localhost/ifi/IFI-Style/web/index.php">Zurück zur Startseite</a>
                             </td>
                         </tr> <br />
 
