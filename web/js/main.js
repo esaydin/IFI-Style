@@ -102,3 +102,44 @@ function validate() {
 
 }
 
+
+							//Javascript für das Datum und Uhrzeit
+						
+								//Funktion für die Monate
+								function gMon() {
+ 									this[0] = 'Januar';
+ 									this[1] = 'Februar';
+  									this[2] = 'März';
+  									this[3] = 'April';
+ 									this[4] = 'Mai';
+ 									this[5] = 'Juni';
+									this[6] = 'Juli';
+  									this[7] = 'August';
+  									this[8] = 'September';
+									this[9] = 'Oktober';
+ 									this[10] = 'November';
+  									this[11] = 'Dezember';
+								}
+								//FUnktion für die Tage
+								var monNames = new gMon();
+								var dayNames = new Array('Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag');
+								function t4(y) {
+  									return(y < 1000?  y + 1900:y);
+								}
+								//Funktion für die Stunden und Minuten
+ 								var now = new Date();
+ 								var Stunden = now.getHours();
+								var Minuten = now.getMinutes();
+								var NachVoll = ((Minuten < 10) ? ":0" : ":");
+						
+								//Ausgabe für den Text
+								document.write('Heute ist ', dayNames[now.getDay()]);
+ 								document.write(', der ', now.getDate());
+  								document.write('. ', monNames[now.getMonth()]);
+ 								document.write(' ', t4(now.getYear()));
+ 								document.write(".Wir haben  " + Stunden + NachVoll + Minuten + " Uhr<\/b>");
+ 							
+ 							
+
+
+

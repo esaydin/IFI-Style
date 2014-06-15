@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
-    //header('Location: index.php');
+   
 }
 ?>
 
@@ -22,11 +22,14 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
 
 
             <div id="inhalt">
-
+                <!-- Formular für Registrierung,verweist auf Registrierungcheck-->
                 <form method="post" action="registrierungcheck.php" id="formular">
                     <table>
                         <td>
-                            <input type="text" id="vorname" name="vorname" placeholder="*Vorname" value="" onKeyUp="validate()"/><br />
+                            <!--EIngabefelder mit Hinweisen für Registrierungsformular mit Vorname, Nachname, Benutzername, Kennwort,
+                            Kennwortwdhl, Strasse, Hausnummer, PLZ, Ort und Email
+                            Onkeyup-Funktion überprüfut bei Eingabe auf regulären Ausdrücke-->
+                            <input type="text" id="vorname" name="vorname" placeholder="*Vorname" value="" onKeyUp="validate()"/><br /> 
                         </td><td id="hinweis">Zeichenkette darf nur Buchstaben und Umlaute enthalten.</td>
                         </tr>
                         <tr>
@@ -81,18 +84,22 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
                         </tr>
                         <tr>
                             <td>
+                                
                                 <?php
                                 $sql = "SELECT * FROM benutzer_typ";
+                                //Verbindung zur Datenbank
                                 include_once "db_connection.php";
                                 $db = new DbConnection();
 
                                 $result = $db->connection($sql);
                                 if ($result) {
                                     ?>
+                                <!--ComboBox für die Auswahl ob Student oder Auftraggeber-->
                                 <select id="combo" name="benutzer_typ">
                                         <?php
                                         foreach ($result as $value) {
                                             ?>
+                                            <!--Jeder Benutzer wird je nach ID zu Auftraggeber oder Student in der Datenbank zugeordnet-->
                                             <option value = "<?php echo $value["id"] ?>"><?php echo $value["name"] ?></option>
                                             <?php
                                         }
@@ -107,6 +114,7 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
                             <td>
 
                             </td>
+                            <!--Button für das Registrieren, bei nicht Erfdüllung der Pflichtfelder ist der Button gesperrt-->
                             <td colspan="2" align="right">
                                 <input type="submit" name="registrieren" value="Registrieren" id="registrierung" disabled>
                             </td>
@@ -115,6 +123,7 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
                             <td>
 
                             </td>
+                            <!--Link zur Startseite-->
                             <td colspan="2" align="right">
                                 <a href="http://localhost/ifi/IFI-Style/web/index.php">Zurück zur Startseite</a>
                             </td>
@@ -126,6 +135,7 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
             </div>
             <div id="info">
             </div>
+            <!--Footer mit Angabe von Gruppenname und Datum-->
             <div id="fussbereich">
                 &copy; 2014 IFI-Style
             </div>

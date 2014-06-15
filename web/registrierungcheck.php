@@ -48,20 +48,31 @@ and open the template in the editor.
 
 
             $pass = md5($_POST['kennwort']);
+            $vorname = $_POST["vorname"];
+            $nachname = $_POST["nachname"];
+            $benutzername = $_POST["benutzername"];
+            $email = $_POST["email"];
+            $strasse = $_POST["strasse"];
+            $hausnr = $_POST["hausnr"];
+            $plz = $_POST["plz"];
+            $ort = $_POST["ort"];
+            $benutzertyp = $_POST["benutzer_typ"];
+            
+            
             $sql = "INSERT INTO benutzer"
                     . " ( id, vorname, nachname, benutzername, kennwort, email, strasse, hausnr, plz, ort, idbenutzertyp)"
                     . " VALUES"
                     . " (null,"
-                    . " '" . $_POST["vorname"] . "',"
-                    . " '" . $_POST["nachname"] . "',"
-                    . " '" . $_POST["benutzername"] . "',"
+                    . " '" . $vorname . "',"
+                    . " '" . $nachname . "',"
+                    . " '" . $benutzername . "',"
                     . " '" . $pass . "',"
-                    . " '" . $_POST["email"] . "',"
-                    . " '" . $_POST["strasse"] . "',"
-                    . " '" . $_POST["hausnr"] . "',"
-                    . " '" . $_POST["plz"] . "',"
-                    . " '" . $_POST["ort"] . "',"
-                    . " '" . $_POST["benutzer_typ"] . "');";
+                    . " '" . $email . "',"
+                    . " '" . $strasse . "',"
+                    . " '" . $hausnr . "',"
+                    . " '" . $plz . "',"
+                    . " '" . $ort . "',"
+                    . " '" . $benutzertyp . "');";
 
 
             //echo "<br> " .$sql;

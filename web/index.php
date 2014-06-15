@@ -39,55 +39,34 @@ if (!empty($_POST["benutzername"]) && !empty($_POST["kennwort"])) {
     //echo "<br>" . "<a href=\"index.php\"> Zurück </a>";
 }
 ?>
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>   
-        <link rel="stylesheet" type="text/css" href="css/main.css">
-    </head>
-    <body>
-        <div id="seite"> 
-            <div id="kopfbereich">
-                <img id="hsLogo" src="bilder/hsLogo.png"/>
-                <img id="prostud" src="bilder/prostud.png"/>             
-            </div>
-            <div id="inhalt">
-                <h1 class="studh2">  Willkommen!</h1>
-                <p class="textstart">  Die Seite steht jedem als eine Austauschplattform zur verfügung
-                    und <br>ermöglicht Projekte zu suchen oder eigene zu veröffentlichen!</p>
-            </div>
-            <div id="info">              
-                <div id="login">
-                    <h2 class="anmelden"> Anmelden</h1>
-                        <form method="post" action="index.php">
-                            <table id="tabelleLogin">
-                                <tr>
-                                    <td><input type="text" name="benutzername" placeholder="benutzername" value="" /></td>
-                                </tr> 
-                                <tr>
-                                    <td><input type="password" name="kennwort" placeholder="kennwort" value="" /></td>
-                                    <td><input type="submit"  name="anmelden" style="background-color: #B2CCE5" value="Anmelden"/></td>
-                                </tr>
-                            </table>
-                        </form>
-                        <h4 class="reg"> Neu bei Search ProStud?<br> Registriere Dich!</h4>  
-                        <td colspan="2" align="right">
-                            <a href="registrieren.php" id="registrieren1">
-                                <button style="background-color: #FFCC7F ">  Registrieren</button>
-                            </a>
-                        </td>
-                        <br />
-                </div>
-            </div>
-            <div id="fussbereich">
-                &copy; 2014 SearchProStud
-            </div>
-        </div>
-    </body>
-</html>
+
+<?php include_once 'header.php'; ?>
+<div id="inhalt">
+    <h1 class="studh2">  Willkommen!</h1>
+    <p class="textstart">  Die Seite steht jedem als eine Austauschplattform zur verfügung
+        und <br>ermöglicht Projekte zu suchen oder eigene zu veröffentlichen!</p>
+</div>
+<div id="info">              
+    <div id="login">
+        <h2 class="anmelden"> Anmelden</h1>
+            <form method="post" action="index.php">
+                <table id="tabelleLogin">
+                    <tr>
+                        <td><input type="text" name="benutzername" placeholder="benutzername" value="" /></td>
+                    </tr> 
+                    <tr>
+                        <td><input type="password" name="kennwort" placeholder="kennwort" value="" /></td>
+                        <td><input type="submit"  name="anmelden" style="background-color: #B2CCE5" value="Anmelden"/></td>
+                    </tr>
+                </table>
+            </form>
+            <h4 class="reg"> Neu bei Search ProStud?<br> Registriere Dich!</h4>  
+            <td colspan="2" align="right">
+                <a href="registrieren.php" id="registrieren1">
+                    <button style="background-color: #FFCC7F ">  Registrieren</button>
+                </a>
+            </td>
+            <br />
+    </div>
+</div>
+<?php include_once 'footer.php'; ?>
