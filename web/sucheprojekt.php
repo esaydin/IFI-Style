@@ -32,11 +32,14 @@ and open the template in the editor.
                 <h1>Hier können Sie nach mehreren Projekten suchen:</h1>
                 <div id="text">
 
+                    
                     <form  method="post" action="ausgabe_student.php">
+                        <!--und verknüpfung damit alle ausgewählten skills im projekt vorhanden sind-->
                         <p id="und">Und</p>
                         <input id="verknuepfung" name="verknuepfung" type="checkbox">
                         <?php
                         echo "<br>";
+                        //liste der skills wid von der datenbank geholt
                         $sql = "SELECT * FROM skill";
                         $result = $connection->connection($sql);
 
@@ -52,7 +55,7 @@ and open the template in the editor.
             <div id="info">
                   <div id="InhaltHöhe">
                 <?php
-                //echo $_SESSION['benutzername'] ;                 
+                               
 
                 echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
                 echo "<a href=\"logout.php\">Logout</a>";

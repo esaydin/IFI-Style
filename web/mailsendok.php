@@ -20,7 +20,7 @@ $db = new DbConnection();
                 </ul> 
             </div>
 
-            <!--Textausgabe, wenn man sich als Student eingeloggt hat-->
+            <!--Textausgabe, wenn die mail versenet wurde-->
             <div id="inhalt">
                   <div id="InhaltHöhe">
                <p>Ihre Nachricht wurde versendet! Sie werden bezüglich der Teilnahme benachrichtigt.</p> 

@@ -9,20 +9,22 @@ $connection = new DbConnection();
 
 $projektAngelegt = false;
 
-
+//wenn die felder gefüllt sind wird es ind tabelle projekt gespeicher
 if (!empty($_POST["titel"]) && !empty($_POST["projektbeschreibung"]) && !empty($_POST["skill"])) {
     // Projekt speichern
     $sql = "INSERT INTO projekt"
             . " VALUES"
             . " (null, '" . $_POST["titel"] . "', '" . $_POST["projektbeschreibung"] . "');";
     $result = $connection->connection($sql);
+    //wenn die daten in die tabelle projekt gespeichert werden konnten,
     if ($result) {
-        // projektskills speichern
+        // werden die skills für den projekt mit dem projekt idind projektskillzuordnung gespeichert
         foreach ($_POST["skill"] as $key => $value) {
             $sql2 = "INSERT INTO projektskillzuordnung"
                     . " VALUES ( (SELECT id FROM projekt WHERE titel = '" . $_POST["titel"] . "'), '" . $value . "' )";
             $result = $connection->connection($sql2);
         }
+        //am ende werden die daten in Projektbenutzerzuordnung gespeicher, damit man sehen kann wem das Projekt gehort
          $sql3 = "INSERT INTO projektbenutzerzuordnung"
                     . " VALUES ( (SELECT id FROM projekt WHERE titel = '" . $_POST["titel"] . "'), '" . $_SESSION['id'] . "', '" . $_SESSION['idbenutzertyp'] . "' )";
            $connection->connection($sql3);
@@ -53,19 +55,13 @@ and open the template in the editor.
             <div id="inhalt">
                   <div id="InhaltHöhe">
                 <?php
+                //wenn projekt angelegt true liefert wird die ausgabe gemacht das es erfolgreich war
                 if ($projektAngelegt) {
-                    echo "Projekt angelegt";
+                    echo "Projekt wurde angelegt!";
                     echo "<br><br>" . "Titel: " . $_POST["titel"] . "<br>" . "Beschreibung: " . $_POST["projektbeschreibung"] . "<br>";
 
-                    echo "Skills: ";
-                    $sk = "";
-                    foreach ($_POST["skill"] as $key => $value) {
-                        $sk .= $value . ", ";
-                    }
-                    //$sk = rtrim($string, ", ");
-                    echo substr($sk, 0, -2);
                 } else {
-                    echo "Projekt nicht angelegt";
+                    echo "Projekt konnte nicht angelegt werden!";
                 }
                 ?>
                 <br><a href="projektanlegen.php"> Zurück </a>  
@@ -73,7 +69,7 @@ and open the template in the editor.
             <div id="info">
                   <div id="InhaltHöhe">
                 <?php
-                //echo $_SESSION['benutzername'] ;                 
+                        
                 echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
                 echo "<a href=\"logout.php\">Logout</a>";
                 ?>
