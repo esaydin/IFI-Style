@@ -27,6 +27,7 @@ and open the template in the editor.
 
 
             <div id="inhalt">
+                  <div id="InhaltHöhe">
 
                 <h1>Hier können Sie nach mehreren Projekten suchen:</h1>
                 <div id="text">
@@ -49,9 +50,10 @@ and open the template in the editor.
                         <input id="senden" type="submit" name="senden" value="Senden" id="senden">
                     </form>
                 </div>
-            </div>
+                  </div></div>
            
             <div id="info">
+                  <div id="InhaltHöhe">
                 <?php
                                
 
@@ -60,7 +62,7 @@ and open the template in the editor.
                 ?>
                 </br>
                 <a href="page_student.php">Startseite</a>
-            </div>
+                  </div></div>
        
             <!--Inkludieren vom Fussbereich-->
 <?php include_once 'footer.php'; ?>

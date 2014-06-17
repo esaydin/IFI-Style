@@ -5,6 +5,7 @@ $db = new DbConnection();
 
 <?php include_once 'header.php'; ?>
             <div id="inhalt">
+                  <div id="InhaltHöhe">
         <?php
         //Pflichtfelder
         if (!empty($_POST["benutzername"]) && !empty($_POST["kennwort"]) && !empty($_POST["kennwortwdhl"]) && !empty($_POST["vorname"]) && !empty($_POST["nachname"]) && !empty($_POST["email"])) {
@@ -67,9 +68,11 @@ $db = new DbConnection();
         }
         ?>
 
-            </div>
+                  </div></div>
 
-            <div id="info"></div>
+            <div id="info">
+            <div id="InhaltHöhe"></div>
+            </div>
 
 
        <?php include_once 'footer.php'; ?>

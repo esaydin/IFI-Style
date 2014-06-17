@@ -27,6 +27,7 @@ and open the template in the editor.
 </div>
 
             <div id="inhalt">
+                  <div id="InhaltHöhe">
                 <form method="post" action="projektanlegencheck.php">
                     <table id="projektanlegen">
                         <tr>
@@ -64,9 +65,10 @@ and open the template in the editor.
                         </tr>
                     </table>
                 </form>
-            </div>
+                  </div></div>
 
             <div id="info">
+                  <div id="InhaltHöhe">
                 <?php
                 //echo $_SESSION['benutzername'] ;                 
 
@@ -75,5 +77,5 @@ and open the template in the editor.
                 ?>
                 </br>
                 <a href="page_auftraggeber.php">Zurück</a></div>
-        </div>
+            </div> </div>
 <?php include_once 'footer.php'; ?>

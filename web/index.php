@@ -40,44 +40,94 @@ if (!empty($_POST["benutzername"]) && !empty($_POST["kennwort"])) {
             //Seitenwechsel
             header('Location: ' . $page);
         }
-        
     }
-    
 }
 ?>
 <!--Import der Klasse header.php  -->
 <?php include_once 'header.php'; ?>
 <!--Inhalte der Startseite -->
 <div id="inhalt">
-    <h1 class="studh2">  Willkommen!</h1>
-    <p class="textstart">  Die Seite steht jedem als eine Austauschplattform zur verfügung
-        und <br>ermöglicht Projekte zu suchen oder eigene zu veröffentlichen!</p>
+    <div id = "InhaltHöhe">
+        <h1 class="studh2">  Willkommen!</h1>
+        <p class="textstart">  Die Seite steht jedem als eine Austauschplattform zur verfügung
+            und <br>ermöglicht Projekte zu suchen oder eigene zu veröffentlichen!</p>
+    </div>
+    
+    
+    <?php
+# Diashow mit PHP und JavaScript
+
+# Verzeichnis der Bilder
+$verzeichnis = "bilderslide/";
+
+# Geschwindigkeit in Millisekunden
+# 3000 = 3 Sekunden
+$peed = 2500;
+
+echo "
+<div style='text-align: center;'><img id='dummy' src='#'></div>
+
+<script type='text/javascript'>
+var bild = new Array();
+var i = 0;
+";
+
+$ordner = openDir($verzeichnis);
+$by = 0;
+while ($file = readDir($ordner)) {
+ if($file != "." && $file != "..") {
+  echo "bild[$by]='$verzeichnis$file';\n";
+  $by++;
+ }
+}
+closeDir($ordner);
+
+echo "
+function anzeigen() {
+ if (i < bild.length) {
+  document.getElementById('dummy').src=bild[i];
+  i++;
+ }
+ else {
+  i = 0;
+ }
+  setTimeout('anzeigen()', $peed);
+}
+anzeigen();
+</script>
+";
+?>
+
+    
+    
 </div>
+
 <!-- -->
 <div id="info">   
-    <!-- Loginbereich -->
-    <div id="login">
-        <h2 class="anmelden"> Anmelden</h1>
-            <!--Formular für den Loginbereich, mit Benutzername und verschlüsstem Passwort -->
-            <form method="post" action="index.php">
-                <table id="tabelleLogin">
-                    <tr>
-                        <td><input type="text" name="benutzername" placeholder="benutzername" value="" /></td>
-                    </tr> 
-                    <tr>
-                        <td><input type="password" name="kennwort" placeholder="kennwort" value="" /></td>
-                        <td><input type="submit"  name="anmelden" style="background-color: #B2CCE5" value="Anmelden"/></td>
-                    </tr>
-                </table>
-            </form>
-            <h4 class="reg"> Neu bei Search ProStud?<br> Registriere Dich!</h4>  
-            
+    <div id = "InhaltHöhe">
+        <!-- Loginbereich -->
+        <div id="login">
+            <h2 class="anmelden"> Anmelden</h1>
+                <!--Formular für den Loginbereich, mit Benutzername und verschlüsstem Passwort -->
+                <form method="post" action="index.php">
+                    <table id="tabelleLogin">
+                        <tr>
+                            <td><input type="text" name="benutzername" placeholder="benutzername" value="" /></td>
+                        </tr> 
+                        <tr>
+                            <td><input type="password" name="kennwort" placeholder="kennwort" value="" /></td>
+                            <td><input type="submit"  name="anmelden" style="background-color: #B2CCE5" value="Anmelden"/></td>
+                        </tr>
+                    </table>
+                </form>
+                <h4 class="reg"> Neu bei Search ProStud?<br> Registriere Dich!</h4>  
+
                 <a href="registrieren.php" id="registrierung" value="Neu Registrieren" style="margin-left: 50px"></a>
-            <br />
-            
-            
-    </div>
-</div>
+                <br />
+
+
+        </div>
+    </div></div>
 
 
 

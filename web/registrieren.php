@@ -1,12 +1,13 @@
 <?php include_once 'header.php'; ?>
 
 <div id="inhalt">
+      <div id="InhaltHöhe">
+   
     <!-- Formular für Registrierung,verweist auf Registrierungcheck-->
     <form method="post" action="registrierungcheck.php" id="formular">
+        
         <table id="name"><h1>Konto erstellen</h1>
-             <td colspan="2" align="right">
-                    <a href="index.php">Zurück zur Startseite</a>
-                </td>
+            
             <tr> 
                 
             <tr>
@@ -77,6 +78,7 @@
                 <td>
                     <input type="password" id="kennwortwdhl" name="kennwortwdhl" placeholder="*Kennwort erneut" value="" onKeyUp="validate()"/><br /><br />
                 </td>
+                <td></td>
                 <td id="passmsg"></td>
             </tr>
             <tr>
@@ -124,8 +126,12 @@
             <br></br>
         </table>
     </form>
-</div>
+      </div></div>
 <div id="info">
-</div>
+      <div id="InhaltHöhe">
+                    <a id="zuruckButton" href="index.php">Zurück zur Startseite</a>
+     
+
+      </div></div>
 <!--Footer mit Angabe von Gruppenname und Datum-->
 <?php include_once 'footer.php'; ?>
