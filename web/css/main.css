@@ -67,7 +67,9 @@ input, select {
 #kopfbereich {
     height: 100px;
     padding: 20px;
-    background-color: white;
+    background-image: linear-gradient(white 0%, #8FBFD2 110%);
+  
+    //background: rgba(120,160,180,0.3);
     width:1293px;
 }
 
@@ -386,9 +388,9 @@ ul#Navigation a:hover, ul#Navigation span {
 }
 
 
-.studh2{font-family: 'Open Sans', sans-serif;}
+.studh2{font-family: 'Open Sans', sans-serif; text-align: center}
 
-.textstud{font-family: 'Open Sans', sans-serif;
+.textstud{font-family: 'Open Sans', sans-serif; 
           letter-spacing:0.0em;
           line-height:1.5em;
           font-size:0.9em;
@@ -400,7 +402,7 @@ ul#Navigation a:hover, ul#Navigation span {
 
 
 
-.textstart{font-family: 'Open Sans', sans-serif;
+.textstart{font-family: 'Open Sans', sans-serif;text-align: center;
            letter-spacing:0.0em;
            line-height:1.5em;
            font-size:1.1em;

@@ -48,9 +48,9 @@ if (!empty($_POST["benutzername"]) && !empty($_POST["kennwort"])) {
 <!--Inhalte der Startseite -->
 <div id="inhalt">
     <div id = "InhaltHöhe">
-        <h1 class="studh2">  Willkommen!</h1>
+        <h1 class="studh2"><br><br>  Willkommen!</h1>
         <p class="textstart">  Die Seite steht jedem als eine Austauschplattform zur verfügung
-            und <br>ermöglicht Projekte zu suchen oder eigene zu veröffentlichen!</p>
+            und <br>ermöglicht Projekte zu suchen oder eigene zu veröffentlichen!<br><br><br> </p>
     </div>
     
     
