@@ -1,12 +1,41 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Feedback: Danke</title> 
-</head> 
-<body>
-<h1>Feedback: Fehler!</h1>
-<p>Leider ist ein Fehler aufgetreten, und Ihre Formulardaten konnten 
-nicht an uns gesendet werden.</p> 
-</body>
-</html>
+
+<?php
+session_start();
+if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
+    header('Location: index.php');
+}
+
+include_once 'db_connection.php';
+$db = new DbConnection();
+?>
+
+<?php include_once 'header.php'; ?>
+            <div id='cssmenu'> 
+                <ul> 
+                    <li class='active'><a href='page_student.php'><span>Start</span></a></li> 
+                    <li><a href='profil_student.php'><span>Profil</span></a></li>
+                    <li class='last'><a href='sucheprojekt.php'><span>Suche Projekt</span></a>
+                    </li> 
+                </ul> 
+            </div>
+
+            <!--Textausgabe, wenn man sich als Student eingeloggt hat-->
+            <div id="inhalt">
+              <p>Leider ist ein Fehler aufgetreten, und Ihre Formular konnten nicht an uns gesendet werden.</p>
+                 <a href="page_student.php">Zurück zur Startseite</a>
+            </div>
+
+            <div id="info">
+                <?php                
+                //Textausgabe, je nach eingeloggter Benutzer
+                echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
+                //Link zum Logout
+                echo "<a href=\"logout.php\">Logout</a>";
+                ?>
+
+            </div>
+       <!--Inkludieren vom Fussbereich-->
+       <?php include_once 'footer.php'; ?>
+
+
+
