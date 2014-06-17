@@ -18,7 +18,9 @@ body {
     font: normal 100.01%;
     overflow-x: hidden;
     overflow-y: auto;
+    position: absolute;
 }
+
 
 #head{
     height: 250px; 
@@ -80,9 +82,7 @@ input, select {
     //height:300px;
 }
 #seite{ 
-    background-color:#d3d3d3; 
     width: 100%;
-
 }
 
 #hsLogo{
@@ -108,8 +108,8 @@ input, select {
     margin-top: -130px;
     height: 130px;
     width: 190px;
-
 }
+
 #fussbereich {
     clear: both;
     padding: 20px;
@@ -118,7 +118,7 @@ input, select {
     text-align:center;
     margin-left:-5px; 
     //width:1042px;
-    width:1320px;
+    width:1297px;
     height: 100px; 
 
 }
@@ -127,22 +127,25 @@ input, select {
     background-color:#F8F8ff;
     margin-left:-5px;
     padding: 20px;
-    margin-top:10px;
-    height: 720px;
-    //width:730px;
-    width:775px;
-
+    margin-top: 0px;
+    height: 740;
+    width:770px;
 }
+#InhaltArt{
+    color:#5c62d6;
+}
+
+
 #info {
     float: left;
-    width:510px; 
-    height: 750px;
+    width:505px; 
+    height: 770px;
     padding: 5px;
     background-color: #F8F8ff;
     //border-left: 2px solid black;
-    margin-top: -760px;
+    margin-top: -780px;
     // margin-left:800px;
-    margin-left:820px;
+    margin-left:817px;
 
 }
 ul#Navigation {
@@ -190,9 +193,8 @@ ul#Navigation a:hover, ul#Navigation span {
 #formular{
     background-color:#F8F8ff; 
     width:380px; 
-    
     margin-top: 0px;
-    margin-left:120px;
+    margin-left:100px;
 
 }
 #vorname,#nachname,#benutzername, #kennwort, #kennwortwdhl, #strasse, #hausnr, #plz, #ort, #email, #combo {
@@ -214,6 +216,7 @@ ul#Navigation a:hover, ul#Navigation span {
 
 #daten{
     margin-top: -70px;
+   
     
 }
 
@@ -251,10 +254,7 @@ ul#Navigation a:hover, ul#Navigation span {
 #passmsg {
     font-size: 8pt;
     color: #FF0000;
-}
-#hinweis {
-    font-size: 7pt;
-    
+    font-weight: 100;
 }
 
 
@@ -401,14 +401,14 @@ ul#Navigation a:hover, ul#Navigation span {
 
 
 .textstart{font-family: 'Open Sans', sans-serif;
-           letter-spacing:0.1em;
+           letter-spacing:0.0em;
            line-height:1.5em;
            font-size:1.1em;
 
 }
 
 #zuruckButton{
-    margin-left: -50px;
+    margin-left: 280px;
 }
 
 #projekthinzufuegen{margin-left: -900px;}

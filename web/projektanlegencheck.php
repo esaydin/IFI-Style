@@ -53,6 +53,7 @@ and open the template in the editor.
             </div>
 
             <div id="inhalt">
+                  <div id="InhaltHöhe">
                 <?php
                 //wenn projekt angelegt true liefert wird die ausgabe gemacht das es erfolgreich war
                 if ($projektAngelegt) {
@@ -64,8 +65,9 @@ and open the template in the editor.
                 }
                 ?>
                 <br><a href="projektanlegen.php"> Zurück </a>  
-            </div>
+                  </div></div>
             <div id="info">
+                  <div id="InhaltHöhe">
                 <?php
                         
                 echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
@@ -73,6 +75,6 @@ and open the template in the editor.
                 ?>
                 </br>
                 <a href="projektanlegen.php"/>
-            </div>
+                  </div></div>
 
           <?php include_once 'footer.php'; ?>

@@ -20,20 +20,22 @@ $db = new DbConnection();
 
             <!--Textausgabe, wenn man  sich als Student eingeloggt hat-->
             <div id="inhalt">
-                <h2 class="studh2">Sie sind als Student eingeloggt</h2><br/>
+                <div id="InhaltHöhe"> <h2 class="studh2">Sie sind als Student eingeloggt</h2><br/>
                 <p class="textstud">Als Student haben Sie die Möglichkeiten Skills die Sie besitzen über das Profil zu speichern.<br/>
                     Diese Informationen werden dafür genutzt, dass eventuell ein Auftraggeber Sie für sein Projekt finden kann.<br/>
                     Selber können Sie unter "Suche Projekte" präziese Projekte filtern, die für Sie interessant sein könnten.</p>
             </div>
+            </div>
 
             <div id="info">
+                <div id="InhaltArt">
                 <?php                
                 //Textausgabe, je nach eingeloggter Benutzer
-                echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
+                echo "<br>Eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
                 //Link zum Logout
                 echo "<a href=\"logout.php\">Logout</a>";
                 ?>
-
+            </div>
             </div>
        <!--Inkludieren vom Fussbereich-->
        <?php include_once 'footer.php'; ?>
