@@ -7,12 +7,7 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
 include_once 'db_connection.php';
 $db = new DbConnection();
 ?>
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <?php include_once 'header.php'; ?>
             <div id='cssmenu'> 
                 <ul> 

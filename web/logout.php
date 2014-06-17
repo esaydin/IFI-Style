@@ -1,4 +1,4 @@
-<!--Klasse für das Logout, alle Inhalte der Werte wird gelöscht und dadurch ist man ausgeloggt-->
+<!--Klasse für das Logout, alle Inhalte der Werte werden gelöscht und dadurch ist man ausgeloggt-->
 <?php
 
 session_start();

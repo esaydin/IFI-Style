@@ -7,7 +7,7 @@
             <td>
                 <!--EIngabefelder mit Hinweisen für Registrierungsformular mit Vorname, Nachname, Benutzername, Kennwort,
                 Kennwortwdhl, Strasse, Hausnummer, PLZ, Ort und Email
-                Onkeyup-Funktion überprüfut bei Eingabe auf regulären Ausdrücke-->
+                Onkeyup-Funktion überprüft bei Eingabe auf regulären Ausdrücke-->
                 <input type="text" id="vorname" name="vorname" placeholder="*Vorname" value="" onKeyUp="validate()"/><br /> 
             </td><td></td>
             </tr>

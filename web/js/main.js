@@ -49,7 +49,7 @@ function validate() {
                 break;
         }
 
-        //alert(key + " " + $(key).value);
+       
         if (!pattern.test($(key).value)) {
             field[key] = false;
             $(key).style.borderColor = "#FF0000";
@@ -67,16 +67,17 @@ function validate() {
     }
 
     if (validation == true) {
-        //alert("ok");
         $('registrierung').removeAttribute("disabled");
         $('registrierung').style.borderColor = "";
+        
     } else {
-        //alert("no");
+        
+        $('passmsg').innerHTML = "";
         $('registrierung').setAttribute('disabled', 'disabled');
         $('registrierung').style.borderColor = "#FF0000";
     }
 
-// passwort
+
     if ($('kennwort').value != $('kennwortwdhl').value)
     {
         $('kennwortwdhl').style.borderColor = "#FF0000";
@@ -84,7 +85,7 @@ function validate() {
         $('registrierung').setAttribute('disabled', 'disabled');
         $('registrierung').style.borderColor = "#FF0000";
     }
-    if ($('kennwort').value == $('kennwortwdhl').value)
+    if ($('kennwort').value == $('kennwortwdhl').value && validation)
     {
         $('kennwortwdhl').style.borderColor = "";
         $('passmsg').innerHTML = "";
