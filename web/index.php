@@ -52,6 +52,55 @@ if (!empty($_POST["benutzername"]) && !empty($_POST["kennwort"])) {
     <h1 class="studh2">  Willkommen!</h1>
     <p class="textstart">  Die Seite steht jedem als eine Austauschplattform zur verfügung
         und <br>ermöglicht Projekte zu suchen oder eigene zu veröffentlichen!</p>
+    
+    
+    <div id ="slideshow">
+<?php
+# Diashow mit PHP und JavaScript
+
+# Verzeichnis der Bilder
+$verzeichnis = "bilderslide/";
+
+# Geschwindigkeit in Millisekunden
+# 3000 = 3 Sekunden
+$peed = 1000;
+
+echo "
+<div style='text-align: center;'><img id='dummy' src='#'></div>
+
+<script type='text/javascript'>
+var bild = new Array();
+var i = 0;
+";
+
+$ordner = openDir($verzeichnis);
+$by = 0;
+while ($file = readDir($ordner)) {
+ if($file != "." && $file != "..") {
+  echo "bild[$by]='$verzeichnis$file';\n";
+  $by++;
+ }
+}
+closeDir($ordner);
+
+echo "
+function anzeigen() {
+ if (i < bild.length) {
+  document.getElementById('dummy').src=bild[i];
+  i++;
+ }
+ else {
+  i = 0;
+ }
+  setTimeout('anzeigen()', $peed);
+}
+anzeigen();
+</script>
+";
+?>
+</div>
+    
+    
 </div>
 <!-- -->
 <div id="info">   

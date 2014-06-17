@@ -8,6 +8,12 @@ and open the template in the editor.
     Author     : seyma
 */
 
+#slideshow{
+    
+    height: 300px;
+    width: 500px;
+}
+
 body {
     font: normal 100.01%;
     overflow-x: hidden;
@@ -41,7 +47,6 @@ input, select {
 #tabelleLogin{
     background-color:#F8F8ff; 
     width:350px; 
-
     border:6px solid #ddd; 
     margin-top: 70px;
     margin-left:-875px;
@@ -54,7 +59,6 @@ input, select {
     color:#fff; 
     width:200px; 
     border:6px; 
-
 }
 
 
@@ -63,12 +67,7 @@ input, select {
     padding: 20px;
     background-color: white;
     width:1293px;
-
-
 }
-
-
-
 
 #Tabelle1{
     margin-top:  30px; 
