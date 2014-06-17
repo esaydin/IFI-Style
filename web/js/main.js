@@ -99,6 +99,4 @@ function validate() {
         $('registrierung').style.borderColor = "#FF0000";
     }
 
-
-
 }
