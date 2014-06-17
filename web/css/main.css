@@ -421,3 +421,12 @@ ul#Navigation a:hover, ul#Navigation span {
     margin-left: -50px;
 }
 
+#projekthinzufuegen{margin-left: -900px;}
+#projektteilnehmenbetreff {
+    border-radius: 4px;
+    height: 25px;
+}
+#projektteilnehmenbemerken {
+    border-radius: 4px;
+   
+}
