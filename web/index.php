@@ -107,7 +107,7 @@ anzeigen();
     <div id = "InhaltHöhe">
         <!-- Loginbereich -->
         <div id="login">
-            <h2 class="anmelden"> Anmelden</h1>
+            <h2 class="anmelden"> Anmelden</h2>
                 <!--Formular für den Loginbereich, mit Benutzername und verschlüsstem Passwort -->
                 <form method="post" action="index.php">
                     <table id="tabelleLogin">
@@ -121,9 +121,10 @@ anzeigen();
                     </table>
                 </form>
                 <h4 class="reg"> Neu bei Search ProStud?<br> Registriere Dich!</h4>  
-
-                <a href="registrieren.php" id="registrierung" value="Neu Registrieren" style="margin-left: 50px"></a>
+                <td>
+                    <a href="registrieren.php" name="registrierung1" value="neu" id="registrierung1" style="margin: 40px">Neu registrieren</a>
                 <br />
+                </td>
 
 
         </div>
