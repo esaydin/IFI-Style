@@ -9,14 +9,15 @@ $connection = new DbConnection();
 
 //==============================================================================
 $skillsAngelegt = false;
-
+//wenn man auf senden klickt wird erst alles gelöscht
 if (isset($_POST['senden'])) {
     $sql = "DELETE FROM benutzerskillzuordnung"
             . " WHERE idbenutzer = '" . $_SESSION["id"] . "';";
     $connection->connection($sql);
+    //wenn skills ausgewählt wurde werden diese in die datenbank gespeichert
+    //ind die tabelle benutzerskillzuornung
     if (!empty($_POST["skill"])) {
-        // Projekt speichern
-        // projektskills speicher
+      
         foreach ($_POST["skill"] as $key => $value) {
             $sql = "INSERT INTO benutzerskillzuordnung (idbenutzer, idskill)"
                     . " SELECT " . $_SESSION["id"] . ", $value"
@@ -28,6 +29,7 @@ if (isset($_POST['senden'])) {
                     . " );";
             $connection->connection($sql);
         }
+        //wenn die daten gespeichert werden wird skillsAngelegt auf true gesetzt
         $skillsAngelegt = true;
     }
 }
@@ -60,9 +62,9 @@ if (!is_bool($result)) {
             </div>
 
             <div id="inhalt">
-                  <div id="InhaltHöhe">
 
                 <?php
+                //Daten von der eingeloggten person werden von der Session geholt
                 echo "Benutzername: " . $_SESSION["benutzername"] . "<br>"
                 . "Vorname: " . $_SESSION["vorname"] . "<br>"
                 . "Nachname: " . $_SESSION["nachname"] . "<br>"
@@ -73,6 +75,8 @@ if (!is_bool($result)) {
                 <form  method="post">
 
                     <?php
+                    //die liste der skills wird von der Datenbank geholt und mit checkbox versehen
+    
                     echo "<br>";
                     $sql = "SELECT * FROM skill";
                     $result = $connection->connection($sql);
@@ -80,18 +84,20 @@ if (!is_bool($result)) {
                         foreach ($result as $key => $value) {
                             ?>
                             <input id="skill" type="checkbox" name="skill[]" value="<?php echo $value['id']; ?>"
+                             <!--wenn schon   skills vorhanden sind, sind sie markiert-->      
                             <?php if (!is_bool(strpos($ids, $value['id']))) echo "checked"; ?>
                                    > <?php echo $value['skill']; ?><br>
                                <?php } ?>
                            <?php } ?>
                     <input id="senden" type="submit" name="senden" value="Senden" id="senden">
                 </form>
-                  </div></div>
+               
+            </div>
+
             <div id="info">
-                  <div id="InhaltHöhe">
                 <?php
                 echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
                 echo "<a href=\"logout.php\">Logout</a>";
                 ?>
-                  </div></div>
+            </div>
     <?php include_once 'footer.php'; ?>
