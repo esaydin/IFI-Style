@@ -18,7 +18,7 @@ $db = new DbConnection();
                 </ul> 
             </div>
 
-            <!--Textausgabe, wenn man sich als Student eingeloggt hat-->
+            <!--Textausgabe, wenn man  sich als Student eingeloggt hat-->
             <div id="inhalt">
                 <h2 class="studh2">Sie sind als Student eingeloggt</h2><br/>
                 <p class="textstud">Als Student haben Sie die Möglichkeiten Skills die Sie besitzen über das Profil zu speichern.<br/>
