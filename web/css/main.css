@@ -244,6 +244,7 @@ ul#Navigation a:hover, ul#Navigation span {
     color:#fff; 
     width:200px; 
     border:2px solid #ddd; 
+    margin-left: -20px;
 
 }
 
