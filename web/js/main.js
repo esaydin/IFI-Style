@@ -84,7 +84,7 @@ function validate() {
         $('registrierung').setAttribute('disabled', 'disabled');
         $('registrierung').style.borderColor = "#FF0000";
     }
-    if ($('kennwort').value == $('kennwortwdhl').value && validation)
+    if ($('kennwort').value == $('kennwortwdhl').value)
     {
         $('kennwortwdhl').style.borderColor = "";
         $('passmsg').innerHTML = "";

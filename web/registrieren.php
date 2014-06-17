@@ -9,7 +9,7 @@
                 Kennwortwdhl, Strasse, Hausnummer, PLZ, Ort und Email
                 Onkeyup-Funktion überprüfut bei Eingabe auf regulären Ausdrücke-->
                 <input type="text" id="vorname" name="vorname" placeholder="*Vorname" value="" onKeyUp="validate()"/><br /> 
-            </td><td id="hinweis">Zeichenkette darf nur Buchstaben und Umlaute enthalten.</td>
+            </td><td></td>
             </tr>
             <tr>
                 <td>
@@ -21,13 +21,13 @@
                 <td>
                     <input type="text" id="benutzername" name="benutzername" placeholder="*Benutzername" value="" onKeyUp="validate()"/><br />
                 </td>
-                <td id="hinweis">Zeichenkette darf nur Buchstaben und Ziffern enthalten</td>
+                <td></td>
             </tr>
             <tr>
                 <td>
                     <input type="password" id="kennwort" name="kennwort" placeholder="*Kennwort" value="" onKeyUp="validate()"/><br />
                 </td>
-                <td id="hinweis">Zeichenkette darf nur Buchstaben und Ziffern enthalten</td>
+                <td></td>
             </tr>
             <tr>
                 <td>
@@ -39,27 +39,27 @@
                 <td>
                     <input type="text" id="strasse" name="strasse" placeholder=" Strasse" value="" onKeyUp="validate()"/><br />
                 </td>
-                <td id="hinweis">Zeichenkette darf nur Buchstaben,Umlaute und Sonderzeichen(-| ) enthalten</td>
+                <td></td>
             </tr>
             <tr>
                 <td>
                     <input type="text" id="hausnr" name="hausnr" placeholder=" Hausnummer" value="" onKeyUp="validate()"/><br />
-                </td><td id="hinweis">Zeichenkette darf nur Ziffern und Buchstaben enthalten</td>
+                </td><td></td>
             </tr>
             <tr>
                 <td>
                     <input type="text" id="plz" name="plz" placeholder=" PLZ" value="" onKeyUp="validate()" /><br />
-                </td><td id="hinweis">Zeichenkette darf nur Ziffern enthalten</td>
+                </td><td></td>
             </tr>
             <tr>
                 <td>
                     <input type="text" id="ort" name="ort" placeholder=" Ort" value="" onKeyUp="validate()"/>
-                </td><td id="hinweis">Zeichenkette darf nur Buchstaben enthalten</td>
+                </td><td></td>
             </tr>
             <tr>
                 <td>
                     <input type="text" id="email" name="email" placeholder="*Email" value="" onKeyUP="validate()"/><br />
-                </td><td id="hinweis">Zeichenkette darf nur Buchstaben, Ziffern, Bindestrich (-) und Unterstrich (_) enthalten</td>
+                </td><td></td>
             </tr>
             <tr>
                 <td>
