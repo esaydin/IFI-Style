@@ -28,17 +28,29 @@ and open the template in the editor.
 
                 <h1>Projektteilnahme beantragen</h1>
                 <form action="email.php" method="post">
-                    <!-- Hier die eigentlichen Formularfelder eintragen. Die folgenden sind Beispielangaben. -->
-                    <dl> <?php if (isset($_POST["proname"])) echo $_POST["proname"]; ?>
-                        <dt>Bemerkungen:</dt>
-                        <dd><textarea name="Bemerkungen" rows="3" cols="20">Bemerkungen</textarea></dd>
-                    </dl>
-                    <!-- Ende der Beispielangaben -->
-                    <p>
-                        <input type="submit" value="Senden" />
-                        <input type="reset" value="Zurücksetzen" />
-                    </p>
+                    <table id="projekthinzufuegen">
+                        <tr>
+                            <td>
+                                <!-- Hier die eigentlichen Formularfelder eintragen. Die folgenden sind Beispielangaben. -->
+                                <dl> Titel: <?php if (isset($_POST["proname"])) echo $_POST["proname"]; ?> </dl>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <dt>Bemerkungen:</dt>
+                                <dd><textarea name="Bemerkungen" rows="3" cols="20">Bemerkungen</textarea></dd>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    <input type="submit" value="Senden" />
+                                    <input type="reset" value="Zurücksetzen" />
+                                </p>
+                            </td>
+                        </tr>
                 </form>
+                </table>
             </div>
             <div id="info">
                 <?php
