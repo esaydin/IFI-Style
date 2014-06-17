@@ -18,7 +18,7 @@ and open the template in the editor.
             <div id='cssmenu'> 
                 <ul> 
                     <li class='active'><a href='page_student.php'><span>Start</span></a></li> 
-                    <li><a href=''><span>Profil</span></a></li>
+                    <li><a href='profil_student.php'><span>Profil</span></a></li>
                     <li class='last'><a href='sucheprojekt.php'><span>Suche Projekt</span></a>
                     </li> 
                 </ul> 
@@ -33,7 +33,7 @@ and open the template in the editor.
                         <tr>
                             <td>
                                 <!-- Hier die eigentlichen Formularfelder eintragen. Die folgenden sind Beispielangaben. -->
-                                <dl> Titel: <?php if (isset($_POST["proname"])) echo $_POST["proname"]; ?> </dl>
+                                <dl> Titel: <?php if (isset($_POST["proname"])) echo $_POST["proname"]; ?> </dl><!--titel wom Projekt wird gesetzt-->
                             </td>
                         </tr>
                         <tr>
@@ -60,8 +60,7 @@ and open the template in the editor.
             </div>
             <div id="info">
                 <?php
-                //echo $_SESSION['benutzername'] ;                 
-
+              
                 echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
                 echo "<a href=\"logout.php\">Logout</a>";
                 ?>

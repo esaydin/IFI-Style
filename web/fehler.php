@@ -19,7 +19,7 @@ $db = new DbConnection();
                 </ul> 
             </div>
 
-            <!--Textausgabe, wenn man sich als Student eingeloggt hat-->
+            <!--textausgabe wenn die mail nicht versendet werden kann-->
             <div id="inhalt">
               <p>Leider ist ein Fehler aufgetreten, und Ihre Formular konnten nicht an uns gesendet werden.</p>
                  <a href="page_student.php">Zurück zur Startseite</a>

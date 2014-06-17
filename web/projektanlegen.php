@@ -45,6 +45,7 @@ and open the template in the editor.
                                 <p>Kreuzen Sie die gew&uuml;nschten Skills an:</p>
                                 <p>
                                     <?php
+                                    //liste der skills wird von der db geholt um auszuwählen welche skills man für dieses projekt braucht
                                     echo "<br>";
                                     $sql = "SELECT * FROM skill";
                                     $result = $connection->connection($sql);

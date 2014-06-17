@@ -26,6 +26,7 @@ $connection = new DbConnection();
             <div id="inhalt">
 
                 <?php
+                //Daten von der eingeloggten person werden von der Session geholt
                 echo "Benutzername: " . $_SESSION["benutzername"] . "<br>"
                 . "Vorname: " . $_SESSION["vorname"] . "<br>"
                 . "Nachname: " . $_SESSION["nachname"] . "<br>"
@@ -37,6 +38,7 @@ $connection = new DbConnection();
             </div>
             <div id="info">
                 <?php
+                //anzeige wer eingeloggt ist und logout
                 echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
                 echo "<a href=\"logout.php\">Logout</a>";
                 ?>

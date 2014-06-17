@@ -29,13 +29,14 @@ and open the template in the editor.
             <div id="inhalt">
                 <h1>Gefundene Studenten:</h1>     
                 <?php
-                //Speichervariable
+             
                 if (empty($_POST['skill'])) {
                     header('Location: index.php');
                 }
                 //Datenbankverbindung wird hergestellt
                 include_once 'db_connection.php';
                 $db = new DbConnection();
+                //variable für skill
                 $var = $_POST['skill'];
                 
 
@@ -43,7 +44,7 @@ and open the template in the editor.
                 $condition = join(',', $_POST['skill']); // bsp: html, php, bla
                 $skillanzahl = count($_POST['skill']);
 
-                // Und verknüpfung,alle ausgesuchten skills müssen im Projekt sein
+                // Und verknüpfung,alle ausgesuchten skills müssen beim Student vorhanen sein
                 if (isset($_POST['verknuepfung'])) {
                     $sql = "SELECT group_concat(tmp.id SEPARATOR ', ') As ids"//, tmp.titel, tmp.beschreibung, tmp.skills
                             . " FROM (
@@ -55,7 +56,7 @@ and open the template in the editor.
                         GROUP BY b.benutzername ORDER BY cnt DESC) As tmp
                         WHERE tmp.cnt = '$skillanzahl';";
                 } else {
-                    // oder verknüpfung, wenn nur eine Eigenschaft im Projekt vorhanden ist, reicht es zur Ausgabe
+                    // oder verknüpfung, wenn nur eine Eigenschaft muss beim  Studnet vorhanden sein, reicht es zur Ausgabe
                     $sql = "SELECT group_concat(tmp.id SEPARATOR ', ') AS ids"
                             . " FROM (SELECT b.id"
                             . "   FROM benutzer b"
@@ -65,9 +66,7 @@ and open the template in the editor.
                             . "   GROUP BY b.benutzername) As tmp";
                 }
 
-                //echo $sql;
                 $result = $db->connection($sql);
-
 
                 $ids = $result[0];
                 $sql2 = "SELECT benutzer.benutzername, group_concat(skill.skill SEPARATOR ', ') AS skills"
@@ -80,10 +79,10 @@ and open the template in the editor.
                 $result = $db->connection($sql2);
 
                 //Gibt die Skills mit den zugehörigen Benutzern aus.
+                //wenn das ergebniss nicht leer ist wird die ausgabe gemacht
                 if (!empty($result)) {
                     foreach ($result as $value) {
                         ?>
-
                         </br> Benutzer: <?php echo $value["benutzername"]; ?>
                         </br> Skills: <?php echo $value["skills"]; ?>
                         </br>

@@ -23,38 +23,23 @@ and open the template in the editor.
             </div>
 
 
-<!--<div id='cssmenu'> 
-    <ul> 
-        <li class='active'><a href='page_student.php'><span>Start</span></a></li> 
-        <li><a href='<?php
-           // if ($_SESSION["idbenutzertyp"] == 1) {
-             //   echo "page_student.php";
-           // } else {
-            //    echo "page_auftraggeber.php";
-           // }
-            ?>'><span>Profil</span></a></li>
-        <li class='last'><a href='sucheprojekt.php'><span>Suche Projekt</span></a>
-        </li> 
-    </ul> 
-</div>-->
-
 <div id="inhalt">
     <h1>Gefundene Projekte:</h1>     
     <?php
     if (empty($_POST['skill'])) {
-        //header('Location: index.php');
+        header('Location: index.php');
     }
 
     include_once 'db_connection.php';
     $db = new DbConnection();
     $var = $_POST['skill'];
-//print_r($var);
+
 
     $s = array();
     $condition = join(',', $_POST['skill']); // bsp: html, php, bla
     $skillanzahl = count($_POST['skill']);
 
-// gruppen ids
+// Und verknüpfung,alle ausgesuchten skills müssen im Projekt sein
     if (isset($_POST['verknuepfung'])) {
         $sql = "SELECT group_concat(tmp.id SEPARATOR ', ') As ids"//, tmp.titel, tmp.beschreibung, tmp.skills
                 . " FROM (
@@ -66,6 +51,7 @@ and open the template in the editor.
                     GROUP BY p.titel ORDER BY cnt DESC) As tmp
                     WHERE tmp.cnt = '$skillanzahl';";
     } else {
+        //nicht alle asugewählten skills mussen in ein Projekt vorkommen, es reicht auch wenn nur eins dabei ist
         $sql = "SELECT group_concat(tmp.id SEPARATOR ', ') AS ids"
                 . " FROM (SELECT p.id"
                 . "   FROM projekt p"
@@ -74,10 +60,8 @@ and open the template in the editor.
                 . "   WHERE psz.idskill IN (" . $condition . ")"
                 . "   GROUP BY p.titel) As tmp";
     }
-//echo $sql;
-    $result = $db->connection($sql);
 
-//print_r($result);
+    $result = $db->connection($sql);
 
     $ids = $result[0];
     $sql2 = "SELECT projekt.titel, projekt.beschreibung, group_concat(skill.skill SEPARATOR ', ') AS skills"
@@ -87,8 +71,7 @@ and open the template in the editor.
             . " WHERE idprojekt in (" . $ids["ids"] . ")"
             . " GROUP BY projekt.titel";
     $result = $db->connection($sql2);
-//print_r($result);
-
+//wernn result nicht leer ist werden die projekte angezeigt
     if (!empty($result)) {
         foreach ($result as $value) {
             ?>
