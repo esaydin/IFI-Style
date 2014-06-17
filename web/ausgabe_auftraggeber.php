@@ -14,15 +14,16 @@ and open the template in the editor.
 -->
 <?php include_once 'header.php'; ?>
             <!--Navigationsbereich-->
-            <div id='cssmenu'> 
-                <ul> 
-                    <!--Reiter für Start, Profil, Student suchen und Projekt-->
-                    <li class='active'><a href='page_auftraggeber.php'><span>Start</span></a></li> 
-                    <li><a href='profil_auftraggeber.php'><span>Profil</span></a></li>
-                    <li><a href='suchestudenten.php'><span>Student suchen</span></a></li>
-                    <li class='last'><a href='projektanlegen.php'><span>Projekt Anlegen</span></a></li>
-                </ul> 
-            </div>
+ <div id='cssmenu'> 
+    <ul> 
+        <li class='active'><a href='page_auftraggeber.php.'><span>Start</span></a></li> 
+        <li><a href='profil_auftraggeber.php'><span>Profil</span></a></li>
+        <li><a href='suchestudenten.php'><span>Suche Student</span></a></li>
+        <li><a href='suchestudenten.php'><span>Projekt Anlegen</span></a></li>
+        <li class='last'><a href='projekte_auftraggeber.php'><span>Meine Projekte</span></a>
+        </li>
+    </ul> 
+</div>
 
             <!-- Der Contentbereich-->
             <div id="inhalt">
