@@ -9,6 +9,7 @@ $connection = new DbConnection();
 
 $projektAngelegt = false;
 
+
 if (!empty($_POST["titel"]) && !empty($_POST["projektbeschreibung"]) && !empty($_POST["skill"])) {
     // Projekt speichern
     $sql = "INSERT INTO projekt"
@@ -21,8 +22,11 @@ if (!empty($_POST["titel"]) && !empty($_POST["projektbeschreibung"]) && !empty($
             $sql2 = "INSERT INTO projektskillzuordnung"
                     . " VALUES ( (SELECT id FROM projekt WHERE titel = '" . $_POST["titel"] . "'), '" . $value . "' )";
             $result = $connection->connection($sql2);
-            
         }
+         $sql3 = "INSERT INTO projektbenutzerzuordnung"
+                    . " VALUES ( (SELECT id FROM projekt WHERE titel = '" . $_POST["titel"] . "'), '" . $_SESSION['id'] . "', '" . $_SESSION['idbenutzertyp'] . "' )";
+           $connection->connection($sql3);
+
         $projektAngelegt = true;
     }
 }
