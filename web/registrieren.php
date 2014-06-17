@@ -3,63 +3,74 @@
 <div id="inhalt">
     <!-- Formular für Registrierung,verweist auf Registrierungcheck-->
     <form method="post" action="registrierungcheck.php" id="formular">
-        <table>
+        <table id="name"><h1>Konto erstellen</h1>
+             <td colspan="2" align="right">
+                    <a href="index.php">Zurück zur Startseite</a>
+                </td>
+            <tr> 
             <td>
                 <!--EIngabefelder mit Hinweisen für Registrierungsformular mit Vorname, Nachname, Benutzername, Kennwort,
                 Kennwortwdhl, Strasse, Hausnummer, PLZ, Ort und Email
                 Onkeyup-Funktion überprüft bei Eingabe auf regulären Ausdrücke-->
-                <input type="text" id="vorname" name="vorname" placeholder="*Vorname" value="" onKeyUp="validate()"/><br /> 
-            </td><td></td>
+                <input type="text" id="vorname" name="vorname" placeholder="*Vorname" value="" onKeyUp="validate()"/>
+                
+            </td>
+            <td> <input type="text" id="nachname" name="nachname" placeholder="*Nachname" value="" onKeyUp="validate()"/><br /></td>
             </tr>
+           
             <tr>
                 <td>
-                    <input type="text" id="nachname" name="nachname" placeholder="*Nachname" value="" onKeyUp="validate()"/><br />
+                   
+                </td>
+                <td></td>
+            </tr>
+           <table id="daten"
+            <tr>
+                <td>
+                    <input type="text" id="benutzername" name="benutzername" placeholder="*Benutzername" value="" onKeyUp="validate()"/><br /><br />
                 </td>
                 <td></td>
             </tr>
             <tr>
                 <td>
-                    <input type="text" id="benutzername" name="benutzername" placeholder="*Benutzername" value="" onKeyUp="validate()"/><br />
+                    <input type="password" id="kennwort" name="kennwort" placeholder="*Kennwort" value="" onKeyUp="validate()"/><br /><br />
                 </td>
                 <td></td>
             </tr>
             <tr>
                 <td>
-                    <input type="password" id="kennwort" name="kennwort" placeholder="*Kennwort" value="" onKeyUp="validate()"/><br />
-                </td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="password" id="kennwortwdhl" name="kennwortwdhl" placeholder="*Kennwort erneut" value="" onKeyUp="validate()"/><br />
+                    <input type="password" id="kennwortwdhl" name="kennwortwdhl" placeholder="*Kennwort erneut" value="" onKeyUp="validate()"/><br /><br />
                 </td>
                 <td id="passmsg"></td>
             </tr>
             <tr>
                 <td>
-                    <input type="text" id="strasse" name="strasse" placeholder=" Strasse" value="" onKeyUp="validate()"/><br />
+                    <input type="text" id="strasse" name="strasse" placeholder=" Strasse" value="" onKeyUp="validate()"/><br /><br />
                 </td>
                 <td></td>
             </tr>
             <tr>
                 <td>
-                    <input type="text" id="hausnr" name="hausnr" placeholder=" Hausnummer" value="" onKeyUp="validate()"/><br />
+                    <input type="text" id="hausnr" name="hausnr" placeholder=" Hausnummer" value="" onKeyUp="validate()"/><br /><br />
                 </td><td></td>
             </tr>
             <tr>
                 <td>
-                    <input type="text" id="plz" name="plz" placeholder=" PLZ" value="" onKeyUp="validate()" /><br />
-                </td><td></td>
+                    <input type="text" id="plz" name="plz" placeholder=" PLZ" value="" onKeyUp="validate()" /><br /><br />
+                </td>
+                <td></td>
             </tr>
             <tr>
                 <td>
-                    <input type="text" id="ort" name="ort" placeholder=" Ort" value="" onKeyUp="validate()"/>
-                </td><td></td>
+                    <input type="text" id="ort" name="ort" placeholder=" Ort" value="" onKeyUp="validate()"/><br /><br />
+                </td>
+                <td></td>
             </tr>
             <tr>
                 <td>
-                    <input type="text" id="email" name="email" placeholder="*Email" value="" onKeyUP="validate()"/><br />
-                </td><td></td>
+                    <input type="text" id="email" name="email" placeholder="*Email" value="" onKeyUP="validate()"/><br /><br />
+                </td>
+                <td></td>
             </tr>
             <tr>
                 <td>
@@ -95,7 +106,7 @@
                 </td>
                 <!--Button für das Registrieren, bei nicht Erfdüllung der Pflichtfelder ist der Button gesperrt-->
                 <td colspan="2" align="right">
-                    <input type="submit" name="registrieren" value="Registrieren" id="registrierung" disabled>
+                    <input type="submit" name="registrieren" value="Konto Erstellen" id="registrierung" disabled>
                 </td>
             </tr> <br />
             <tr>
@@ -103,9 +114,7 @@
 
                 </td>
                 <!--Link zur Startseite-->
-                <td colspan="2" align="right">
-                    <a href="index.php">Zurück zur Startseite</a>
-                </td>
+               
             </tr> <br />
 
             <br></br>

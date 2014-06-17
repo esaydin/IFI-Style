@@ -211,7 +211,7 @@ ul#Navigation a:hover, ul#Navigation span {
 #formular{
     background-color:#F8F8ff; 
     width:380px; 
-    border:6px solid #FFF; 
+    
     margin-top: 0px;
     margin-left:120px;
 
@@ -219,6 +219,14 @@ ul#Navigation a:hover, ul#Navigation span {
 #vorname,#nachname,#benutzername, #kennwort, #kennwortwdhl, #strasse, #hausnr, #plz, #ort, #email, #combo {
     border-radius: 4px;
     height: 30px;
+}
+#benutzername, #kennwort, #kennwortwdhl, #strasse, #hausnr, #plz, #ort, #email{
+  width: 420px; 
+}
+
+#daten{
+    margin-top: -70px;
+    
 }
 
 
@@ -409,5 +417,7 @@ ul#Navigation a:hover, ul#Navigation span {
 
 }
 
-
+#zuruckButton{
+    margin-left: -50px;
+}
 
