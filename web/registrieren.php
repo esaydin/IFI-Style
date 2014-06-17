@@ -8,6 +8,35 @@
                     <a href="index.php">Zurück zur Startseite</a>
                 </td>
             <tr> 
+                
+            <tr>
+                <td>
+
+                    <?php
+                    $sql = "SELECT * FROM benutzer_typ";
+                    //Verbindung zur Datenbank
+                    include_once "db_connection.php";
+                    $db = new DbConnection();
+
+                    $result = $db->connection($sql);
+                    if ($result) {
+                        ?>
+                        <!--ComboBox für die Auswahl ob Student oder Auftraggeber-->
+                        <select id="combo" name="benutzer_typ">
+                            <?php
+                            foreach ($result as $value) {
+                                ?>
+                                <!--Jeder Benutzer wird je nach ID zu Auftraggeber oder Student in der Datenbank zugeordnet-->
+                                <option value = "<?php echo $value["id"] ?>"><?php echo $value["name"] ?></option>
+                                <?php
+                            }
+                            ?>
+                        </select>
+                    <?php }
+                    ?>
+
+                </td><td></td>
+            </tr>    
             <td>
                 <!--EIngabefelder mit Hinweisen für Registrierungsformular mit Vorname, Nachname, Benutzername, Kennwort,
                 Kennwortwdhl, Strasse, Hausnummer, PLZ, Ort und Email
@@ -28,6 +57,12 @@
             <tr>
                 <td>
                     <input type="text" id="benutzername" name="benutzername" placeholder="*Benutzername" value="" onKeyUp="validate()"/><br /><br />
+                </td>
+                <td></td>
+            </tr>
+              <tr>
+                <td>
+                    <input type="text" id="email" name="email" placeholder="*Email" value="" onKeyUP="validate()"/><br /><br />
                 </td>
                 <td></td>
             </tr>
@@ -66,40 +101,8 @@
                 </td>
                 <td></td>
             </tr>
-            <tr>
-                <td>
-                    <input type="text" id="email" name="email" placeholder="*Email" value="" onKeyUP="validate()"/><br /><br />
-                </td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>
-
-                    <?php
-                    $sql = "SELECT * FROM benutzer_typ";
-                    //Verbindung zur Datenbank
-                    include_once "db_connection.php";
-                    $db = new DbConnection();
-
-                    $result = $db->connection($sql);
-                    if ($result) {
-                        ?>
-                        <!--ComboBox für die Auswahl ob Student oder Auftraggeber-->
-                        <select id="combo" name="benutzer_typ">
-                            <?php
-                            foreach ($result as $value) {
-                                ?>
-                                <!--Jeder Benutzer wird je nach ID zu Auftraggeber oder Student in der Datenbank zugeordnet-->
-                                <option value = "<?php echo $value["id"] ?>"><?php echo $value["name"] ?></option>
-                                <?php
-                            }
-                            ?>
-                        </select>
-                    <?php }
-                    ?>
-
-                </td><td></td>
-            </tr>
+          
+            
             <tr>
                 <td>
 
