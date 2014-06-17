@@ -2,18 +2,11 @@
 include_once 'db_connection.php';
 $db = new DbConnection();
 ?>
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <?php include_once 'header.php'; ?>
             <div id="inhalt">
-            
-                
-                   <?php
-                   //Pflichtfelder
+        <?php
+        //Pflichtfelder
         if (!empty($_POST["benutzername"]) && !empty($_POST["kennwort"]) && !empty($_POST["kennwortwdhl"]) && !empty($_POST["vorname"]) && !empty($_POST["nachname"]) && !empty($_POST["email"])) {
             //Da die Email adresse in der DB unique ist darf es nur einmal existieren, in diesem Abschnitt wird das überprüft
             //Falls die Adresse vorhanden ist wird es abgebrochen
@@ -76,10 +69,7 @@ and open the template in the editor.
 
             </div>
 
-            <div id="info">
-               
- 
-            </div>
+            <div id="info"></div>
 
 
        <?php include_once 'footer.php'; ?>
