@@ -138,25 +138,26 @@ input, select {
     background-color: black;
     color:#ffffff;
     text-align:center;
-    margin-left:30px; 
+    margin-left:-5px; 
     //width:1042px;
-    width:1235px;
+    width:1320px;
+    height: 100px; 
 
 }
 #inhalt {
 
     background-color:#F8F8ff;
-    margin-left:30px;
+    margin-left:-5px;
     padding: 20px;
     margin-top:10px;
     height: 720px;
     //width:730px;
-    width:745px;
+    width:775px;
 
 }
 #info {
     float: left;
-    width:475px; 
+    width:510px; 
     height: 750px;
     padding: 5px;
     background-color: #F8F8ff;
