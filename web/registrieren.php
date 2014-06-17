@@ -110,7 +110,7 @@
                 </td>
                 <!--Button für das Registrieren, bei nicht Erfdüllung der Pflichtfelder ist der Button gesperrt-->
                 <td colspan="2" align="right">
-                    <input type="submit" name="registrieren" value="Konto Erstellen" id="registrierung" disabled>
+                    <input type="submit" name="registrieren" value="Registrieren" id="registrierung" disabled>
                 </td>
             </tr> <br />
             <tr>

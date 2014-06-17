@@ -71,12 +71,10 @@ if (!empty($_POST["benutzername"]) && !empty($_POST["kennwort"])) {
                 </table>
             </form>
             <h4 class="reg"> Neu bei Search ProStud?<br> Registriere Dich!</h4>  
-            <td colspan="2" align="right">
-                <a href="registrieren.php" id="registrieren1">
-                    <button style="background-color: #FFCC7F ">  Registrieren</button>
-                </a>
-            </td>
+            
+                <a href="registrieren.php" id="registrierung" value="Neu Registrieren" style="margin-left: 50px"></a>
             <br />
+            
             
     </div>
 </div>
