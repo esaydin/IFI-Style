@@ -43,16 +43,20 @@ if (!empty($_POST["benutzername"]) && !empty($_POST["kennwort"])) {
     }
 }
 ?>
-
+<!--Import der Klasse header.php  -->
 <?php include_once 'header.php'; ?>
+<!--Inhalte der Startseite -->
 <div id="inhalt">
     <h1 class="studh2">  Willkommen!</h1>
     <p class="textstart">  Die Seite steht jedem als eine Austauschplattform zur verfügung
         und <br>ermöglicht Projekte zu suchen oder eigene zu veröffentlichen!</p>
 </div>
-<div id="info">              
+<!-- -->
+<div id="info">   
+    <!-- Loginbereich -->
     <div id="login">
         <h2 class="anmelden"> Anmelden</h1>
+            <!--Formular für den Loginbereich, mit Benutzername und verschlüsstem Passwort -->
             <form method="post" action="index.php">
                 <table id="tabelleLogin">
                     <tr>

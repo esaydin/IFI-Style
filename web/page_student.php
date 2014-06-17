@@ -7,12 +7,7 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
 include_once 'db_connection.php';
 $db = new DbConnection();
 ?>
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <?php include_once 'header.php'; ?>
             <div id='cssmenu'> 
                 <ul> 
@@ -27,7 +22,7 @@ and open the template in the editor.
             <div id="inhalt">
                 <h2 class="studh2">Sie sind als Student eingeloggt</h2><br/>
                 <p class="textstud">Als Student haben Sie die Möglichkeiten Skills die Sie besitzen über das Profil zu speichern.<br/>
-                    Diese Informationen werden dafür genutzt,<br/>dass eventuell ein Auftraggeber Sie für sein Projekt finden kann.<br/>
+                    Diese Informationen werden dafür genutzt, dass eventuell ein Auftraggeber Sie für sein Projekt finden kann.<br/>
                     Selber können Sie unter "Suche Projekte" präziese Projekte filtern, die für Sie interessant sein könnten.</p>
             </div>
 
