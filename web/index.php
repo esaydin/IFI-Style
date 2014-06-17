@@ -40,7 +40,9 @@ if (!empty($_POST["benutzername"]) && !empty($_POST["kennwort"])) {
             //Seitenwechsel
             header('Location: ' . $page);
         }
+        
     }
+    
 }
 ?>
 <!--Import der Klasse header.php  -->
@@ -75,6 +77,11 @@ if (!empty($_POST["benutzername"]) && !empty($_POST["kennwort"])) {
                 </a>
             </td>
             <br />
+            
     </div>
 </div>
+
+
+
+
 <?php include_once 'footer.php'; ?>

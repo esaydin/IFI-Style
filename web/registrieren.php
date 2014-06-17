@@ -53,6 +53,7 @@
                 </td>
                 <td></td>
             </tr>
+        </table>
            <table id="daten"
             <tr>
                 <td>

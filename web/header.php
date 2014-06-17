@@ -11,3 +11,7 @@
                 <img id="hsLogo" src="bilder/hsLogo.png"/>
                 <img id="prostud" src="bilder/prostud.png"/>             
             </div>
+        </div>
+        
+    </body>
+</html>

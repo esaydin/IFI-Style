@@ -220,6 +220,14 @@ ul#Navigation a:hover, ul#Navigation span {
     border-radius: 4px;
     height: 30px;
 }
+
+#nachname{
+    margin-left: 17px; 
+}
+
+#vorname, #nachname{
+    width: 200px;
+}
 #benutzername, #kennwort, #kennwortwdhl, #strasse, #hausnr, #plz, #ort, #email{
   width: 420px; 
 }
