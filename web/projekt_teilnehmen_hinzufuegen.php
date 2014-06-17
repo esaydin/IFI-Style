@@ -25,9 +25,10 @@ and open the template in the editor.
             </div>
 
             <div id="inhalt">
-
+                
+                <h1>Feedback</h1>
                 <h1>Projektteilnahme beantragen</h1>
-                <form action="email.php" method="post">
+                <form action="formmail.php" method="post">
                     <table id="projekthinzufuegen">
                         <tr>
                             <td>
@@ -37,8 +38,13 @@ and open the template in the editor.
                         </tr>
                         <tr>
                             <td>
-                                <dt>Bemerkungen:</dt>
-                                <dd><textarea name="Bemerkungen" rows="3" cols="20">Bemerkungen</textarea></dd>
+                               <p><label>Betreff:<br><input type="text" name="Betreff"></label></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><label>Bemerkungen:<br>
+                                    <textarea name="Nachricht" cols="50" rows="8"></textarea></label></p>
                             </td>
                         </tr>
                         <tr>
