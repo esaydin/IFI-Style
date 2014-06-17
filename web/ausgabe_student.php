@@ -39,6 +39,7 @@ and open the template in the editor.
 </div>-->
 
 <div id="inhalt">
+      <div id="InhaltHöhe">
     <h1>Gefundene Projekte:</h1>     
     <?php
     if (empty($_POST['skill'])) {
@@ -105,9 +106,10 @@ and open the template in the editor.
         }
     }
     ?>
-</div>
+      </div> </div>
 
 <div id="info">
+      <div id="InhaltHöhe">
     <?php
 //echo $_SESSION['benutzername'] ;                 
 
@@ -117,5 +119,5 @@ and open the template in the editor.
     </br>
     <a href="sucheprojekt.php">Zurück</a>
 
-</div>
+      </div> </div>
 <?php include_once 'footer.php'; ?>

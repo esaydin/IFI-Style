@@ -22,12 +22,13 @@ $db = new DbConnection();
     </ul> 
 </div>
 <div id="inhalt">
-
+    <div id="InhaltHöhe"></div>
     
    
 </div>
 
 <div id="info">
+      <div id="InhaltHöhe">
 
     <?php               
     //Textausgabe, je nach eingeloggter Benutzer
@@ -35,6 +36,6 @@ $db = new DbConnection();
     //Link zum Logout
     echo "<a href=\"logout.php\">Logout</a>";
     ?>
-</div>
+      </div></div>
 <!--Inkludieren vom Fussbereich-->
 <?php include_once 'footer.php'; ?>

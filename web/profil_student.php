@@ -60,6 +60,7 @@ if (!is_bool($result)) {
             </div>
 
             <div id="inhalt">
+                  <div id="InhaltHöhe">
 
                 <?php
                 echo "Benutzername: " . $_SESSION["benutzername"] . "<br>"
@@ -85,11 +86,12 @@ if (!is_bool($result)) {
                            <?php } ?>
                     <input id="senden" type="submit" name="senden" value="Senden" id="senden">
                 </form>
-            </div>
+                  </div></div>
             <div id="info">
+                  <div id="InhaltHöhe">
                 <?php
                 echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
                 echo "<a href=\"logout.php\">Logout</a>";
                 ?>
-            </div>
+                  </div></div>
     <?php include_once 'footer.php'; ?>

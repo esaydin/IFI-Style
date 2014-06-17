@@ -25,6 +25,7 @@ and open the template in the editor.
             </div>
 
             <div id="inhalt">
+                  <div id="InhaltHöhe">
                 
               
                 <h1>Projektteilnahme beantragen</h1>
@@ -57,8 +58,9 @@ and open the template in the editor.
                         </tr>
                 </form>
                 </table>
-            </div>
+                  </div></div>
             <div id="info">
+                  <div id="InhaltHöhe">
                 <?php
                 //echo $_SESSION['benutzername'] ;                 
 
@@ -67,5 +69,5 @@ and open the template in the editor.
                 ?>
                 </br>
                 <a href="sucheprojekt.php"/>
-            </div>
+                  </div></div>
           <?php include_once 'footer.php'; ?>

@@ -22,12 +22,14 @@ $db = new DbConnection();
 
             <!--Textausgabe, wenn man sich als Student eingeloggt hat-->
             <div id="inhalt">
+                  <div id="InhaltHöhe">
                <p>Ihre Nachricht wurde versendet! Sie werden bezüglich der Teilnahme benachrichtigt.</p> 
                <a href="page_student.php">Zurück zur Startseite</a>
                
-            </div>
+                  </div></div>
 
             <div id="info">
+                  <div id="InhaltHöhe">
                 <?php                
                 //Textausgabe, je nach eingeloggter Benutzer
                 echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
@@ -35,7 +37,7 @@ $db = new DbConnection();
                 echo "<a href=\"logout.php\">Logout</a>";
                 ?>
 
-            </div>
+                  </div></div>
        <!--Inkludieren vom Fussbereich-->
        <?php include_once 'footer.php'; ?>
 

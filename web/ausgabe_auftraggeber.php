@@ -27,6 +27,7 @@ and open the template in the editor.
 
             <!-- Der Contentbereich-->
             <div id="inhalt">
+                  <div id="InhaltHöhe">
                 <h1>Gefundene Studenten:</h1>     
                 <?php
                 //Speichervariable
@@ -91,16 +92,17 @@ and open the template in the editor.
                     }
                 }
                 ?>
-            </div>
+                  </div></div>
             <div id="info">
-
+                <div id = "InhaltHöhe ">
+                
                 <?php
                 //
                 echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
                 echo "<a href=\"logout.php\">Logout</a>";
                 ?>
                 </br>
-                <a href="suchestudenten.php">Zurück</a>
+                <a href="suchestudenten.php">Zurück</a> </div>
             </div>           
         </div>
        <?php include_once 'footer.php'; ?>

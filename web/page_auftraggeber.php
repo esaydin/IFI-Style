@@ -22,14 +22,16 @@ $db = new DbConnection();
     </ul> 
 </div>
 <div id="inhalt">
+      <div id="InhaltHöhe">
 
     <!--Textausgabe bei der Anmeldung als Auftraggeber-->
     <h2> Sie Sind als Auftraggeber eingeloggt</h2><br/>
     <p class="textstud">Als Auftraggeber haben Sie die Möglichkeiten Studenten für ihr Projekt zu finden, die Ihren Ansprüchen entspricht.<br/>
         Selber können Sie unter "Projekt anlegen" Projekte veröffentlichen, die von allen Studenten sichtbar werden.</p>
-</div>
+      </div></div>
 
 <div id="info">
+      <div id="InhaltHöhe">
 
     <?php               
     //Textausgabe, je nach eingeloggter Benutzer
@@ -37,6 +39,6 @@ $db = new DbConnection();
     //Link zum Logout
     echo "<a href=\"logout.php\">Logout</a>";
     ?>
-</div>
+      </div></div>
 <!--Inkludieren vom Fussbereich-->
 <?php include_once 'footer.php'; ?>
