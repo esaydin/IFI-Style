@@ -219,6 +219,7 @@ ul#Navigation a:hover, ul#Navigation span {
 #vorname,#nachname,#benutzername, #kennwort, #kennwortwdhl, #strasse, #hausnr, #plz, #ort, #email, #combo {
     border-radius: 4px;
     height: 30px;
+    font-weight:100;
 }
 #benutzername, #kennwort, #kennwortwdhl, #strasse, #hausnr, #plz, #ort, #email{
   width: 420px; 
