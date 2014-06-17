@@ -104,7 +104,7 @@
                 </td>
                 <!--Link zur Startseite-->
                 <td colspan="2" align="right">
-                    <a href="http://localhost/ifistyle/web/index.php">Zurück zur Startseite</a>
+                    <a href="index.php">Zurück zur Startseite</a>
                 </td>
             </tr> <br />
 

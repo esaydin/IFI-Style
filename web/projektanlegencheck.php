@@ -21,6 +21,7 @@ if (!empty($_POST["titel"]) && !empty($_POST["projektbeschreibung"]) && !empty($
             $sql2 = "INSERT INTO projektskillzuordnung"
                     . " VALUES ( (SELECT id FROM projekt WHERE titel = '" . $_POST["titel"] . "'), '" . $value . "' )";
             $result = $connection->connection($sql2);
+            
         }
         $projektAngelegt = true;
     }
@@ -38,7 +39,7 @@ and open the template in the editor.
             <div id='cssmenu'> 
                 <ul> 
                     <li class='active'><a href='page_auftraggeber.php'><span>Start</span></a></li> 
-                    <li><a href='profil_auftraggeber'><span>Profil</span></a></li>
+                    <li><a href='profil_auftraggeber.php'><span>Profil</span></a></li>
                     <li><a href='suchestudenten.php'><span>Suche Student</span></a></li>
                     <li class='last'><a href='projektanlegen.php'><span>Projekt Anlegen</span></a>
                     </li> 
