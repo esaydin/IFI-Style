@@ -49,7 +49,7 @@ function validate() {
                 break;
         }
 
-       
+
         if (!pattern.test($(key).value)) {
             field[key] = false;
             $(key).style.borderColor = "#FF0000";
@@ -69,9 +69,9 @@ function validate() {
     if (validation == true) {
         $('registrierung').removeAttribute("disabled");
         $('registrierung').style.borderColor = "";
-        
+
     } else {
-        
+
         $('passmsg').innerHTML = "";
         $('registrierung').setAttribute('disabled', 'disabled');
         $('registrierung').style.borderColor = "#FF0000";
