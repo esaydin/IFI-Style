@@ -7,6 +7,8 @@
     <form method="post" action="registrierungcheck.php" id="formular">
         
         <table id="name"><h1>Konto erstellen</h1>
+            <p class="textstud">Auf nur einer Seite richten sie in einpaar Schritten Ihr Konto bei SearchProStud ein und erhalten 
+                Zugriff auf die Austauschplattform.</p>
             
             <tr> 
                 

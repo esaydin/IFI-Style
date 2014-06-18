@@ -19,10 +19,10 @@ $db = new DbConnection();
 
             <!--Textausgabe, wenn man  sich als Student eingeloggt hat-->
             <div id="inhalt">
-                <div id="InhaltHöhe"> <h2 class="studh2">Sie sind als Student eingeloggt</h2><br/>
+                <div id="InhaltHöhe"> <h2 class="studh2">Sie sind als Student eingeloggt</h2>
                 <p class="textstud">Als Student haben Sie die Möglichkeiten Skills die Sie besitzen über das Profil zu speichern.<br/>
-                    Diese Informationen werden dafür genutzt, dass eventuell ein Auftraggeber Sie für sein Projekt finden kann.<br/>
-                    Selber können Sie unter "Suche Projekte" präziese Projekte filtern, die für Sie interessant sein könnten.</p>
+                    Diese Informationen werden dafür genutzt, dass eventuell ein Auftraggeber<br> Sie für sein Projekt finden kann.<br/>
+                    Selber können Sie unter "Suche Projekte" präziese Projekte filtern,<br> die für Sie interessant sein könnten.</p>
             </div>
             </div>
 
@@ -32,7 +32,7 @@ $db = new DbConnection();
                 //Textausgabe, je nach eingeloggter Benutzer
                 echo "<br>Eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
                 //Link zum Logout
-                echo "<a href=\"logout.php\">Logout</a>";
+                echo "<a href=\"logout.php\">Abmelden</a>";
                 ?>
             </div>
             </div>

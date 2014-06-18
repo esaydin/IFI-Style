@@ -112,25 +112,22 @@ anzeigen();
                 <form method="post" action="index.php">
                     <table id="tabelleLogin">
                         <tr>
-                            <td><input type="text" name="benutzername" placeholder="benutzername" value="" /></td>
+                            <td><input type="text" name="benutzername" placeholder="Benutzername" value="" /></td>
                         </tr> 
                         <tr>
-                            <td><input type="password" name="kennwort" placeholder="kennwort" value="" /></td>
-                            <td><input type="submit"  name="anmelden" style="background-color: #B2CCE5" value="Anmelden"/></td>
+                            <td><input type="password" name="kennwort" placeholder="Kennwort" value="" /></td>
+                        <td><input  id="anmelden" type="submit"  name="anmelden" style= "background-color: #B2CCE5" value="Anmelden"/></td>
                         </tr>
                     </table>
                 </form>
                 <h4 class="reg"> Neu bei Search ProStud?<br> Registriere Dich!</h4>  
-                <td>
-                    <a href="registrieren.php" name="registrierung1" value="neu" id="registrierung1" style="margin: 40px">Neu registrieren</a>
-                <br />
-                </td>
+                             <td>
+                            <a href="registrieren.php" name="registrierung1" value="neu" id="registrierung1" style="margin: 40px">Neu registrieren</a>
+                            <br />
+                            </td>
 
 
         </div>
     </div></div>
-
-
-
 
 <?php include_once 'footer.php'; ?>

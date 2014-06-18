@@ -24,7 +24,7 @@ $connection = new DbConnection();
     <div id="InhaltHöhe"> 
         <div id="text">
 
-            <h2>Hier können Sie nach Projekten suchen</h2>
+            <h4 class="h4">Hier können Sie nach Projekten suchen</h4>
             <form  method="post" action="ausgabe_student.php">
                 <!--und verknüpfung damit alle ausgewählten skills im projekt vorhanden sind-->
                 <p id="und">Und</p>
@@ -48,8 +48,8 @@ $connection = new DbConnection();
 <div id="info">
     <div id="InhaltArt">
          <?php
-    echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
-    echo "<a href=\"logout.php\">Logout</a>";
+    echo "<br>Eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
+    echo "<a href=\"logout.php\">Abmelden</a>";
     ?>
     </br>
     <a href="page_student.php">Startseite</a>
