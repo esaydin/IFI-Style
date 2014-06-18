@@ -116,7 +116,7 @@ anzeigen();
                         </tr> 
                         <tr>
                             <td><input type="password" name="kennwort" placeholder="Kennwort" value="" /></td>
-                        <td><input  id="anmelden" type="submit"  name="anmelden" style= "background-color: #B2CCE5" value="Anmelden"/></td>
+                        <td><input  id="anmelden1" type="submit"  name="anmelden" value="Anmelden"/></td>
                         </tr>
                     </table>
                 </form>

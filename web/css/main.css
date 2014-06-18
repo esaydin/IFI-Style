@@ -535,3 +535,76 @@ ul#Navigation a:hover, ul#Navigation span {
     margin-top: 20px;
 
 }
+
+#losgehts {
+	background-color:#11b83d;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:17px;
+	padding:7px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+#losgehts:hover {
+	background-color:#48bd0a;
+}
+#losgehts:active {
+	position:relative;
+	top:1px;
+}
+
+#anmelden1 {
+	background-color:#5365f2;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #4260c2;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:17px;
+	padding:1px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2949cc;
+}
+#anmelden1:hover {
+	background-color:#3d4fdb;
+}
+#anmelden1:active {
+	position:relative;
+	top:1px;
+}
+
+
+.abmelden1 {
+	background-color:#5365f2;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #4260c2;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:17px;
+	padding:1px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2949cc;
+}
+.abmelden1:hover {
+	background-color:#3d4fdb;
+}
+.abmelden1:active {
+	position:relative;
+	top:1px;
+}
+
+
+
