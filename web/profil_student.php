@@ -76,6 +76,7 @@ if (!is_bool($result)) {
 
                     <?php
                     //die liste der skills wird von der Datenbank geholt und mit checkbox versehen
+                    //wenn schon   skills vorhanden sind, sind sie markiert   
     
                     echo "<br>";
                     $sql = "SELECT * FROM skill";
@@ -84,7 +85,7 @@ if (!is_bool($result)) {
                         foreach ($result as $key => $value) {
                             ?>
                             <input id="skill" type="checkbox" name="skill[]" value="<?php echo $value['id']; ?>"
-                             <!--wenn schon   skills vorhanden sind, sind sie markiert-->      
+                             
                             <?php if (!is_bool(strpos($ids, $value['id']))) echo "checked"; ?>
                                    > <?php echo $value['skill']; ?><br>
                                <?php } ?>

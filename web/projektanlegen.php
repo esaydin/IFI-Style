@@ -7,15 +7,11 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
 include_once 'db_connection.php';
 $connection = new DbConnection();
 ?>
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<!--Inkludieren von Header für den Kopfbereich-->
 <?php include_once 'header.php'; ?>
 
- <div id='cssmenu'> 
+<!--Navigationsbereich mit den Punkten Start, Profil, Student suchen und Projekt anlegen-->
+<div id='cssmenu'> 
     <ul> 
         <li class='active'><a href='page_auftraggeber.php.'><span>Start</span></a></li> 
         <li><a href='profil_auftraggeber.php'><span>Profil</span></a></li>
@@ -25,10 +21,9 @@ and open the template in the editor.
         </li>
     </ul> 
 </div>
-
-            <div id="inhalt">
-                  <div id="InhaltHöhe">
-                <form method="post" action="projektanlegencheck.php">
+<div id="inhalt">
+    <div id="InhaltHöhe">
+         <form method="post" action="projektanlegencheck.php">
                     <table id="projektanlegen">
                         <tr>
                             <td>
@@ -65,10 +60,15 @@ and open the template in the editor.
                         </tr>
                     </table>
                 </form>
-                  </div></div>
+    </div>
+    
+   
+</div>
 
-            <div id="info">
-                  <div id="InhaltHöhe">
+<div id="info">
+      <div id="InhaltHöhe">
+
+   
                 <?php
                 //echo $_SESSION['benutzername'] ;                 
 
@@ -76,6 +76,8 @@ and open the template in the editor.
                 echo "<a href=\"logout.php\">Logout</a>";
                 ?>
                 </br>
-                <a href="page_auftraggeber.php">Zurück</a></div>
-            </div> </div>
+                <a href="page_auftraggeber.php">Zurück</a>
+      </div>
+      </div>
+<!--Inkludieren vom Fussbereich-->
 <?php include_once 'footer.php'; ?>

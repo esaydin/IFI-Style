@@ -5,15 +5,9 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
     header('Location: index.php');
 }
 ?>
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To//hhh change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<?php include_once 'header.php'; ?>
 
-<div id='cssmenu'> 
+<?php include_once 'header.php'; ?>
+            <div id='cssmenu'> 
                 <ul> 
                     <li class='active'><a href='page_student.php'><span>Start</span></a></li> 
                     <li><a href='profil_student.php'><span>Profil</span></a></li>
@@ -22,10 +16,10 @@ and open the template in the editor.
                 </ul> 
             </div>
 
-
-<div id="inhalt">
-      <div id="InhaltHöhe">
-    <h1>Gefundene Projekte:</h1>     
+            <!--Textausgabe, wenn man  sich als Student eingeloggt hat-->
+            <div id="inhalt">
+                <div id="InhaltHöhe"> 
+                     <h1>Gefundene Projekte:</h1>     
     <?php
     if (empty($_POST['skill'])) {
         header('Location: index.php');
@@ -89,11 +83,12 @@ and open the template in the editor.
         }
     }
     ?>
-      </div> </div>
+                </div>
+            </div>
 
-<div id="info">
-      <div id="InhaltHöhe">
-    <?php
+            <div id="info">
+                <div id="InhaltArt">
+                <?php
 //echo $_SESSION['benutzername'] ;                 
 
     echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
@@ -102,5 +97,7 @@ and open the template in the editor.
     </br>
     <a href="sucheprojekt.php">Zurück</a>
 
-      </div> </div>
-<?php include_once 'footer.php'; ?>
+            </div>
+            </div>
+       <!--Inkludieren vom Fussbereich-->
+       <?php include_once 'footer.php'; ?>

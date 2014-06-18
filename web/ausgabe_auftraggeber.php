@@ -1,20 +1,14 @@
-<!--Diese Klasse stellt die Seite für den Auftraggeber dar. Wenn man sich als Auftraggeber eingeloggt hat, wird man auf diese Seite weitergeleitet-->
 <?php
-//Sitzung wird gestartet, damit man weiss ob das Einloggen erfolt hat oder nicht
 session_start();
 if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
     header('Location: index.php');
 }
 ?>
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<!--Inkludieren von Header für den Kopfbereich-->
 <?php include_once 'header.php'; ?>
-            <!--Navigationsbereich-->
- <div id='cssmenu'> 
+
+<!--Navigationsbereich mit den Punkten Start, Profil, Student suchen und Projekt anlegen-->
+<div id='cssmenu'> 
     <ul> 
         <li class='active'><a href='page_auftraggeber.php.'><span>Start</span></a></li> 
         <li><a href='profil_auftraggeber.php'><span>Profil</span></a></li>
@@ -24,31 +18,27 @@ and open the template in the editor.
         </li>
     </ul> 
 </div>
+<div id="inhalt">
+    <div id="InhaltHöhe">
+         <h1>Gefundene Studenten:</h1>     
+        <?php
+        if (empty($_POST['skill'])) {
+            header('Location: index.php');
+        }
 
-            <!-- Der Contentbereich-->
-            <div id="inhalt">
-                  <div id="InhaltHöhe">
-                <h1>Gefundene Studenten:</h1>     
-                <?php
-             
-                if (empty($_POST['skill'])) {
-                    header('Location: index.php');
-                }
-                //Datenbankverbindung wird hergestellt
-                include_once 'db_connection.php';
-                $db = new DbConnection();
-                //variable für skill
-                $var = $_POST['skill'];
-                
+        include_once 'db_connection.php';
+        $db = new DbConnection();
 
-                $s = array();
-                $condition = join(',', $_POST['skill']); // bsp: html, php, bla
-                $skillanzahl = count($_POST['skill']);
+        $var = $_POST['skill'];
 
-                // Und verknüpfung,alle ausgesuchten skills müssen beim Student vorhanen sein
-                if (isset($_POST['verknuepfung'])) {
-                    $sql = "SELECT group_concat(tmp.id SEPARATOR ', ') As ids"//, tmp.titel, tmp.beschreibung, tmp.skills
-                            . " FROM (
+
+        $s = array();
+        $condition = join(',', $_POST['skill']); // bsp: html, php, bla
+        $skillanzahl = count($_POST['skill']);
+
+        if (isset($_POST['verknuepfung'])) {
+            $sql = "SELECT group_concat(tmp.id SEPARATOR ', ') As ids"//, tmp.titel, tmp.beschreibung, tmp.skills
+                    . " FROM (
                         SELECT b.id, b.benutzername, group_concat(skill SEPARATOR ', ') As skills, count(b.benutzername) AS cnt
                         FROM benutzer b
                         LEFT JOIN benutzerskillzuordnung bsz ON bsz.idbenutzer = b.id
@@ -56,52 +46,60 @@ and open the template in the editor.
                         WHERE bsz.idskill IN (" . $condition . ")
                         GROUP BY b.benutzername ORDER BY cnt DESC) As tmp
                         WHERE tmp.cnt = '$skillanzahl';";
-                } else {
-                    // oder verknüpfung, wenn nur eine Eigenschaft muss beim  Studnet vorhanden sein, reicht es zur Ausgabe
-                    $sql = "SELECT group_concat(tmp.id SEPARATOR ', ') AS ids"
-                            . " FROM (SELECT b.id"
-                            . "   FROM benutzer b"
-                            . "   LEFT JOIN benutzerskillzuordnung bsz ON bsz.idbenutzer = b.id"
-                            . "   LEFT JOIN skill s ON s.id = bsz.idskill"
-                            . "   WHERE bsz.idskill IN (" . $condition . ")"
-                            . "   GROUP BY b.benutzername) As tmp";
-                }
+        } else {
 
-                $result = $db->connection($sql);
+            $sql = "SELECT group_concat(tmp.id SEPARATOR ', ') AS ids"
+                    . " FROM (SELECT b.id"
+                    . "   FROM benutzer b"
+                    . "   LEFT JOIN benutzerskillzuordnung bsz ON bsz.idbenutzer = b.id"
+                    . "   LEFT JOIN skill s ON s.id = bsz.idskill"
+                    . "   WHERE bsz.idskill IN (" . $condition . ")"
+                    . "   GROUP BY b.benutzername) As tmp";
+        }
 
-                $ids = $result[0];
-                $sql2 = "SELECT benutzer.benutzername, group_concat(skill.skill SEPARATOR ', ') AS skills"
-                        . " FROM `benutzerskillzuordnung`"
-                        . " LEFT JOIN skill ON skill.id = benutzerskillzuordnung.idskill"
-                        . " LEFT JOIN benutzer ON benutzer.id = benutzerskillzuordnung.idbenutzer"
-                        . " WHERE idbenutzer in (" . $ids["ids"] . ")"
-                        . " GROUP BY benutzer.benutzername";
+        $result = $db->connection($sql);
 
-                $result = $db->connection($sql2);
+        $ids = $result[0];
+        $sql2 = "SELECT benutzer.benutzername, group_concat(skill.skill SEPARATOR ', ') AS skills"
+                . " FROM `benutzerskillzuordnung`"
+                . " LEFT JOIN skill ON skill.id = benutzerskillzuordnung.idskill"
+                . " LEFT JOIN benutzer ON benutzer.id = benutzerskillzuordnung.idbenutzer"
+                . " WHERE idbenutzer in (" . $ids["ids"] . ")"
+                . " GROUP BY benutzer.benutzername";
 
-                //Gibt die Skills mit den zugehörigen Benutzern aus.
-                //wenn das ergebniss nicht leer ist wird die ausgabe gemacht
-                if (!empty($result)) {
-                    foreach ($result as $value) {
-                        ?>
-                        </br> Benutzer: <?php echo $value["benutzername"]; ?>
-                        </br> Skills: <?php echo $value["skills"]; ?>
-                        </br>
-                        <?php
-                    }
-                }
+        $result = $db->connection($sql2);
+
+
+
+
+        if (!empty($result)) {
+            foreach ($result as $value) {
                 ?>
-                  </div></div>
-            <div id="info">
-                <div id = "InhaltHöhe ">
-                
-                <?php
-                //
-                echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
-                echo "<a href=\"logout.php\">Logout</a>";
-                ?>
+                </br> Benutzer: <?php echo $value["benutzername"]; ?>
+                </br> Skills: <?php echo $value["skills"]; ?>
                 </br>
-                <a href="suchestudenten.php">Zurück</a> </div>
-            </div>           
-        </div>
-       <?php include_once 'footer.php'; ?>
+                <?php
+            }
+        }
+        ?>
+
+
+    </div>
+    
+   
+</div>
+
+<div id="info">
+      <div id="InhaltHöhe">
+
+    <?php
+//
+        echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
+        echo "<a href=\"logout.php\">Logout</a>";
+        ?>
+        </br>
+        <a href="suchestudenten.php">Zurück</a>
+      </div>
+</div>
+<!--Inkludieren vom Fussbereich-->
+<?php include_once 'footer.php'; ?>
