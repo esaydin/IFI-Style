@@ -25,6 +25,7 @@ $connection = new DbConnection();
 
             <div id="inhalt">
                   <div id="InhaltHöhe">
+                        <div id="profilDaten">
 
                 <?php
                 //Daten von der eingeloggten person werden von der Session geholt
@@ -35,15 +36,17 @@ $connection = new DbConnection();
                 . "<hr>";
                 ?>
 
-                
+                </div>
                   </div></div>
             <div id="info">
-                  <div id="InhaltHöhe">
+                  <div id="InhaltArt">
                 <?php
                 //anzeige wer eingeloggt ist und logout
                 echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
                 echo "<a href=\"logout.php\">Logout</a>";
                 ?>
+                  
                   </div></div>
+                
     <?php include_once 'footer.php'; ?>
 

@@ -23,13 +23,14 @@ $db = new DbConnection();
             <!--Textausgabe, wenn die mail versenet wurde-->
             <div id="inhalt">
                   <div id="InhaltHöhe">
+                       <div id="profilDaten">
                <p>Ihre Nachricht wurde versendet! Sie werden bezüglich der Teilnahme benachrichtigt.</p> 
                <a href="page_student.php">Zurück zur Startseite</a>
                
-                  </div></div>
+                  </div></div></div>
 
             <div id="info">
-                  <div id="InhaltHöhe">
+                <div id="InhaltArt">
                 <?php                
                 //Textausgabe, je nach eingeloggter Benutzer
                 echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";

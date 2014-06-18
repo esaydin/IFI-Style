@@ -22,7 +22,7 @@ $connection = new DbConnection();
 <!--Textausgabe, wenn man  sich als Student eingeloggt hat-->
 <div id="inhalt">
     <div id="InhaltHöhe"> 
-        <div id="text">
+        <div id="profilDaten">
 
             <h4 class="h4">Hier können Sie nach Projekten suchen</h4>
             <form  method="post" action="ausgabe_student.php">

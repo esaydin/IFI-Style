@@ -23,6 +23,9 @@ $connection = new DbConnection();
 </div>
 <div id="inhalt">
     <div id="InhaltHöhe">
+          <div id="profilDaten">
+         <h1 class="h4">Projekte veröffentlichen:</h1>
+          
          <form method="post" action="projektanlegencheck.php">
                     <table id="projektanlegen">
                         <tr>
@@ -61,12 +64,13 @@ $connection = new DbConnection();
                     </table>
                 </form>
     </div>
+         </div>
     
    
 </div>
 
 <div id="info">
-      <div id="InhaltHöhe">
+      <div id="InhaltArt">
 
    
                 <?php

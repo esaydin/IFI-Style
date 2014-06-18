@@ -19,7 +19,8 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
             <!--Textausgabe, wenn man  sich als Student eingeloggt hat-->
             <div id="inhalt">
                 <div id="InhaltHöhe"> 
-                     <h1>Gefundene Projekte:</h1>     
+                    <div id="profilDaten">
+                        <h1 class="h4">Gefundene Projekte:</h1>     
     <?php
     if (empty($_POST['skill'])) {
         header('Location: index.php');
@@ -83,6 +84,7 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
         }
     }
     ?>
+            </div>
                 </div>
             </div>
 

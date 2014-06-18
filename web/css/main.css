@@ -122,6 +122,10 @@ input, select {
     //width:1042px;
     width:1297px;
     height: 100px; 
+    font-family: 'Open Sans', sans-serif;
+           letter-spacing:0.0em;
+           line-height:1.4em;
+           font-size:1.0em;
 }
 
 #inhalt {
@@ -270,7 +274,12 @@ ul#Navigation a:hover, ul#Navigation span {
     height: 200px;
     weight: 200px;
 }
-#projektanlegen{margin-left: -800px;}
+#projektanlegen{margin-left: -800px;
+  font-family: 'Open Sans', sans-serif; 
+    letter-spacing:0.0em;
+    line-height:1.4em;
+    font-size:1.0em;
+   }
 
 #verknuepfung{margin-left: -700px;}
 
@@ -398,14 +407,29 @@ ul#Navigation a:hover, ul#Navigation span {
  margin-top: 70px;
 }
 
+
+.regtext1{font-family: 'Open Sans', sans-serif; text-align: center;
+ margin-top: 30px;
+}
+
 .textstud{font-family: 'Open Sans', sans-serif; 
           letter-spacing:0.0em;
           line-height:1.5em;
-          font-size:1.1em;
-          text-align: center;
+          font-size:1.0em;
+          
           margin-top: 10px;
 
 }  
+
+.zuruckStart{font-family: 'Open Sans', sans-serif; 
+          letter-spacing:0.0em;
+          line-height:1.5em;
+          font-size:1.0em;
+      margin-left: 70px;
+          margin-top: 10px;
+
+}  
+
 
 .anmelden{ margin-left:50px; margin-top: 60px;  color:#576D72;font-family: 'Open Sans', sans-serif;}
 .reg{ margin-left:50px; margin-top: 40px;  color:#576D72;font-family:'Open Sans', sans-serif;}
@@ -414,8 +438,12 @@ ul#Navigation a:hover, ul#Navigation span {
 
 .textstart{font-family: 'Open Sans', sans-serif;text-align: center;
            letter-spacing:0.0em;
-           line-height:1.5em;
-           font-size:1.1em;
+           line-height:1.4em;
+           font-size:1.0em;
+           
+           
+       
+
 
 }
 
@@ -533,6 +561,7 @@ ul#Navigation a:hover, ul#Navigation span {
     line-height:1.4em;
     font-size:1.4em;
     margin-top: 20px;
+   
 
 }
 
@@ -606,5 +635,5 @@ ul#Navigation a:hover, ul#Navigation span {
 	top:1px;
 }
 
-
+#regtabelle{margin-top: 0px;}
 

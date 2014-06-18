@@ -26,8 +26,9 @@ $connection = new DbConnection();
         
          
 
-                <h1>Hier können Sie nach mehreren Studenten suchen:</h1>
+                <h1 class="h4">Hier können Sie nach mehreren Studenten suchen:</h1>
                 <div id="text">
+                  <div id="profilDaten">
                     <form  method="post" action="ausgabe_auftraggeber.php">
                         <p id="und">Und</p>
                         <input id="verknuepfung" name="verknuepfung" type="checkbox">
@@ -43,6 +44,7 @@ $connection = new DbConnection();
                         ?>
                         <input id="senden" type="submit" name="senden" value="Senden" id="senden">
                     </form>
+                        </div>
                 </div>
                   </div>
         
@@ -52,7 +54,7 @@ $connection = new DbConnection();
 </div>
 
 <div id="info">
-      <div id="InhaltHöhe">
+      <div id="InhaltArt">
  <?php
                 //echo $_SESSION['benutzername'] ;                 
 

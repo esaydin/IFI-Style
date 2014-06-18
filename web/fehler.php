@@ -22,12 +22,14 @@ $db = new DbConnection();
             <!--textausgabe wenn die mail nicht versendet werden kann-->
             <div id="inhalt">
                   <div id="InhaltHöhe">
+                       <div id="profilDaten">
+                    
               <p>Leider ist ein Fehler aufgetreten, und Ihre Formular konnten nicht an uns gesendet werden.</p>
                  <a href="page_student.php">Zurück zur Startseite</a>
-                  </div></div>
+                  </div></div> </div>
 
             <div id="info">
-                  <div id="InhaltHöhe">
+                      <div id="InhaltArt">
                 <?php                
                 //Textausgabe, je nach eingeloggter Benutzer
                 echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
@@ -35,7 +37,7 @@ $db = new DbConnection();
                 echo "<a href=\"logout.php\">Logout</a>";
                 ?>
 
-                  </div></div>
+                  </div></div> 
        <!--Inkludieren vom Fussbereich-->
        <?php include_once 'footer.php'; ?>
 

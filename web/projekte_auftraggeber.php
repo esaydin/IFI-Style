@@ -28,7 +28,7 @@ $db = new DbConnection();
 </div>
 
 <div id="info">
-      <div id="InhaltHöhe">
+     <div id="InhaltArt">
 
     <?php               
     //Textausgabe, je nach eingeloggter Benutzer

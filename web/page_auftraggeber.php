@@ -25,13 +25,13 @@ $db = new DbConnection();
       <div id="InhaltHöhe">
 
     <!--Textausgabe bei der Anmeldung als Auftraggeber-->
-    <h2> Sie Sind als Auftraggeber eingeloggt</h2><br/>
-    <p class="textstud">Als Auftraggeber haben Sie die Möglichkeiten Studenten für ihr Projekt zu finden, die Ihren Ansprüchen entspricht.<br/>
+    <h2 class="studh2"> Sie Sind als Auftraggeber eingeloggt</h2><br/>
+    <p class="textstud">Als Auftraggeber haben Sie die Möglichkeiten Studenten für ihr Projekt zu finden, die Ihren Ansprüchen entspricht.
         Selber können Sie unter "Projekt anlegen" Projekte veröffentlichen, die von allen Studenten sichtbar werden.</p>
       </div></div>
 
 <div id="info">
-      <div id="InhaltHöhe">
+       <div id="InhaltArt">
 
     <?php               
     //Textausgabe, je nach eingeloggter Benutzer

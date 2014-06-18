@@ -20,8 +20,9 @@ $db = new DbConnection();
 
             <!--Textausgabe, wenn man  sich als Student eingeloggt hat-->
             <div id="inhalt">
-                <div id="InhaltHöhe"> 
-                    <h1>Projektteilnahme beantragen</h1>
+                <div id="InhaltHöhe">
+                    
+                    <h1 class="h4">Projektteilnahme beantragen</h1>
                 <form action="formmail.php" method="post">
                     <table id="projekthinzufuegen">
                         <tr>
