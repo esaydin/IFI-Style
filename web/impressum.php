@@ -14,7 +14,7 @@
     
     <table>
         <tr>
-            <td>Foto</td>
+            <td></td>
             <td><img src="bilder/esra.jpg" id="team"/></td>
         </tr>
         <tr>
@@ -56,6 +56,52 @@
         </tr>
         <tr>
             <td>hsarar@stud.hs-bremen.de</td>
+        </tr>
+    </table>
+     <table id="sidi">
+        <tr>
+            <td></td>
+            <td><img src="bilder/sidi.jpg" id="team"/></td>
+        </tr>
+        <tr> 
+            <td>Name:</td>
+            <td>Siderida Hasa</td>
+        </tr>
+        <tr> 
+            <td>Matrikelnummer:</td>
+            <td>309769</td>
+        </tr>
+        <tr>
+            <td>E-Mail:</td>
+            <td>shasa@stud.hs-bremen.de</td>
+        </tr>
+    </table>
+     <table id="seyma">
+        <tr>
+            <td><img src="bilder/seyma.jpg" id="team"/></td>
+        </tr>
+        <tr> 
+            <td>Seyma Azakli</td>
+        </tr>
+        <tr> 
+            <td>300230</td>
+        </tr>
+        <tr>
+            <td>mazakli@stud.hs-bremen.de</td>
+        </tr>
+    </table>
+     <table id="nurhan">
+        <tr>
+            <td><img src="bilder/nurhan.jpg" id="team"/></td>
+        </tr>
+        <tr> 
+            <td>Nurhan Koc</td>
+        </tr>
+        <tr> 
+            <td>267878</td>
+        </tr>
+        <tr>
+            <td>nkoc002@stud.hs-bremen.de</td>
         </tr>
     </table>
     
