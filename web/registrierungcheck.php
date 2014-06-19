@@ -7,6 +7,7 @@ $db = new DbConnection();
             <div id="inhalt">
                   <div id="InhaltHöhe">
         <?php
+          header('Content-type: text/css');
         //Pflichtfelder
         if (!empty($_POST["benutzername"]) && !empty($_POST["kennwort"]) && !empty($_POST["kennwortwdhl"]) && !empty($_POST["vorname"]) && !empty($_POST["nachname"]) && !empty($_POST["email"])) {
             //Da die Email adresse in der DB unique ist darf es nur einmal existieren, in diesem Abschnitt wird das überprüft
@@ -53,6 +54,7 @@ $db = new DbConnection();
                 echo 'Herzlich Willkommen bei SearchProStud.<br> '
                 .    'Sie haben sich erfolgreich registriert.<br>'
                         . ' Klicken Sie auf Los gehts, um sich einzuloggen.' ;
+             
                 //Link zur Startseite für die Anmeldung nach der Registrierung
                  echo "<br><a href=\"index.php\"> Los gehts </a>";
                 
@@ -64,7 +66,7 @@ $db = new DbConnection();
         } else {
             //Fehlermeldung falls nicht alle Felder nicht ganz gefüllt werden können
             echo "Pflichfelder nicht ganz gefüllt.";
-            echo "<br><a href=\"registrieren.php\"> Zurück </a>";
+            echo "<br><a href=\"registrieren.php\"> Zurück </a>";            
         }
         ?>
 
@@ -73,6 +75,5 @@ $db = new DbConnection();
             <div id="info">
             <div id="InhaltHöhe"></div>
             </div>
-
 
        <?php include_once 'footer.php'; ?>

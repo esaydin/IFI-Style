@@ -17,7 +17,7 @@ $connection = new DbConnection();
         <li class='active'><a href='page_auftraggeber.php.'><span>Start</span></a></li> 
         <li><a href='profil_auftraggeber.php'><span>Profil</span></a></li>
         <li><a href='suchestudenten.php'><span>Suche Student</span></a></li>
-        <li><a href='suchestudenten.php'><span>Projekt Anlegen</span></a></li>
+        <li><a href='projektanlegen.php'><span>Projekt Anlegen</span></a></li>
         <li class='last'><a href='projekte_auftraggeber.php'><span>Meine Projekte</span></a>
         </li>
     </ul> 
@@ -25,6 +25,7 @@ $connection = new DbConnection();
 
             <div id="inhalt">
                   <div id="InhaltHöhe">
+                        <div id="profilDaten">
 
                 <?php
                 //Daten von der eingeloggten person werden von der Session geholt
@@ -35,15 +36,17 @@ $connection = new DbConnection();
                 . "<hr>";
                 ?>
 
-                
+                </div>
                   </div></div>
             <div id="info">
-                  <div id="InhaltHöhe">
+                  <div id="InhaltArt">
                 <?php
                 //anzeige wer eingeloggt ist und logout
                 echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
                 echo "<a href=\"logout.php\">Logout</a>";
                 ?>
+                  
                   </div></div>
+                
     <?php include_once 'footer.php'; ?>
 

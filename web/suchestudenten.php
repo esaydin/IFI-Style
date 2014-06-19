@@ -7,30 +7,28 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
 include_once 'db_connection.php';
 $connection = new DbConnection();
 ?>
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-      <?php include_once 'header.php'; ?>
+<!--Inkludieren von Header für den Kopfbereich-->
+<?php include_once 'header.php'; ?>
 
+<!--Navigationsbereich mit den Punkten Start, Profil, Student suchen und Projekt anlegen-->
 <div id='cssmenu'> 
     <ul> 
         <li class='active'><a href='page_auftraggeber.php.'><span>Start</span></a></li> 
         <li><a href='profil_auftraggeber.php'><span>Profil</span></a></li>
         <li><a href='suchestudenten.php'><span>Suche Student</span></a></li>
-        <li><a href='suchestudenten.php'><span>Projekt Anlegen</span></a></li>
+        <li><a href='projektanlegen.php'><span>Projekt Anlegen</span></a></li>
         <li class='last'><a href='projekte_auftraggeber.php'><span>Meine Projekte</span></a>
         </li>
     </ul> 
 </div>
+<div id="inhalt">
+    <div id="InhaltHöhe">
+        
+         
 
-            <div id="inhalt">
-                  <div id="InhaltHöhe">
-
-                <h1>Hier können Sie nach mehreren Studenten suchen:</h1>
+                <h1 class="h4">Hier können Sie nach mehreren Studenten suchen:</h1>
                 <div id="text">
+                  <div id="profilDaten">
                     <form  method="post" action="ausgabe_auftraggeber.php">
                         <p id="und">Und</p>
                         <input id="verknuepfung" name="verknuepfung" type="checkbox">
@@ -46,11 +44,18 @@ and open the template in the editor.
                         ?>
                         <input id="senden" type="submit" name="senden" value="Senden" id="senden">
                     </form>
+                        </div>
                 </div>
-                  </div></div>
-            <div id="info">
-                  <div id="InhaltHöhe">
-                <?php
+                  </div>
+        
+    </div>
+    
+   
+</div>
+
+<div id="info">
+      <div id="InhaltArt">
+ <?php
                 //echo $_SESSION['benutzername'] ;                 
 
                 echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
@@ -58,7 +63,6 @@ and open the template in the editor.
                 ?>
                 </br>
                 <a href="page_auftraggeber.php">Startseite</a>
-                  </div></div>
-            
+      </div></div>
 <!--Inkludieren vom Fussbereich-->
 <?php include_once 'footer.php'; ?>

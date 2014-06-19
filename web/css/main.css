@@ -9,7 +9,6 @@ and open the template in the editor.
 */
 
 #slideshow{
-    
     height: 300px;
     width: 500px;
 }
@@ -21,7 +20,6 @@ body {
     position: absolute;
 }
 
-
 #head{
     height: 250px; 
     padding: 20px;
@@ -31,11 +29,13 @@ body {
     background-size:80% 100%;
     background-position:50% 50%;
 }
+
 form { 
     background-image:url(background.gif); 
     padding:20px; 
     margin-left: 900px; 
 }
+
 td, input { 
     font-size:13px; 
     font-family:Verdana,sans-serif; 
@@ -48,26 +48,26 @@ input, select {
 
 #tabelleLogin{
     background-color:#F8F8ff; 
-    width:350px; 
-    border:6px solid #ddd; 
-    margin-top: 70px;
+    width:380px; 
+    height:90px;
+    border:5px solid #ddd; 
+    margin-top: 60px;
     margin-left:-875px;
-
-
 }
 
 #anmelden { 
     // background-color:#DCDCDC; 
-    color:#fff; 
-    width:200px; 
-    border:6px; 
+    color:#585858; 
+    width:120px; 
+   border:1px solid #6E6E6E; 
 }
-
 
 #kopfbereich {
     height: 100px;
     padding: 20px;
-    background-color: white;
+    background-image: linear-gradient(white 0%, #8FBFD2 110%);
+
+    //background: rgba(120,160,180,0.3);
     width:1293px;
 }
 
@@ -76,11 +76,13 @@ input, select {
     margin-left:200px; 
     width: 450px;
 }
+
 #tabelleRegistrieren{
     margin-top:  -20px; 
     // width:1500px;
     //height:300px;
 }
+
 #seite{ 
     width: 100%;
 }
@@ -91,6 +93,7 @@ input, select {
     height: 90px;
     width: 230px;
 }
+
 #projekte{
     margin-left:-1150px; 
     margin-top: 50px;
@@ -103,7 +106,6 @@ input, select {
 }
 
 #prostud{
-
     margin-left:-20px; 
     margin-top: -130px;
     height: 130px;
@@ -120,10 +122,13 @@ input, select {
     //width:1042px;
     width:1297px;
     height: 100px; 
-
+    font-family: 'Open Sans', sans-serif;
+           letter-spacing:0.0em;
+           line-height:1.4em;
+           font-size:1.0em;
 }
-#inhalt {
 
+#inhalt {
     background-color:#F8F8ff;
     margin-left:-5px;
     padding: 20px;
@@ -131,10 +136,14 @@ input, select {
     height: 740;
     width:770px;
 }
+
 #InhaltArt{
     color:#5c62d6;
+     font-family: 'Open Sans', sans-serif; 
+          letter-spacing:0.0em;
+          line-height:1.4em;
+          font-size:1.0em;
 }
-
 
 #info {
     float: left;
@@ -146,14 +155,15 @@ input, select {
     margin-top: -780px;
     // margin-left:800px;
     margin-left:817px;
-
 }
+
 ul#Navigation {
     margin: 0; padding: 0.8em;
     text-align: center;
     // border: 1px solid ;
     background-color: #d3d3d3;
 }
+
 ul#Navigation li {
     list-style: none;
     display: inline;
@@ -171,11 +181,13 @@ ul#Navigation a, ul#Navigation span {
     width: 1em;    /* nur fuer IE 5.0x erforderlich */
     width: auto;  /* sicherheitshalber fuer IE 6 zurueckgesetzt */
 }
+
 ul#Navigation a:hover, ul#Navigation span {
     border-color: white;
     border-left-color: black; border-top-color: black;
     color: white; background-color: gray;
 }
+
 #text{    margin-top:0px; 
           height: 550px;}
 
@@ -211,13 +223,13 @@ ul#Navigation a:hover, ul#Navigation span {
     width: 200px;
 }
 #benutzername, #kennwort, #kennwortwdhl, #strasse, #hausnr, #plz, #ort, #email{
-  width: 420px; 
+    width: 420px; 
 }
 
 #daten{
     margin-top: -70px;
-   
-    
+
+
 }
 
 
@@ -262,7 +274,12 @@ ul#Navigation a:hover, ul#Navigation span {
     height: 200px;
     weight: 200px;
 }
-#projektanlegen{margin-left: -800px;}
+#projektanlegen{margin-left: -800px;
+  font-family: 'Open Sans', sans-serif; 
+    letter-spacing:0.0em;
+    line-height:1.4em;
+    font-size:1.0em;
+   }
 
 #verknuepfung{margin-left: -700px;}
 
@@ -386,24 +403,47 @@ ul#Navigation a:hover, ul#Navigation span {
 }
 
 
-.studh2{font-family: 'Open Sans', sans-serif;}
+.studh2{font-family: 'Open Sans', sans-serif; text-align: center;
+ margin-top: 70px;
+}
 
-.textstud{font-family: 'Open Sans', sans-serif;
+
+.regtext1{font-family: 'Open Sans', sans-serif; text-align: center;
+ margin-top: 30px;
+}
+
+.textstud{font-family: 'Open Sans', sans-serif; 
           letter-spacing:0.0em;
           line-height:1.5em;
-          font-size:0.9em;
+          font-size:1.0em;
+          
+          margin-top: 10px;
 
-}
+}  
+
+.zuruckStart{font-family: 'Open Sans', sans-serif; 
+          letter-spacing:0.0em;
+          line-height:1.5em;
+          font-size:1.0em;
+      margin-left: 70px;
+          margin-top: 10px;
+
+}  
+
 
 .anmelden{ margin-left:50px; margin-top: 60px;  color:#576D72;font-family: 'Open Sans', sans-serif;}
 .reg{ margin-left:50px; margin-top: 40px;  color:#576D72;font-family:'Open Sans', sans-serif;}
 
 
 
-.textstart{font-family: 'Open Sans', sans-serif;
+.textstart{font-family: 'Open Sans', sans-serif;text-align: center;
            letter-spacing:0.0em;
-           line-height:1.5em;
-           font-size:1.1em;
+           line-height:1.4em;
+           font-size:1.0em;
+           
+           
+       
+
 
 }
 
@@ -418,49 +458,182 @@ ul#Navigation a:hover, ul#Navigation span {
 }
 #projektteilnehmenbemerken {
     border-radius: 4px;
-    
+
 }
 
 
 #registrierung {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5c62d6), color-stop(1, #4951bd));
-	background:-moz-linear-gradient(top, #5c62d6 5%, #4951bd 100%);
-	background:-webkit-linear-gradient(top, #5c62d6 5%, #4951bd 100%);
-	background:-o-linear-gradient(top, #5c62d6 5%, #4951bd 100%);
-	background:-ms-linear-gradient(top, #5c62d6 5%, #4951bd 100%);
-	background:linear-gradient(to bottom, #5c62d6 5%, #4951bd 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5c62d6', endColorstr='#4951bd',GradientType=0);
-	background-color:#5c62d6;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-	border-radius:3px;
-	border:1px solid #5c62d6;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5c62d6), color-stop(1, #4951bd));
+    background:-moz-linear-gradient(top, #5c62d6 5%, #4951bd 100%);
+    background:-webkit-linear-gradient(top, #5c62d6 5%, #4951bd 100%);
+    background:-o-linear-gradient(top, #5c62d6 5%, #4951bd 100%);
+    background:-ms-linear-gradient(top, #5c62d6 5%, #4951bd 100%);
+    background:linear-gradient(to bottom, #5c62d6 5%, #4951bd 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5c62d6', endColorstr='#4951bd',GradientType=0);
+    background-color:#5c62d6;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    border:1px solid #5c62d6;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:arial;
+    font-size:17px;
+    padding:4px 8px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #5c62d6;
+    font-weight:100;
+
+}
+#registrierung:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #4951bd), color-stop(1, #5c62d6));
+    background:-moz-linear-gradient(top, #4951bd 5%, #5c62d6 100%);
+    background:-webkit-linear-gradient(top, #4951bd 5%, #5c62d6 100%);
+    background:-o-linear-gradient(top, #4951bd 5%, #5c62d6 100%);
+    background:-ms-linear-gradient(top, #4951bd 5%, #5c62d6 100%);
+    background:linear-gradient(to bottom, #4951bd 5%, #5c62d6 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4951bd', endColorstr='#5c62d6',GradientType=0);
+    background-color:#4951bd;
+}
+#registrierung:active {
+    position:relative;
+    top:1px;
+
+}
+
+
+#registrierung1 {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5c62d6), color-stop(1, #4951bd));
+    background:-moz-linear-gradient(top, #5c62d6 5%, #4951bd 100%);
+    background:-webkit-linear-gradient(top, #5c62d6 5%, #4951bd 100%);
+    background:-o-linear-gradient(top, #5c62d6 5%, #4951bd 100%);
+    background:-ms-linear-gradient(top, #5c62d6 5%, #4951bd 100%);
+    background:linear-gradient(to bottom, #5c62d6 5%, #4951bd 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5c62d6', endColorstr='#4951bd',GradientType=0);
+
+    background-color:#5c62d6;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    border:1px solid #5c62d6;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:arial;
+    font-size:17px;
+    padding:4px 8px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #5c62d6;
+    font-weight:100;
+
+
+}
+#registrierung1:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #4951bd), color-stop(1, #5c62d6));
+    background:-moz-linear-gradient(top, #4951bd 5%, #5c62d6 100%);
+    background:-webkit-linear-gradient(top, #4951bd 5%, #5c62d6 100%);
+    background:-o-linear-gradient(top, #4951bd 5%, #5c62d6 100%);
+    background:-ms-linear-gradient(top, #4951bd 5%, #5c62d6 100%);
+    background:linear-gradient(to bottom, #4951bd 5%, #5c62d6 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4951bd', endColorstr='#5c62d6',GradientType=0);
+    background-color:#4951bd;
+
+}
+#registrierung1:active {
+    position:relative;
+    top:1px;
+    margin-left: 10px;
+}
+
+#profilDaten{
+    font-family: 'Open Sans', sans-serif; 
+    letter-spacing:0.0em;
+    line-height:1.4em;
+    font-size:1.0em;
+    margin-top: 20px;
+
+}
+
+.h4{
+    font-family: 'Open Sans', sans-serif; 
+    letter-spacing:0.0em;
+    line-height:1.4em;
+    font-size:1.4em;
+    margin-top: 20px;
+   
+
+}
+
+#losgehts {
+	background-color:#11b83d;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #18ab29;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
 	font-family:arial;
 	font-size:17px;
-	padding:4px 8px;
+	padding:7px 24px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #5c62d6;
-        font-weight:100;
-
+	text-shadow:0px 1px 0px #2f6627;
 }
-#registrierung:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #4951bd), color-stop(1, #5c62d6));
-	background:-moz-linear-gradient(top, #4951bd 5%, #5c62d6 100%);
-	background:-webkit-linear-gradient(top, #4951bd 5%, #5c62d6 100%);
-	background:-o-linear-gradient(top, #4951bd 5%, #5c62d6 100%);
-	background:-ms-linear-gradient(top, #4951bd 5%, #5c62d6 100%);
-	background:linear-gradient(to bottom, #4951bd 5%, #5c62d6 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4951bd', endColorstr='#5c62d6',GradientType=0);
-	background-color:#4951bd;
+#losgehts:hover {
+	background-color:#48bd0a;
 }
-#registrierung:active {
+#losgehts:active {
 	position:relative;
 	top:1px;
-        
+}
+
+#anmelden1 {
+	background-color:#5365f2;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #4260c2;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:17px;
+	padding:1px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2949cc;
+}
+#anmelden1:hover {
+	background-color:#3d4fdb;
+}
+#anmelden1:active {
+	position:relative;
+	top:1px;
 }
 
 
+.abmelden1 {
+	background-color:#5365f2;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:1px solid #4260c2;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:17px;
+	padding:1px 10px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2949cc;
+}
+.abmelden1:hover {
+	background-color:#3d4fdb;
+}
+.abmelden1:active {
+	position:relative;
+	top:1px;
+}
+
+#regtabelle{margin-top: 0px;}
 

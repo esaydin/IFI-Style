@@ -62,20 +62,23 @@ if (!is_bool($result)) {
             </div>
 
             <div id="inhalt">
-
+                 
+                      <h4 class="h4">Persönliche Daten</h4>
+                       <div id="profilDaten">
                 <?php
                 //Daten von der eingeloggten person werden von der Session geholt
                 echo "Benutzername: " . $_SESSION["benutzername"] . "<br>"
-                . "Vorname: " . $_SESSION["vorname"] . "<br>"
-                . "Nachname: " . $_SESSION["nachname"] . "<br>"
-                . "E-Mail: " . $_SESSION["email"] . "<br>"
-                . "<hr>";
+                   . "Vorname:      " . $_SESSION["vorname"] . "<br>"
+                   . "Nachname:     " . $_SESSION["nachname"] . "<br>"
+                   . "E-Mail:       " . $_SESSION["email"] . "<br>"
+                   . "<hr>";
                 ?>
 
                 <form  method="post">
 
                     <?php
                     //die liste der skills wird von der Datenbank geholt und mit checkbox versehen
+                    //wenn schon   skills vorhanden sind, sind sie markiert   
     
                     echo "<br>";
                     $sql = "SELECT * FROM skill";
@@ -84,7 +87,7 @@ if (!is_bool($result)) {
                         foreach ($result as $key => $value) {
                             ?>
                             <input id="skill" type="checkbox" name="skill[]" value="<?php echo $value['id']; ?>"
-                             <!--wenn schon   skills vorhanden sind, sind sie markiert-->      
+                             
                             <?php if (!is_bool(strpos($ids, $value['id']))) echo "checked"; ?>
                                    > <?php echo $value['skill']; ?><br>
                                <?php } ?>
@@ -92,12 +95,13 @@ if (!is_bool($result)) {
                     <input id="senden" type="submit" name="senden" value="Senden" id="senden">
                 </form>
                
-            </div>
+                  </div></div>
 
             <div id="info">
+                <div id="InhaltArt">
                 <?php
-                echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
-                echo "<a href=\"logout.php\">Logout</a>";
+                echo "<br>Eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
+                echo "<a href=\"logout.php\">Abmelden</a>";
                 ?>
-            </div>
+                </div></div>
     <?php include_once 'footer.php'; ?>

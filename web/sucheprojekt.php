@@ -8,61 +8,52 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
 include_once 'db_connection.php';
 $connection = new DbConnection();
 ?>
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-      <?php include_once 'header.php'; ?>
 
-            <div id='cssmenu'> 
-                <ul> 
-                    <li class='active'><a href='page_student.php'><span>Start</span></a></li> 
-                    <li><a href='profil_student.php'><span>Profil</span></a></li>
-                    <li class='last'><a href='sucheprojekt.php'><span>Suche Projekt</span></a>
-                    </li> 
-                </ul> 
-            </div>
+<?php include_once 'header.php'; ?>
+<div id='cssmenu'> 
+    <ul> 
+        <li class='active'><a href='page_student.php'><span>Start</span></a></li> 
+        <li><a href='profil_student.php'><span>Profil</span></a></li>
+        <li class='last'><a href='sucheprojekt.php'><span>Suche Projekt</span></a>
+        </li> 
+    </ul> 
+</div>
 
+<!--Textausgabe, wenn man  sich als Student eingeloggt hat-->
+<div id="inhalt">
+    <div id="InhaltHöhe"> 
+        <div id="profilDaten">
 
-            <div id="inhalt">
-                  <div id="InhaltHöhe">
-
-                <h1>Hier können Sie nach mehreren Projekten suchen:</h1>
-                <div id="text">
-
-                    
-                    <form  method="post" action="ausgabe_student.php">
-                        <!--und verknüpfung damit alle ausgewählten skills im projekt vorhanden sind-->
-                        <p id="und">Und</p>
-                        <input id="verknuepfung" name="verknuepfung" type="checkbox">
-                        <?php
-                        echo "<br>";
-                        //liste der skills wid von der datenbank geholt
-                        $sql = "SELECT * FROM skill";
-                        $result = $connection->connection($sql);
-
-                        foreach ($result as $key => $value) {
-                            ?>
-                            <input id="skill" type="checkbox" name="skill[]" value="<?php echo $value['id']; ?>"> <?php echo $value['skill']; ?><br>
-                        <?php } ?>
-                        <input id="senden" type="submit" name="senden" value="Senden" id="senden">
-                    </form>
-                </div>
-                  </div></div>
-           
-            <div id="info">
-                  <div id="InhaltHöhe">
+            <h4 class="h4">Hier können Sie nach Projekten suchen</h4>
+            <form  method="post" action="ausgabe_student.php">
+                <!--und verknüpfung damit alle ausgewählten skills im projekt vorhanden sind-->
+                <p id="und">Und</p>
+                <input id="verknuepfung" name="verknuepfung" type="checkbox">
                 <?php
-                               
+                echo "<br>";
+                //liste der skills wid von der datenbank geholt
+                $sql = "SELECT * FROM skill";
+                $result = $connection->connection($sql);
 
-                echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
-                echo "<a href=\"logout.php\">Logout</a>";
-                ?>
-                </br>
-                <a href="page_student.php">Startseite</a>
-                  </div></div>
-       
-            <!--Inkludieren vom Fussbereich-->
+                foreach ($result as $key => $value) {
+                    ?>
+                    <input id="skill" type="checkbox" name="skill[]" value="<?php echo $value['id']; ?>"> <?php echo $value['skill']; ?><br>
+                <?php } ?>
+                <input id="senden" type="submit" name="senden" value="Senden" id="senden">
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="info">
+    <div id="InhaltArt">
+         <?php
+    echo "<br>Eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
+    echo "<a href=\"logout.php\">Abmelden</a>";
+    ?>
+    </br>
+    <a href="page_student.php">Startseite</a>
+    </div>
+</div>
+<!--Inkludieren vom Fussbereich-->
 <?php include_once 'footer.php'; ?>

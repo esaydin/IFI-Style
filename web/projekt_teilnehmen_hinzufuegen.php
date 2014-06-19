@@ -3,18 +3,12 @@ session_start();
 if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
     header('Location: index.php');
 }
+
 include_once 'db_connection.php';
 $db = new DbConnection();
 ?>
 
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <?php include_once 'header.php'; ?>
-
             <div id='cssmenu'> 
                 <ul> 
                     <li class='active'><a href='page_student.php'><span>Start</span></a></li> 
@@ -24,11 +18,11 @@ and open the template in the editor.
                 </ul> 
             </div>
 
+            <!--Textausgabe, wenn man  sich als Student eingeloggt hat-->
             <div id="inhalt">
-                  <div id="InhaltHöhe">
-                
-              
-                <h1>Projektteilnahme beantragen</h1>
+                <div id="InhaltHöhe">
+                    
+                    <h1 class="h4">Projektteilnahme beantragen</h1>
                 <form action="formmail.php" method="post">
                     <table id="projekthinzufuegen">
                         <tr>
@@ -58,15 +52,19 @@ and open the template in the editor.
                         </tr>
                 </form>
                 </table>
-                  </div></div>
+                </div>
+            </div>
+
             <div id="info">
-                  <div id="InhaltHöhe">
-                <?php
+                <div id="InhaltArt">
+               <?php
               
                 echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
                 echo "<a href=\"logout.php\">Logout</a>";
                 ?>
                 </br>
                 <a href="sucheprojekt.php"/>
-                  </div></div>
-          <?php include_once 'footer.php'; ?>
+            </div>
+            </div>
+       <!--Inkludieren vom Fussbereich-->
+       <?php include_once 'footer.php'; ?>

@@ -2,11 +2,13 @@
 
 <div id="inhalt">
       <div id="InhaltHöhe">
-   
+    <h1 class="regtext1">Konto erstellen</h1>
+            <p class="textstud">Auf nur einer Seite richten sie in einpaar Schritten Ihr Konto bei SearchProStud ein und erhalten 
+                Zugriff auf die Austauschplattform.</p>
     <!-- Formular für Registrierung,verweist auf Registrierungcheck-->
     <form method="post" action="registrierungcheck.php" id="formular">
-        
-        <table id="name"><h1>Konto erstellen</h1>
+        <table id="regTabelle">
+           
             
             <tr> 
                 
@@ -129,7 +131,7 @@
       </div></div>
 <div id="info">
       <div id="InhaltHöhe">
-                    <a id="zuruckButton" href="index.php">Zurück zur Startseite</a>
+          <p class="zuruckStart" >  <a id="zuruckButton" href="index.php">Zurück zur Startseite</a></p>
      
 
       </div></div>

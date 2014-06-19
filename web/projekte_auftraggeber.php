@@ -16,7 +16,7 @@ $db = new DbConnection();
         <li class='active'><a href='page_auftraggeber.php.'><span>Start</span></a></li> 
         <li><a href='profil_auftraggeber.php'><span>Profil</span></a></li>
         <li><a href='suchestudenten.php'><span>Suche Student</span></a></li>
-        <li><a href='suchestudenten.php'><span>Projekt Anlegen</span></a></li>
+        <li><a href='projektanlegen.php'><span>Projekt Anlegen</span></a></li>
         <li class='last'><a href='projekte_auftraggeber.php'><span>Meine Projekte</span></a>
         </li>
     </ul> 
@@ -28,7 +28,7 @@ $db = new DbConnection();
 </div>
 
 <div id="info">
-      <div id="InhaltHöhe">
+     <div id="InhaltArt">
 
     <?php               
     //Textausgabe, je nach eingeloggter Benutzer
