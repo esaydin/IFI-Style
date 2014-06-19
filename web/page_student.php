@@ -30,7 +30,7 @@ $db = new DbConnection();
                 <div id="InhaltArt">
                 <?php                
                 //Textausgabe, je nach eingeloggter Benutzer
-                echo "<br>Eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
+                echo "<br>Eingeloggt als: " . $_SESSION["vorname"] . " " . $_SESSION["nachname"] . " >> ";
                 //Link zum Logout
                 echo "<a href=\"logout.php\">Abmelden</a>";
                 ?>

@@ -58,11 +58,11 @@ $connection = new DbConnection();
  <?php
                 //echo $_SESSION['benutzername'] ;                 
 
-                echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
-                echo "<a href=\"logout.php\">Logout</a>";
+               echo "<br>Eingeloggt als: " . $_SESSION["vorname"] . " " . $_SESSION["nachname"] . " >> ";
+                echo "<a href=\"logout.php\">Abmelden</a>";
                 ?>
                 </br>
-                <a href="page_auftraggeber.php">Startseite</a>
+              
       </div></div>
 <!--Inkludieren vom Fussbereich-->
 <?php include_once 'footer.php'; ?>

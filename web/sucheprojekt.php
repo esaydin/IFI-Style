@@ -26,9 +26,7 @@ $connection = new DbConnection();
 
             <h4 class="h4">Hier können Sie nach Projekten suchen</h4>
             <form  method="post" action="ausgabe_student.php">
-                <!--und verknüpfung damit alle ausgewählten skills im projekt vorhanden sind-->
-                <p id="und">Und</p>
-                <input id="verknuepfung" name="verknuepfung" type="checkbox">
+               
                 <?php
                 echo "<br>";
                 //liste der skills wid von der datenbank geholt
@@ -40,6 +38,9 @@ $connection = new DbConnection();
                     <input id="skill" type="checkbox" name="skill[]" value="<?php echo $value['id']; ?>"> <?php echo $value['skill']; ?><br>
                 <?php } ?>
                 <input id="senden" type="submit" name="senden" value="Senden" id="senden">
+                 <!--und verknüpfung damit alle ausgewählten skills im projekt vorhanden sind-->
+                  <p id="und">Und</p>
+                <input id="verknuepfung" name="verknuepfung" type="checkbox">
             </form>
         </div>
     </div>
@@ -48,11 +49,10 @@ $connection = new DbConnection();
 <div id="info">
     <div id="InhaltArt">
          <?php
-    echo "<br>Eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
+     echo "<br>Eingeloggt als: " . $_SESSION["vorname"] . " " . $_SESSION["nachname"] . " >> ";
     echo "<a href=\"logout.php\">Abmelden</a>";
     ?>
-    </br>
-    <a href="page_student.php">Startseite</a>
+       
     </div>
 </div>
 <!--Inkludieren vom Fussbereich-->

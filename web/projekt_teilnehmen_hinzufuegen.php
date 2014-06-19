@@ -59,8 +59,8 @@ $db = new DbConnection();
                 <div id="InhaltArt">
                <?php
               
-                echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
-                echo "<a href=\"logout.php\">Logout</a>";
+                echo "<br>Eingeloggt als: " . $_SESSION["vorname"] . " " . $_SESSION["nachname"] . " >> ";
+                echo "<a href=\"logout.php\">Abmelden</a>";
                 ?>
                 </br>
                 <a href="sucheprojekt.php"/>
