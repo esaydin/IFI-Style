@@ -35,7 +35,7 @@ $connection = new DbConnection();
                         </tr>
                         <tr>
                             <td>
-                                <textarea name="projektbeschreibung"  placeholder="*Beschreibung" id="projektbeschreibung" rows="10" cols="40">
+                                <textarea name="projektbeschreibung"  placeholder="*Beschreibung" id="projektbeschreibung" value="" rows="10" cols="40">
                                 </textarea><br />
                             </td>
                         </tr>
@@ -57,7 +57,7 @@ $connection = new DbConnection();
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="2" align="right">
+                            <td colspan="2" align="left"><br>
                                 <input type="submit" name="registrieren" value="Registrieren">
                             </td>
                         </tr>
