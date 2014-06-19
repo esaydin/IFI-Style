@@ -39,7 +39,7 @@ function validate() {
                 pattern = /^$|^[1-9][0-9]{0,2}[a-zA-Z]{0,2}$/;
                 break;
             case "plz":
-                pattern = /^$|^[0-9]+$/;
+                pattern = /^$|^[0-9]{5}$/;
                 break;
             case "ort":
                 pattern = /^$|^[a-zA-ZüÜöÖäÄß]+$/;
