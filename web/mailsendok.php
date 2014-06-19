@@ -28,14 +28,7 @@ $db = new DbConnection();
                
                   </div></div></div>
 
-            <div id="info">
-                <div id="InhaltArt">
-                <?php                
-                //Textausgabe, je nach eingeloggter Benutzer
-                 echo "<br>Eingeloggt als: " . $_SESSION["vorname"] . " " . $_SESSION["nachname"] . " >> ";
-                //Link zum Logout
-                echo "<a href=\"logout.php\">Abmelden</a>";
-                ?>
+           <?php include_once 'info.php'; ?>
 
                   </div></div>
        <!--Inkludieren vom Fussbereich-->

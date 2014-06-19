@@ -54,15 +54,7 @@ $connection = new DbConnection();
 
                 </div>
                   </div></div>
-            <div id="info">
-                  <div id="InhaltArt">
-                <?php
-                //anzeige wer eingeloggt ist und logout
-                echo "<br>Eingeloggt als: " . $_SESSION["vorname"] . " " . $_SESSION["nachname"] . " >> ";
-                echo "<a href=\"logout.php\">Abmelden</a>";
-                ?>
-                  
-                  </div></div>
+     <?php include_once 'info.php'; ?>
                 
     <?php include_once 'footer.php'; ?>
 

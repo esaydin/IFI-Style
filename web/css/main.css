@@ -285,9 +285,14 @@ ul#Navigation a:hover, ul#Navigation span {
 }
 
 
+
 #projektbeschreibung{
     height: 200px;
     weight: 200px;
+    font-family: 'Open Sans', sans-serif; 
+    letter-spacing:0.0em;
+    line-height:1.4em;
+    font-size:1.0em;
 }
 #projektanlegen{margin-left: -800px;
   font-family: 'Open Sans', sans-serif; 

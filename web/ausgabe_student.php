@@ -91,18 +91,7 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
                 </div>
             </div>
 
-            <div id="info">
-                <div id="InhaltArt">
-                <?php
-//echo $_SESSION['benutzername'] ;                 
-
-    echo "<br>Eingeloggt als: " . $_SESSION["vorname"] . " " . $_SESSION["nachname"] . " >> ";
-    echo "<a href=\"logout.php\">Abmelden</a>";
-    ?>
-    
-   
-
-            </div>
-            </div>
+           
+          <?php include_once 'info.php'; ?>
        <!--Inkludieren vom Fussbereich-->
        <?php include_once 'footer.php'; ?>
