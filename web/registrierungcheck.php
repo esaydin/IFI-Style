@@ -58,7 +58,9 @@ $db = new DbConnection();
                  Klicken Sie auf Los gehts, um sich einzuloggen.</div>";
                 //Link zur Startseite für die Anmeldung nach der Registrierung
              
-                  echo "<br><a href=\"index.php\">Los geht's</a>";
+                  
+                  echo "<input type=\"submit\" value=\"Los gehts\" id=\"los\" onclick=\"location.href='index.php';\"></input>";
+                  //echo "<br><a href=\"index.php\"></a>";
             } else {
                 //Fehlermeldung, falls die Daten nicht gespeichert werden können
                 echo "<br> Daten konnten nicht gespeichert werden.";
