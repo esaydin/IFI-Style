@@ -34,7 +34,7 @@ if (!empty($_POST["titel"]) && !empty($_POST["projektbeschreibung"]) && !empty($
 }
 ?>
 <!--Inkludieren von Header für den Kopfbereich-->
-<?php include_once 'header.php'; ?>
+<?php include_once 'auftraggeber_header.php'; ?>
 
 <!--Navigationsbereich mit den Punkten Start, Profil, Student suchen und Projekt anlegen-->
 <div id='cssmenu'> 

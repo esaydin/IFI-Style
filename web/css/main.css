@@ -60,6 +60,7 @@ input, select {
     color:#585858; 
     width:120px; 
    border:1px solid #6E6E6E; 
+ 
 }
 
 #kopfbereich {
@@ -126,6 +127,12 @@ input, select {
            letter-spacing:0.0em;
            line-height:1.4em;
            font-size:1.0em;
+}
+
+.bl
+{
+padding: 10px;
+border-left: 2px solid #f00;
 }
 
 #inhalt {
@@ -206,9 +213,15 @@ ul#Navigation a:hover, ul#Navigation span {
     background-color:#F8F8ff; 
     width:380px; 
     margin-top: 0px;
-    margin-left:100px;
+    margin-left:150px;
+   
 
 }
+ #startanmelden{ border-radius: 4px;
+    height: 30px;
+     font-weight:100;
+ width: 200px;}
+
 #vorname,#nachname,#benutzername, #kennwort, #kennwortwdhl, #strasse, #hausnr, #plz, #ort, #email, #combo {
     border-radius: 4px;
     height: 30px;
@@ -407,6 +420,11 @@ ul#Navigation a:hover, ul#Navigation span {
  margin-top: 70px;
 }
 
+#willkommen{font-family: 'Open Sans', sans-serif; text-align: center; font-size: 25px;
+ margin-top: 70px;
+}
+
+#textcheck{text-align: center;}
 
 .regtext1{font-family: 'Open Sans', sans-serif; text-align: center;
  margin-top: 30px;
@@ -416,6 +434,7 @@ ul#Navigation a:hover, ul#Navigation span {
           letter-spacing:0.0em;
           line-height:1.5em;
           font-size:1.0em;
+          text-align: center;
           
           margin-top: 10px;
 
@@ -431,7 +450,7 @@ ul#Navigation a:hover, ul#Navigation span {
 }  
 
 
-.anmelden{ margin-left:50px; margin-top: 60px;  color:#576D72;font-family: 'Open Sans', sans-serif;}
+.anmelden{ margin-left:50px; margin-top: 90px;  color:#576D72;font-family: 'Open Sans', sans-serif;}
 .reg{ margin-left:50px; margin-top: 40px;  color:#576D72;font-family:'Open Sans', sans-serif;}
 
 
@@ -502,6 +521,52 @@ ul#Navigation a:hover, ul#Navigation span {
 
 }
 
+#anmelden2:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #4951bd), color-stop(1, #5c62d6));
+    background:-moz-linear-gradient(top, #4951bd 5%, #5c62d6 100%);
+    background:-webkit-linear-gradient(top, #4951bd 5%, #5c62d6 100%);
+    background:-o-linear-gradient(top, #4951bd 5%, #5c62d6 100%);
+    background:-ms-linear-gradient(top, #4951bd 5%, #5c62d6 100%);
+    background:linear-gradient(to bottom, #4951bd 5%, #5c62d6 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4951bd', endColorstr='#5c62d6',GradientType=0);
+    background-color:#4951bd;
+}
+
+#anmelden2:active {
+    position:relative;
+    top:1px;
+
+}
+
+#anmelden2 {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5c62d6), color-stop(1, #4951bd));
+    background:-moz-linear-gradient(top, #5c62d6 5%, #4951bd 100%);
+    background:-webkit-linear-gradient(top, #5c62d6 5%, #4951bd 100%);
+    background:-o-linear-gradient(top, #5c62d6 5%, #4951bd 100%);
+    background:-ms-linear-gradient(top, #5c62d6 5%, #4951bd 100%);
+    background:linear-gradient(to bottom, #5c62d6 5%, #4951bd 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5c62d6', endColorstr='#4951bd',GradientType=0);
+
+    background-color:#5c62d6;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    border:1px solid #5c62d6;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:arial;
+    font-size:17px;
+    padding:3px 20px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #5c62d6;
+    font-weight:100;
+   
+    margin: 40px;
+   margin-top: -73px;
+   margin-left: 30px;
+}
+
 
 #registrierung1 {
     background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5c62d6), color-stop(1, #4951bd));
@@ -526,8 +591,9 @@ ul#Navigation a:hover, ul#Navigation span {
     text-decoration:none;
     text-shadow:0px 1px 0px #5c62d6;
     font-weight:100;
-
-
+   margin-top: -50px;
+    margin: 40px;
+    margin-left: 50px;
 }
 #registrierung1:hover {
     background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #4951bd), color-stop(1, #5c62d6));
@@ -543,7 +609,7 @@ ul#Navigation a:hover, ul#Navigation span {
 #registrierung1:active {
     position:relative;
     top:1px;
-    margin-left: 10px;
+   
 }
 
 #profilDaten{
@@ -635,5 +701,50 @@ ul#Navigation a:hover, ul#Navigation span {
 	top:1px;
 }
 
-#regtabelle{margin-top: 0px;}
+
+#los:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #4951bd), color-stop(1, #5c62d6));
+    background:-moz-linear-gradient(top, #4951bd 5%, #5c62d6 100%);
+    background:-webkit-linear-gradient(top, #4951bd 5%, #5c62d6 100%);
+    background:-o-linear-gradient(top, #4951bd 5%, #5c62d6 100%);
+    background:-ms-linear-gradient(top, #4951bd 5%, #5c62d6 100%);
+    background:linear-gradient(to bottom, #4951bd 5%, #5c62d6 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4951bd', endColorstr='#5c62d6',GradientType=0);
+    background-color:#4951bd;
+}
+
+#los:active {
+    position:relative;
+    top:1px;
+
+}
+
+#los {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5c62d6), color-stop(1, #4951bd));
+    background:-moz-linear-gradient(top, #5c62d6 5%, #4951bd 100%);
+    background:-webkit-linear-gradient(top, #5c62d6 5%, #4951bd 100%);
+    background:-o-linear-gradient(top, #5c62d6 5%, #4951bd 100%);
+    background:-ms-linear-gradient(top, #5c62d6 5%, #4951bd 100%);
+    background:linear-gradient(to bottom, #5c62d6 5%, #4951bd 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5c62d6', endColorstr='#4951bd',GradientType=0);
+
+    background-color:#5c62d6;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    border:1px solid #5c62d6;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:arial;
+    font-size:17px;
+    padding:3px 20px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #5c62d6;
+    font-weight:100;
+   
+    margin: 40px;
+   margin-top: -73px;
+   margin-left: 30px;
+}
 

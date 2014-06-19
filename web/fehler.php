@@ -9,7 +9,7 @@ include_once 'db_connection.php';
 $db = new DbConnection();
 ?>
 
-<?php include_once 'header.php'; ?>
+<?php include_once 'student_header.php'; ?>
             <div id='cssmenu'> 
                 <ul> 
                     <li class='active'><a href='page_student.php'><span>Start</span></a></li> 
