@@ -602,7 +602,7 @@ margin-top: -136px;
     text-decoration:none;
     text-shadow:0px 1px 0px #5c62d6;
     font-weight:100;
-   margin-top: -50px;
+    margin-top: -50px;
     margin: 40px;
     margin-left: 50px;
 }
@@ -643,28 +643,7 @@ margin-top: -136px;
 
 }
 
-#losgehts {
-	background-color:#11b83d;
-	-moz-border-radius:8px;
-	-webkit-border-radius:8px;
-	border-radius:8px;
-	border:1px solid #18ab29;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:arial;
-	font-size:17px;
-	padding:7px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;
-}
-#losgehts:hover {
-	background-color:#48bd0a;
-}
-#losgehts:active {
-	position:relative;
-	top:1px;
-}
+
 
 #anmelden1 {
 	background-color:#5365f2;
@@ -723,11 +702,13 @@ margin-top: -136px;
     background:linear-gradient(to bottom, #4951bd 5%, #5c62d6 100%);
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4951bd', endColorstr='#5c62d6',GradientType=0);
     background-color:#4951bd;
+  
 }
 
 #los:active {
     position:relative;
     top:1px;
+   
 
 }
 
@@ -756,8 +737,8 @@ margin-top: -136px;
     font-weight:100;
    
     margin: 40px;
-   margin-top: -73px;
-   margin-left: 30px;
+    margin-top: -73px;
+    margin-left: 30px;
 }
 
 #profiltabelle,td{

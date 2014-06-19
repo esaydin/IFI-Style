@@ -54,11 +54,11 @@ $db = new DbConnection();
             if ($result) {
                 //Willkommengruß nach der Registrierung
                  echo "<div id=\"willkommen\">Herzlich Willkommen bei SearchProStud!</div>";
-                echo  " <br>.<div id=\"textcheck\">Sie haben sich erfolgreich registriert.<br>
-                .  Klicken Sie auf Los gehts, um sich einzuloggen.</div>";
+                echo  " <br><div id=\"textcheck\">Sie haben sich erfolgreich registriert.<br>
+                 Klicken Sie auf Los gehts, um sich einzuloggen.</div>";
                 //Link zur Startseite für die Anmeldung nach der Registrierung
              
-                  echo "<br><div id=\"los\"><a href=\"index.php\">Los geht's</a></div>";
+                  echo "<br><a href=\"index.php\">Los geht's</a>";
             } else {
                 //Fehlermeldung, falls die Daten nicht gespeichert werden können
                 echo "<br> Daten konnten nicht gespeichert werden.";
