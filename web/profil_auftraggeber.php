@@ -27,14 +27,29 @@ $connection = new DbConnection();
                   <div id="InhaltHöhe">
                         <div id="profilDaten">
 
-                <?php
-                //Daten von der eingeloggten person werden von der Session geholt
-                echo "Benutzername: " . $_SESSION["benutzername"] . "<br>"
-                . "Vorname: " . $_SESSION["vorname"] . "<br>"
-                . "Nachname: " . $_SESSION["nachname"] . "<br>"
-                . "E-Mail: " . $_SESSION["email"] . "<br>"
-                . "<hr>";
-                ?>
+                          <?php
+                echo "<table id= 'profiltabelle' >";
+                echo "<tr>";
+                echo "<td>" . 'Benutzername: ' . "</td>";
+                echo "<td >" . $_SESSION["benutzername"] .  " </td>" . "<br>" ;
+                echo "</tr>";
+                echo "<tr>";
+                echo "<td>" . 'Vorname: ' . "</td>";
+                echo "<td >" . $_SESSION["vorname"] .  " </td>" . "<br>" ;
+                echo "</tr>";
+                echo "<tr>";
+                echo "<td>" . 'Nachname: ' . "</td>";
+                echo "<td >" . $_SESSION["nachname"] .  " </td>" . "<br>" ;
+                echo "</tr>";
+                echo "<tr>";
+                echo "<td>" . 'Email: ' . "</td>";
+                echo "<td >" . $_SESSION["email"] .  " </td>" . "<br>" ;
+                echo "</tr>";
+                echo "</table>";
+                
+                ?> 
+                <br>           
+                <hr>
 
                 </div>
                   </div></div>
@@ -42,8 +57,8 @@ $connection = new DbConnection();
                   <div id="InhaltArt">
                 <?php
                 //anzeige wer eingeloggt ist und logout
-                echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
-                echo "<a href=\"logout.php\">Logout</a>";
+                echo "<br>Eingeloggt als: " . $_SESSION["vorname"] . " " . $_SESSION["nachname"] . " >> ";
+                echo "<a href=\"logout.php\">Abmelden</a>";
                 ?>
                   
                   </div></div>

@@ -146,10 +146,12 @@ border-left: 2px solid #f00;
 
 #InhaltArt{
     color:#5c62d6;
-     font-family: 'Open Sans', sans-serif; 
-          letter-spacing:0.0em;
-          line-height:1.4em;
-          font-size:1.0em;
+    font-family: 'Open Sans', sans-serif; 
+    letter-spacing:0.0em;
+    line-height:1.4em;
+    font-size:1.0em;
+    text-align: right;
+    margin: 0.6cm;
 }
 
 #info {
@@ -294,9 +296,13 @@ ul#Navigation a:hover, ul#Navigation span {
     font-size:1.0em;
    }
 
-#verknuepfung{margin-left: -700px;}
+#verknuepfung{margin-left: -700px;
+ 
+}
 
-#und{margin-left: -700px;}
+#und{margin-left: -700px;
+margin-top:-110px;
+}
 
 #teilnehmen{margin-left: -870px;}
 
@@ -748,3 +754,14 @@ ul#Navigation a:hover, ul#Navigation span {
    margin-left: 30px;
 }
 
+#profiltabelle,td{
+    font-family: 'Open Sans', sans-serif; 
+    letter-spacing:0.0em;
+    line-height:1.4em;
+    font-size:1.0em;
+    margin-top: -90px;
+    font-weight: 100;
+    width: 50%;
+    height: 20%;
+    
+}

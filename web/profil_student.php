@@ -65,21 +65,41 @@ if (!is_bool($result)) {
                  
                       <h4 class="h4">Persönliche Daten</h4>
                        <div id="profilDaten">
+              
                 <?php
-                //Daten von der eingeloggten person werden von der Session geholt
-                echo "Benutzername: " . $_SESSION["benutzername"] . "<br>"
-                   . "Vorname:      " . $_SESSION["vorname"] . "<br>"
-                   . "Nachname:     " . $_SESSION["nachname"] . "<br>"
-                   . "E-Mail:       " . $_SESSION["email"] . "<br>"
-                   . "<hr>";
-                ?>
-
+                echo "<table id= 'profiltabelle' >";
+                echo "<tr>";
+                echo "<td>" . 'Benutzername: ' . "</td>";
+                echo "<td >" . $_SESSION["benutzername"] .  " </td>" . "<br>" ;
+                echo "</tr>";
+                echo "<tr>";
+                echo "<td>" . 'Vorname: ' . "</td>";
+                echo "<td >" . $_SESSION["vorname"] .  " </td>" . "<br>" ;
+                echo "</tr>";
+                echo "<tr>";
+                echo "<td>" . 'Nachname: ' . "</td>";
+                echo "<td >" . $_SESSION["nachname"] .  " </td>" . "<br>" ;
+                echo "</tr>";
+                echo "<tr>";
+                echo "<td>" . 'Email: ' . "</td>";
+                echo "<td >" . $_SESSION["email"] .  " </td>" . "<br>" ;
+                echo "</tr>";
+                echo "</table>";
+                
+                ?> 
+                <br>           
+                <hr>
+                <br><br>           
+                  <p>Hier können Skills auswählt und gespeichert werden.
+                    <br>Bei Bedarf sind Änderungen möglich.</p>          
                 <form  method="post">
-
+                   
                     <?php
                     //die liste der skills wird von der Datenbank geholt und mit checkbox versehen
                     //wenn schon   skills vorhanden sind, sind sie markiert   
-    
+                    
+                   
+                    
                     echo "<br>";
                     $sql = "SELECT * FROM skill";
                     $result = $connection->connection($sql);
@@ -92,7 +112,7 @@ if (!is_bool($result)) {
                                    > <?php echo $value['skill']; ?><br>
                                <?php } ?>
                            <?php } ?>
-                    <input id="senden" type="submit" name="senden" value="Senden" id="senden">
+                    <input id="senden" type="submit" name="senden" value="Senden">
                 </form>
                
                   </div></div>
@@ -100,7 +120,7 @@ if (!is_bool($result)) {
             <div id="info">
                 <div id="InhaltArt">
                 <?php
-                echo "<br>Eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
+                echo "<br>Eingeloggt als: " . $_SESSION["vorname"] . " " . $_SESSION["nachname"] . " >> ";
                 echo "<a href=\"logout.php\">Abmelden</a>";
                 ?>
                 </div></div>

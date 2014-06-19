@@ -35,9 +35,9 @@ $db = new DbConnection();
 
     <?php               
     //Textausgabe, je nach eingeloggter Benutzer
-    echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
+    echo "<br>Eingeloggt als: " . $_SESSION["vorname"] . " " . $_SESSION["nachname"] . " >> ";
     //Link zum Logout
-    echo "<a href=\"logout.php\">Logout</a>";
+    echo "<a href=\"logout.php\">Abmelden</a>";
     ?>
       </div></div>
 <!--Inkludieren vom Fussbereich-->
