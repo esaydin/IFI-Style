@@ -128,7 +128,9 @@ input, select {
            line-height:1.4em;
            font-size:1.0em;
 }
-
+#impressum {
+    text-decoration:none;
+}
 .bl
 {
 padding: 10px;
@@ -152,6 +154,8 @@ border-left: 2px solid #f00;
     font-size:1.0em;
     text-align: right;
     margin: 0.6cm;
+   
+    
 }
 
 #info {
@@ -628,6 +632,7 @@ margin-top: -136px;
 
 }
 
+
 .h4{
     font-family: 'Open Sans', sans-serif; 
     letter-spacing:0.0em;
@@ -770,5 +775,5 @@ margin-top: -136px;
     height: 100px;
     width: 100px;
     margin-top: 50px;
-    margin-left: 150px;
+    margin-left: 155px;
 }
