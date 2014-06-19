@@ -6,8 +6,6 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
 
 include_once 'db_connection.php';
 $connection = new DbConnection();
-
-
 ?>
 
 <?php include_once 'auftraggeber_header.php'; ?>
@@ -23,38 +21,35 @@ $connection = new DbConnection();
     </ul> 
 </div>
 
-            <div id="inhalt">
-                  <div id="InhaltHöhe">
-                        <h4 class="h4">Persönliche Daten</h4>
-                        <div id="profilDaten">
-
-                          <?php
-                echo "<table id= 'profiltabelle' >";
-                echo "<tr>";
-                echo "<td>" . 'Benutzername: ' . "</td>";
-                echo "<td >" . $_SESSION["benutzername"] .  " </td>" . "<br>" ;
-                echo "</tr>";
-                echo "<tr>";
-                echo "<td>" . 'Vorname: ' . "</td>";
-                echo "<td >" . $_SESSION["vorname"] .  " </td>" . "<br>" ;
-                echo "</tr>";
-                echo "<tr>";
-                echo "<td>" . 'Nachname: ' . "</td>";
-                echo "<td >" . $_SESSION["nachname"] .  " </td>" . "<br>" ;
-                echo "</tr>";
-                echo "<tr>";
-                echo "<td>" . 'Email: ' . "</td>";
-                echo "<td >" . $_SESSION["email"] .  " </td>" . "<br>" ;
-                echo "</tr>";
-                echo "</table>";
-                
+<div id="inhalt">
+    <div id="InhaltHöhe">
+        <h4 class="h4">Persönliche Daten</h4>
+            <div id="profilDaten">
+                <?php
+                    echo "<table id= 'profiltabelle' >";
+                    echo "<tr>";
+                    echo "<td>" . 'Benutzername: ' . "</td>";
+                    echo "<td >" . $_SESSION["benutzername"] . " </td>" . "<br>";
+                    echo "</tr>";
+                    echo "<tr>";
+                    echo "<td>" . 'Vorname: ' . "</td>";
+                    echo "<td >" . $_SESSION["vorname"] . " </td>" . "<br>";
+                    echo "</tr>";
+                    echo "<tr>";
+                    echo "<td>" . 'Nachname: ' . "</td>";
+                    echo "<td >" . $_SESSION["nachname"] . " </td>" . "<br>";
+                    echo "</tr>";
+                    echo "<tr>";
+                    echo "<td>" . 'Email: ' . "</td>";
+                    echo "<td >" . $_SESSION["email"] . " </td>" . "<br>";
+                    echo "</tr>";
+                    echo "</table>";
                 ?> 
-                <br>           
-                <hr>
-
-                </div>
-                  </div></div>
-     <?php include_once 'info.php'; ?>
-                
-    <?php include_once 'footer.php'; ?>
+            <br>           
+            <hr>
+        </div>
+    </div>
+</div>
+<?php include_once 'info.php'; ?>
+<?php include_once 'footer.php'; ?>
 

@@ -23,38 +23,30 @@ $connection = new DbConnection();
 </div>
 <div id="inhalt">
     <div id="InhaltHöhe">
-        
-         
+        <h1 class="h4">Hier können Sie nach mehreren Studenten suchen:</h1>
+        <div id="text">
+            <div id="profilDaten">
+                <p>Wählen Sie mindestens ein Skill, um geeigneten Studenten für das Projekt zu filtern. </p>
+                <form  method="post" action="ausgabe_auftraggeber.php">
+                    <?php
+                    echo "<br>";
+                    $sql = "SELECT * FROM skill";
+                    $result = $connection->connection($sql);
 
-                <h1 class="h4">Hier können Sie nach mehreren Studenten suchen:</h1>
-                
-                <div id="text">
-                  <div id="profilDaten">
-                       <p>Wählen Sie mindestens ein Skill, um geeigneten Studenten für das Projekt zu filtern. </p>
-                    <form  method="post" action="ausgabe_auftraggeber.php">
-                       
-                        <?php
-                        echo "<br>";
-                        $sql = "SELECT * FROM skill";
-                        $result = $connection->connection($sql);
-
-                        foreach ($result as $key => $value) {
-                            ?>
-                            <input id="skill" type="checkbox" name="skill[]" value="<?php echo $value['id']; ?>"> <?php echo $value['skill']; ?><br>
-                        <?php }
+                    foreach ($result as $key => $value) {
                         ?>
-                        <input id="senden" type="submit" name="senden" value="Senden" id="senden">
-                         <p id="und">Zusätzlich anklicken:<br> Für Studenten, die alle ausgewählten Skills besitzen.</p>
-                        <input id="verknuepfung" name="verknuepfung" type="checkbox">
-                    </form>
-                        </div>
-                </div>
-                  </div>
-        
+                        <input id="skill" type="checkbox" name="skill[]" value="<?php echo $value['id']; ?>"> <?php echo $value['skill']; ?><br>
+                    <?php }
+                    ?>
+                    <input id="speichern" type="submit" name="suchen" value="Suchen">
+                    <p id="und">Zusätzlich anklicken:<br> Für Studenten, die alle ausgewählten Skills besitzen.</p>
+                    <input id="verknuepfung" name="verknuepfung" type="checkbox">
+                </form>
+            </div>
+        </div>
     </div>
-    
-   
 </div>
+
 
 <?php include_once 'info.php'; ?>
 <!--Inkludieren vom Fussbereich-->

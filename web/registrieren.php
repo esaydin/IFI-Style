@@ -42,7 +42,7 @@
                         Onkeyup-Funktion überprüft bei Eingabe auf regulären Ausdrücke-->
                         <br><input type="text" id="vorname" name="vorname" placeholder="*Vorname" value="" onKeyUp="validate()"/><br><br>
                     </td>
-         
+
                     <td> 
                         <br><input type="text" id="nachname" name="nachname" placeholder="*Nachname" value="" onKeyUp="validate()"/><br><br>
                     </td>
@@ -53,33 +53,27 @@
                     <td>
                         <input type="text" id="benutzername" name="benutzername" placeholder="*Benutzername" value="" onKeyUp="validate()"/><br><br>
                     </td>
-                   
-
                 </tr>
                 <tr>
                     <td>
                         <input type="text" id="email" name="email" placeholder="*Email" value="" onKeyUP="validate()"/><br><br>
                     </td>
-
                 </tr>
                 <tr>
                     <td>
                         <input type="password" id="kennwort" name="kennwort" placeholder="*Kennwort" value="" onKeyUp="validate()"/><br /><br />
                     </td>
-
                 </tr>
                 <tr>
                     <td>
                         <input type="password" id="kennwortwdhl" name="kennwortwdhl" placeholder="*Kennwort erneut" value="" onKeyUp="validate()"/><br /><br />
                     </td>
-
                     <td id="passmsg"></td>
                 </tr>
                 <tr>
                     <td>
                         <input type="text" id="strasse" name="strasse" placeholder=" Strasse" value="" onKeyUp="validate()"/><br /><br />
                     </td>
-
                 </tr>
                 <tr>
                     <td>
@@ -90,22 +84,18 @@
                     <td>
                         <input type="text" id="plz" name="plz" placeholder=" PLZ" value="" onKeyUp="validate()" /><br /><br />
                     </td>
-
                 </tr>
                 <tr>
                     <td>
                         <input type="text" id="ort" name="ort" placeholder=" Ort" value="" onKeyUp="validate()"/><br /><br />
                     </td>
-
                 </tr>
-
-
                 <tr>
-               <!--Button für das Registrieren, bei nicht Erfdüllung der Pflichtfelder ist der Button gesperrt-->
+                    <!--Button für das Registrieren, bei nicht Erfdüllung der Pflichtfelder ist der Button gesperrt-->
                     <td colspan="2" align="right">
                         <input type="submit" name="registrieren" value="Registrieren" id="registrierung" disabled>
                     </td>
-                </tr> <br />
+                </tr><br />
                 <br></br>
             </table>
         </form>
@@ -114,7 +104,7 @@
 
 <div id="info">
     <div id="InhaltHöhe">
-        <p class="zuruckStart" >  <a id="zuruckButton" href="index.php">Zurück zur Startseite</a></p>
+        <p class="zuruckStart" ><a id="zuruckButton" href="index.php">Zurück zur Startseite</a></p>
     </div>
 </div>
 <!--Footer mit Angabe von Gruppenname und Datum-->

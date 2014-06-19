@@ -9,52 +9,51 @@ $db = new DbConnection();
 ?>
 
 <?php include_once 'student_header.php'; ?>
-            <div id='cssmenu'> 
-                <ul> 
-                    <li><a href='page_student.php'><span>Start</span></a></li> 
-                    <li><a href='profil_student.php'><span>Profil</span></a></li>
-                    <li class='last'><a href='sucheprojekt.php'><span>Suche Projekt</span></a>
-                    </li> 
-                </ul> 
-            </div>
+<div id='cssmenu'> 
+    <ul> 
+        <li><a href='page_student.php'><span>Start</span></a></li> 
+        <li><a href='profil_student.php'><span>Profil</span></a></li>
+        <li class='last'><a href='sucheprojekt.php'><span>Suche Projekt</span></a>
+        </li> 
+    </ul> 
+</div>
 
-            <!--Textausgabe, wenn man  sich als Student eingeloggt hat-->
-            <div id="inhalt">
-                <div id="InhaltHöhe">
-                    
-                    <h1 class="h4">Projektteilnahme beantragen</h1>
-                <form action="formmail.php" method="post">
-                    <table id="projekthinzufuegen">
-                        <tr>
-                            <td>
-                                <!-- Hier die eigentlichen Formularfelder eintragen. Die folgenden sind Beispielangaben. -->
-                                <dl> Titel: <?php if (isset($_POST["proname"])) echo $_POST["proname"]; ?> </dl><!--titel wom Projekt wird gesetzt-->
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p><label>Betreff:<br><input id="projektteilnehmenbetreff"type="text" name="Betreff"></label></p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p><label>Bemerkungen:<br>
-                                        <textarea id="projektteilnehmenbemerken"name="Nachricht" cols="50" rows="8"></textarea></label></p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p>
-                                    <input type="submit" value="Senden" />
-                                    <input type="reset" value="Zurücksetzen" />
-                                </p>
-                            </td>
-                        </tr>
-                </form>
-                </table>
-                </div>
-            </div>
+<!--Textausgabe, wenn man  sich als Student eingeloggt hat-->
+<div id="inhalt">
+    <div id="InhaltHöhe">
+        <h1 class="h4">Projektteilnahme beantragen</h1>
+        <form action="formmail.php" method="post">
+            <table id="projekthinzufuegen">
+                <tr>
+                    <td>
+                        <!-- Hier die eigentlichen Formularfelder eintragen. Die folgenden sind Beispielangaben. -->
+                        <dl> Titel: <?php if (isset($_POST["proname"])) echo $_POST["proname"]; ?> </dl><!--titel wom Projekt wird gesetzt-->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><label>Betreff:<br><input id="projektteilnehmenbetreff"type="text" name="Betreff"></label></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><label>Bemerkungen:<br>
+                                <textarea id="projektteilnehmenbemerken"name="Nachricht" cols="50" rows="8"></textarea></label></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            <input type="submit" value="Senden" />
+                            <input type="reset" value="Zurücksetzen" />
+                        </p>
+                    </td>
+                </tr>
+        </form>
+        </table>
+    </div>
+</div>
 
-       <?php include_once 'info.php'; ?>
-       <!--Inkludieren vom Fussbereich-->
-       <?php include_once 'footer.php'; ?>
+<?php include_once 'info.php'; ?>
+<!--Inkludieren vom Fussbereich-->
+<?php include_once 'footer.php'; ?>

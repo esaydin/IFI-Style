@@ -22,9 +22,9 @@ $db = new DbConnection();
     </ul> 
 </div>
 <div id="inhalt">
-    <div id="InhaltHöhe"></div>
-    
-   
+    <div id="InhaltHöhe">
+        
+    </div>
 </div>
 
 <?php include_once 'info.php'; ?>

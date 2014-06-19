@@ -25,9 +25,9 @@ if (!empty($_POST["titel"]) && !empty($_POST["projektbeschreibung"]) && !empty($
             $result = $connection->connection($sql2);
         }
         //am ende werden die daten in Projektbenutzerzuordnung gespeicher, damit man sehen kann wem das Projekt gehort
-         $sql3 = "INSERT INTO projektbenutzerzuordnung"
-                    . " VALUES ( (SELECT id FROM projekt WHERE titel = '" . $_POST["titel"] . "'), '" . $_SESSION['id'] . "', '" . $_SESSION['idbenutzertyp'] . "' )";
-           $connection->connection($sql3);
+        $sql3 = "INSERT INTO projektbenutzerzuordnung"
+                . " VALUES ( (SELECT id FROM projekt WHERE titel = '" . $_POST["titel"] . "'), '" . $_SESSION['id'] . "', '" . $_SESSION['idbenutzertyp'] . "' )";
+        $connection->connection($sql3);
 
         $projektAngelegt = true;
     }
@@ -49,21 +49,19 @@ if (!empty($_POST["titel"]) && !empty($_POST["projektbeschreibung"]) && !empty($
 </div>
 <div id="inhalt">
     <div id="InhaltHöhe">
-         <div id="profilDaten">
-          <?php
-                //wenn projekt angelegt true liefert wird die ausgabe gemacht das es erfolgreich war
-                if ($projektAngelegt) {
-                    echo "Projekt wurde angelegt!";
-                    echo "<br><br>" . "Titel: " . $_POST["titel"] . "<br>" . "Beschreibung: " . $_POST["projektbeschreibung"] . "<br>";
-
-                } else {
-                    echo "Projekt konnte nicht angelegt werden!";
-                }
-                ?>
-                <br><a href="projektanlegen.php"> Zurück </a>  
+        <div id="profilDaten">
+            <?php
+            //wenn projekt angelegt true liefert wird die ausgabe gemacht das es erfolgreich war
+            if ($projektAngelegt) {
+                echo "Projekt wurde veröffentlicht!";
+                echo "<br><br>" . "Titel: " . $_POST["titel"] . "<br>" . "Beschreibung: " . $_POST["projektbeschreibung"] . "<br>";
+            } else {
+                echo "Projekt konnte nicht veröffentlicht werden!";
+            }
+            ?>
+            <br><a href="projektanlegen.php"> Zurück </a>  
+        </div>
     </div>
-    </div>
-   
 </div>
 
 <?php include_once 'info.php'; ?>

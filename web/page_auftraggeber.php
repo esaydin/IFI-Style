@@ -22,13 +22,13 @@ $db = new DbConnection();
     </ul> 
 </div>
 <div id="inhalt">
-      <div id="InhaltHöhe">
-
-    <!--Textausgabe bei der Anmeldung als Auftraggeber-->
-    <h2 class="studh2"> Sie Sind als Auftraggeber eingeloggt</h2><br/>
-    <p class="textstud">Als Auftraggeber haben Sie die Möglichkeiten Studenten für ihr Projekt zu finden, die Ihren Ansprüchen entspricht.
-        Selber können Sie unter "Projekt anlegen" Projekte veröffentlichen, die von allen Studenten sichtbar werden.</p>
-      </div></div>
+    <div id="InhaltHöhe">
+        <!--Textausgabe bei der Anmeldung als Auftraggeber-->
+        <h2 class="studh2"> Sie Sind als Auftraggeber eingeloggt</h2><br/>
+        <p class="textstud">Als Auftraggeber haben Sie die Möglichkeiten Studenten für ihr Projekt zu finden, die Ihren Ansprüchen entspricht.
+            Selber können Sie unter "Projekt anlegen" Projekte veröffentlichen, die von allen Studenten sichtbar werden.</p>
+    </div>
+</div>
 
 
 

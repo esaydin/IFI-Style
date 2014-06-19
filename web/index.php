@@ -55,7 +55,7 @@ if (!empty($_POST["benutzername"]) && !empty($_POST["kennwort"])) {
     </div>
 
 
- <?php
+    <?php
 # Diashow mit PHP und JavaScript
 # Verzeichnis der Bilder
     $verzeichnis = "bilderslide/";
@@ -90,7 +90,7 @@ if (!empty($_POST["benutzername"]) && !empty($_POST["kennwort"])) {
      setTimeout('anzeigen()', $peed);}
      anzeigen();
     </script>";
-?>
+    ?>
 </div>
 
 <div id="info">   
@@ -116,4 +116,10 @@ if (!empty($_POST["benutzername"]) && !empty($_POST["kennwort"])) {
         </div>
     </div>
 </div>
-<?php include_once 'footer.php'; ?>
+<div id="fussbereich">
+    <p>&copy; 2014 SearchProStud</p>
+    <p><a href="impressum.php" id="impressum" style=" color:white" >Impressum</a></p>
+</div>
+</div>
+</body>
+</html>

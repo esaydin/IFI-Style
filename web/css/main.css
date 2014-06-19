@@ -59,8 +59,8 @@ input, select {
     // background-color:#DCDCDC; 
     color:#585858; 
     width:120px; 
-   border:1px solid #6E6E6E; 
- 
+    border:1px solid #6E6E6E; 
+
 }
 
 #kopfbereich {
@@ -124,17 +124,17 @@ input, select {
     width:1297px;
     height: 100px; 
     font-family: 'Open Sans', sans-serif;
-           letter-spacing:0.0em;
-           line-height:1.4em;
-           font-size:1.0em;
+    letter-spacing:0.0em;
+    line-height:1.4em;
+    font-size:1.0em;
 }
 #impressum {
     text-decoration:none;
 }
 .bl
 {
-padding: 10px;
-border-left: 2px solid #f00;
+    padding: 10px;
+    border-left: 2px solid #f00;
 }
 
 #inhalt {
@@ -146,13 +146,23 @@ border-left: 2px solid #f00;
     width:770px;
 }
 
-#inhaltimpressum {
+
+#inhaltausgabe {
     background-color:#F8F8ff;
     margin-left:-5px;
     padding: 20px;
     margin-top: 0px;
+    height: auto;
+    width:770px;
+}
+#inhaltimpressum {
+    background-color:#F8F8ff;
+    margin-left:-5px;
+    padding: 20px;
     height: 740;
     width:1300px;
+  
+   
 }
 
 #InhaltArt{
@@ -163,8 +173,8 @@ border-left: 2px solid #f00;
     font-size:1.0em;
     text-align: right;
     margin: 0.6cm;
-   
-    
+
+
 }
 
 #info {
@@ -173,9 +183,17 @@ border-left: 2px solid #f00;
     height: 770px;
     padding: 5px;
     background-color: #F8F8ff;
-    //border-left: 2px solid black;
     margin-top: -780px;
-    // margin-left:800px;
+    margin-left:817px;
+}
+
+#infoausgabe{
+    float: left;
+    width:505px; 
+    height: auto;
+    padding: 5px;
+    background-color: #F8F8ff;
+
     margin-left:817px;
 }
 
@@ -218,7 +236,7 @@ ul#Navigation a:hover, ul#Navigation span {
 
 #tabellesuchen{margin-left: 0px; margin-top: -200px;width: 300px;}
 
-#senden{margin-left: -900px; margin-top: 30px;}
+#speichern{margin-left: -900px; margin-top: 30px;}
 
 #skill{margin-left: -900px;}
 
@@ -229,13 +247,13 @@ ul#Navigation a:hover, ul#Navigation span {
     width:380px; 
     margin-top: -20px;
     margin-left:150px;
-   
+
 
 }
- #startanmelden{ border-radius: 4px;
-    height: 30px;
-     font-weight:100;
- width: 200px;}
+#startanmelden{ border-radius: 4px;
+                height: 30px;
+                font-weight:100;
+                width: 200px;}
 
 #vorname,#nachname,#benutzername, #kennwort, #kennwortwdhl, #strasse, #hausnr, #plz, #ort, #email, #combo {
     border-radius: 4px;
@@ -267,7 +285,7 @@ ul#Navigation a:hover, ul#Navigation span {
     width:200px; 
     border:2px solid #ddd; 
     margin-left: -200px;
-   // margin-top: 0px;
+    // margin-top: 0px;
 
 }
 
@@ -308,18 +326,18 @@ ul#Navigation a:hover, ul#Navigation span {
     font-size:1.0em;
 }
 #projektanlegen{margin-left: -800px;
-  font-family: 'Open Sans', sans-serif; 
-    letter-spacing:0.0em;
-    line-height:1.4em;
-    font-size:1.0em;
-   }
+                font-family: 'Open Sans', sans-serif; 
+                letter-spacing:0.0em;
+                line-height:1.4em;
+                font-size:1.0em;
+}
 
 #verknuepfung{margin-left: -700px;
 
 }
 
 #und{margin-left: -700px;
-margin-top: -136px;
+     margin-top: -136px;
 }
 
 #teilnehmen{margin-left: -870px;}
@@ -437,17 +455,17 @@ margin-top: -136px;
 
 
 .studh2{font-family: 'Open Sans', sans-serif; text-align: center;
- margin-top: 70px;
+        margin-top: 70px;
 }
 
 #willkommen{font-family: 'Open Sans', sans-serif; text-align: center; font-size: 25px;
- margin-top: 70px;
+            margin-top: 70px;
 }
 
 #textcheck{text-align: center;}
 
 .regtext1{font-family: 'Open Sans', sans-serif; text-align: center;
- margin-top: 30px;
+          margin-top: 30px;
 }
 
 .textstud{font-family: 'Open Sans', sans-serif; 
@@ -455,17 +473,17 @@ margin-top: -136px;
           line-height:1.5em;
           font-size:1.0em;
           text-align: center;
-          
+
           margin-top: 10px;
 
 }  
 
 .zuruckStart{font-family: 'Open Sans', sans-serif; 
-          letter-spacing:0.0em;
-          line-height:1.5em;
-          font-size:1.0em;
-      margin-left: 70px;
-          margin-top: 10px;
+             letter-spacing:0.0em;
+             line-height:1.5em;
+             font-size:1.0em;
+             margin-left: 70px;
+             margin-top: 10px;
 
 }  
 
@@ -479,9 +497,9 @@ margin-top: -136px;
            letter-spacing:0.0em;
            line-height:1.4em;
            font-size:1.0em;
-           
-           
-       
+
+
+
 
 
 }
@@ -496,6 +514,10 @@ margin-top: -136px;
     height: 25px;
 }
 #projektteilnehmenbemerken {
+    font-family: 'Open Sans', sans-serif;
+           letter-spacing:0.0em;
+           line-height:1.4em;
+           font-size:1.0em;
     border-radius: 4px;
 
 }
@@ -581,10 +603,10 @@ margin-top: -136px;
     text-decoration:none;
     text-shadow:0px 1px 0px #5c62d6;
     font-weight:100;
-   
+
     margin: 40px;
-   margin-top: -73px;
-   margin-left: 30px;
+    margin-top: -73px;
+    margin-left: 30px;
 }
 
 
@@ -629,7 +651,7 @@ margin-top: -136px;
 #registrierung1:active {
     position:relative;
     top:1px;
-   
+
 }
 
 #profilDaten{
@@ -648,57 +670,57 @@ margin-top: -136px;
     line-height:1.4em;
     font-size:1.4em;
     margin-top: 20px;
-   
+
 
 }
 
 
 
 #anmelden1 {
-	background-color:#5365f2;
-	-moz-border-radius:8px;
-	-webkit-border-radius:8px;
-	border-radius:8px;
-	border:1px solid #4260c2;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:arial;
-	font-size:17px;
-	padding:1px 10px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #2949cc;
+    background-color:#5365f2;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border-radius:8px;
+    border:1px solid #4260c2;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:arial;
+    font-size:17px;
+    padding:1px 10px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #2949cc;
 }
 #anmelden1:hover {
-	background-color:#3d4fdb;
+    background-color:#3d4fdb;
 }
 #anmelden1:active {
-	position:relative;
-	top:1px;
+    position:relative;
+    top:1px;
 }
 
 
 .abmelden1 {
-	background-color:#5365f2;
-	-moz-border-radius:8px;
-	-webkit-border-radius:8px;
-	border-radius:8px;
-	border:1px solid #4260c2;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:arial;
-	font-size:17px;
-	padding:1px 10px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #2949cc;
+    background-color:#5365f2;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border-radius:8px;
+    border:1px solid #4260c2;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:arial;
+    font-size:17px;
+    padding:1px 10px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #2949cc;
 }
 .abmelden1:hover {
-	background-color:#3d4fdb;
+    background-color:#3d4fdb;
 }
 .abmelden1:active {
-	position:relative;
-	top:1px;
+    position:relative;
+    top:1px;
 }
 
 
@@ -711,13 +733,13 @@ margin-top: -136px;
     background:linear-gradient(to bottom, #4951bd 5%, #5c62d6 100%);
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4951bd', endColorstr='#5c62d6',GradientType=0);
     background-color:#4951bd;
-  
+
 }
 
 #los:active {
     position:relative;
     top:1px;
-   
+
 
 }
 
@@ -744,7 +766,7 @@ margin-top: -136px;
     text-decoration:none;
     text-shadow:0px 1px 0px #5c62d6;
     font-weight:100;
-   
+
     margin: 60px;
     margin-top: 20px;
     margin-left: 320px;
@@ -759,7 +781,7 @@ margin-top: -136px;
     font-weight: 100;
     width: 50%;
     height: 20%;
-    
+
 }
 #kalender {
     height: 100px;
@@ -781,12 +803,13 @@ margin-top: -136px;
 }
 #sidi {
     margin-top:30px;
-    
+  
+
 }
 #seyma {
     margin-left: 430px;
     margin-top: -275px;
-    
+
 }
 #nurhan {
     margin-left: 660px;

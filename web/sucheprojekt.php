@@ -23,11 +23,10 @@ $connection = new DbConnection();
 <div id="inhalt">
     <div id="InhaltHöhe"> 
         <div id="profilDaten">
-
             <h4 class="h4">Hier können Sie nach Projekten suchen</h4>
             <p>Wählen Sie mindestens ein Skill, um Projekte zu filtern. </p>
             <form  method="post" action="ausgabe_student.php">
-               
+
                 <?php
                 echo "<br>";
                 //liste der skills wid von der datenbank geholt
@@ -38,9 +37,9 @@ $connection = new DbConnection();
                     ?>
                     <input id="skill" type="checkbox" name="skill[]" value="<?php echo $value['id']; ?>"> <?php echo $value['skill']; ?><br>
                 <?php } ?>
-                <input id="senden" type="submit" name="senden" value="Senden" id="senden">
-                 <!--und verknüpfung damit alle ausgewählten skills im projekt vorhanden sind-->
-                 <p id="und">Zusätzlich anklicken:<br> wenn alle ausgewählten Skills im Projekt vorhanden sein sollen.</p>
+                <input id="speichern" type="submit" name="suchen" value="Suchen">
+                <!--und verknüpfung damit alle ausgewählten skills im projekt vorhanden sind-->
+                <p id="und">Zusätzlich anklicken:<br> wenn alle ausgewählten Skills im Projekt vorhanden sein sollen.</p>
                 <input id="verknuepfung" name="verknuepfung" type="checkbox">
             </form>
         </div>

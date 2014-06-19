@@ -9,7 +9,7 @@
         <div id="seite"> 
             <div id="kopfbereich">
                 <img id="hsLogo" src="bilder/hsLogo.png"/>
-                <img id="prostud" src="bilder/prostud.png"/>             
+                <a href="index.php"> <img id="prostud" src="bilder/prostud.png"/></a>  
+                        
             </div>
-        
-   
+
