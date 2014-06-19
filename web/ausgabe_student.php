@@ -83,6 +83,9 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
             <?php
         }
     }
+    else {
+        echo 'Es wurden keine zu treffenden Projekte gefunden.';
+    }
     ?>
             </div>
                 </div>

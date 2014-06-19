@@ -101,8 +101,7 @@
 
 
                 <tr>
-
-                    <!--Button für das Registrieren, bei nicht Erfdüllung der Pflichtfelder ist der Button gesperrt-->
+               <!--Button für das Registrieren, bei nicht Erfdüllung der Pflichtfelder ist der Button gesperrt-->
                     <td colspan="2" align="right">
                         <input type="submit" name="registrieren" value="Registrieren" id="registrierung" disabled>
                     </td>
