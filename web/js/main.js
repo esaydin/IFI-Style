@@ -33,13 +33,13 @@ function validate() {
                 pattern = /^[a-zA-Z0-9]+$/;
                 break;
             case "strasse":
-                pattern = /^$|^[a-zA-ZüÜöÖäÄß]+[- ]?[a-zA-ZüÜöÖäÄß]+$/;
+                pattern = /^$|^[a-zA-ZüÜöÖäÄß]+[- ]?[a-zA-ZüÜöÖäÄß]+[- ]?[a-zA-ZüÜöÖäÄß]+$/;
                 break;
             case "hausnr":
                 pattern = /^$|^[1-9][0-9]{0,2}[a-zA-Z]{0,2}$/;
                 break;
             case "plz":
-                pattern = /^$|^[0-9]+$/;
+                pattern = /^$|^[0-9]{5}$/;
                 break;
             case "ort":
                 pattern = /^$|^[a-zA-ZüÜöÖäÄß]+$/;
