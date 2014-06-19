@@ -25,6 +25,7 @@ $connection = new DbConnection();
 
             <div id="inhalt">
                   <div id="InhaltHöhe">
+                        <h4 class="h4">Persönliche Daten</h4>
                         <div id="profilDaten">
 
                           <?php

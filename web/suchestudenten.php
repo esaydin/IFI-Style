@@ -27,11 +27,12 @@ $connection = new DbConnection();
          
 
                 <h1 class="h4">Hier können Sie nach mehreren Studenten suchen:</h1>
+                
                 <div id="text">
                   <div id="profilDaten">
+                       <p>Wählen Sie mindestens ein Skill, um geeigneten Studenten für das Projekt zu filtern. </p>
                     <form  method="post" action="ausgabe_auftraggeber.php">
-                        <p id="und">Und</p>
-                        <input id="verknuepfung" name="verknuepfung" type="checkbox">
+                       
                         <?php
                         echo "<br>";
                         $sql = "SELECT * FROM skill";
@@ -43,6 +44,8 @@ $connection = new DbConnection();
                         <?php }
                         ?>
                         <input id="senden" type="submit" name="senden" value="Senden" id="senden">
+                         <p id="und">Zusätzlich anklicken:<br> Für Studenten, die alle ausgewählten Skills besitzen.</p>
+                        <input id="verknuepfung" name="verknuepfung" type="checkbox">
                     </form>
                         </div>
                 </div>

@@ -49,7 +49,7 @@ if (!empty($_POST["titel"]) && !empty($_POST["projektbeschreibung"]) && !empty($
 </div>
 <div id="inhalt">
     <div id="InhaltHöhe">
-        
+         <div id="profilDaten">
           <?php
                 //wenn projekt angelegt true liefert wird die ausgabe gemacht das es erfolgreich war
                 if ($projektAngelegt) {
@@ -62,17 +62,17 @@ if (!empty($_POST["titel"]) && !empty($_POST["projektbeschreibung"]) && !empty($
                 ?>
                 <br><a href="projektanlegen.php"> Zurück </a>  
     </div>
-    
+    </div>
    
 </div>
 
 <div id="info">
-      <div id="InhaltHöhe">
+      <div id="InhaltArt">
 
      <?php
                         
-                echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
-                echo "<a href=\"logout.php\">Logout</a>";
+                echo "<br>Eingeloggt als: " . $_SESSION["vorname"] . " " . $_SESSION["nachname"] . " >> ";
+                echo "<a href=\"logout.php\">Abmelden</a>";
                 ?>
                 </br>
                 <a href="projektanlegen.php"/>

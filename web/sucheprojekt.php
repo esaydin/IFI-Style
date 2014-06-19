@@ -25,6 +25,7 @@ $connection = new DbConnection();
         <div id="profilDaten">
 
             <h4 class="h4">Hier können Sie nach Projekten suchen</h4>
+            <p>Wählen Sie mindestens ein Skill, um Projekte zu filtern. </p>
             <form  method="post" action="ausgabe_student.php">
                
                 <?php
@@ -39,7 +40,7 @@ $connection = new DbConnection();
                 <?php } ?>
                 <input id="senden" type="submit" name="senden" value="Senden" id="senden">
                  <!--und verknüpfung damit alle ausgewählten skills im projekt vorhanden sind-->
-                  <p id="und">Und</p>
+                 <p id="und">Zusätzlich anklicken:<br> wenn alle ausgewählten Skills im Projekt vorhanden sein sollen.</p>
                 <input id="verknuepfung" name="verknuepfung" type="checkbox">
             </form>
         </div>
