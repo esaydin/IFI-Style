@@ -82,6 +82,9 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
                 <?php
             }
         }
+        else {
+            echo 'Es wurden keine passenden Studenten gefunden.';
+        }
         ?>
 
  </div>
