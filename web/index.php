@@ -43,91 +43,77 @@ if (!empty($_POST["benutzername"]) && !empty($_POST["kennwort"])) {
     }
 }
 ?>
+
 <!--Import der Klasse header.php  -->
 <?php include_once 'header.php'; ?>
 <!--Inhalte der Startseite -->
 <div id="inhalt">
     <div id = "InhaltHöhe">
-        <h1 class="studh2"><br><br>  Willkommen!</h1>
+        <h1 class="studh2">Willkommen!</h1>
         <p class="textstart">  Die Seite steht jedem als eine Austauschplattform zur verfügung
             und <br>ermöglicht Projekte zu suchen oder eigene zu veröffentlichen!<br><br><br> </p>
     </div>
-    
-    
-    <?php
-# Diashow mit PHP und JavaScript
 
+
+ <?php
+# Diashow mit PHP und JavaScript
 # Verzeichnis der Bilder
-$verzeichnis = "bilderslide/";
+    $verzeichnis = "bilderslide/";
 
 # Geschwindigkeit in Millisekunden
 # 3000 = 3 Sekunden
-$peed = 2500;
+    $peed = 2500;
 
-echo "
-<div style='text-align: center;'><img id='dummy' src='#'></div>
+    echo "<div style='text-align: center;'><img id='dummy' src='#'></div>
+        <script type='text/javascript'>
+        var bild = new Array();
+        var i = 0;";
 
-<script type='text/javascript'>
-var bild = new Array();
-var i = 0;
-";
+    $ordner = openDir($verzeichnis);
+    $by = 0;
+    while ($file = readDir($ordner)) {
+        if ($file != "." && $file != "..") {
+            echo "bild[$by]='$verzeichnis$file';\n";
+            $by++;
+        }
+    }
+    closeDir($ordner);
 
-$ordner = openDir($verzeichnis);
-$by = 0;
-while ($file = readDir($ordner)) {
- if($file != "." && $file != "..") {
-  echo "bild[$by]='$verzeichnis$file';\n";
-  $by++;
- }
-}
-closeDir($ordner);
-
-echo "
-function anzeigen() {
- if (i < bild.length) {
-  document.getElementById('dummy').src=bild[i];
-  i++;
- }
- else {
-  i = 0;
- }
-  setTimeout('anzeigen()', $peed);
-}
-anzeigen();
-</script>
-";
+    echo "function anzeigen() {
+            if (i < bild.length) {
+                document.getElementById('dummy').src=bild[i];
+                i++;
+            }
+            else {
+                i = 0;
+            }
+     setTimeout('anzeigen()', $peed);}
+     anzeigen();
+    </script>";
 ?>
-
-    
-    
 </div>
 
-<!-- -->
 <div id="info">   
     <div id = "InhaltHöhe">
         <!-- Loginbereich -->
         <div id="login">
             <h2 class="anmelden"> Anmelden</h2>
-                <!--Formular für den Loginbereich, mit Benutzername und verschlüsstem Passwort -->
-                <form method="post" action="index.php">
-                    <table id="tabelleLogin">
-                        <tr>
-                            <td><input type="text" name="benutzername" placeholder="Benutzername" value="" /></td>
-                        </tr> 
-                        <tr>
-                            <td><input type="password" name="kennwort" placeholder="Kennwort" value="" /></td>
-                        <td><input  id="anmelden1" type="submit"  name="anmelden" value="Anmelden"/></td>
-                        </tr>
-                    </table>
-                </form>
-                <h4 class="reg"> Neu bei Search ProStud?<br> Registriere Dich!</h4>  
-                             <td>
-                            <a href="registrieren.php" name="registrierung1" value="neu" id="registrierung1" style="margin: 40px">Neu registrieren</a>
-                            <br />
-                            </td>
-
-
+            <!--Formular für den Loginbereich, mit Benutzername und verschlüsstem Passwort -->
+            <form method="post" action="index.php">
+                <table id="tabelleLogin">
+                    <tr>
+                        <td><input id="startanmelden"type="text" name="benutzername" placeholder="Benutzername" value=""/></td>
+                    </tr> 
+                    <tr>
+                        <td><input  id="startanmelden" type="password" name="kennwort" placeholder="Kennwort" value="" /></td>
+                        <td><input  id="anmelden2" type="submit"  name="anmelden" value="Anmelden"/></td>
+                    </tr>
+                </table>
+            </form>
+            <h4 class="reg"> Neu bei Search ProStud?<br> Registriere Dich!</h4>   
+            <a href="registrieren.php" name="registrierung1" value="neu" id="registrierung1">Neu registrieren</a>
+            </br>
         </div>
-    </div></div>
-
+    </div>
+</div>
 <?php include_once 'footer.php'; ?>

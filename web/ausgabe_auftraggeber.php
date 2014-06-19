@@ -5,7 +5,7 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
 }
 ?>
 <!--Inkludieren von Header für den Kopfbereich-->
-<?php include_once 'header.php'; ?>
+<?php include_once 'auftraggeber_header.php'; ?>
 
 <!--Navigationsbereich mit den Punkten Start, Profil, Student suchen und Projekt anlegen-->
 <div id='cssmenu'> 

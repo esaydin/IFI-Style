@@ -10,7 +10,7 @@ $connection = new DbConnection();
 
 ?>
 
-<?php include_once 'header.php'; ?>
+<?php include_once 'auftraggeber_header.php'; ?>
 
 <div id='cssmenu'> 
     <ul> 
