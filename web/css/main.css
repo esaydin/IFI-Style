@@ -146,6 +146,15 @@ border-left: 2px solid #f00;
     width:770px;
 }
 
+#inhaltimpressum {
+    background-color:#F8F8ff;
+    margin-left:-5px;
+    padding: 20px;
+    margin-top: 0px;
+    height: 740;
+    width:1300px;
+}
+
 #InhaltArt{
     color:#5c62d6;
     font-family: 'Open Sans', sans-serif; 
@@ -757,4 +766,16 @@ margin-top: -136px;
     width: 100px;
     margin-top: 40px;
     margin-left: 155px;
+}
+#team {
+    width: 124px;
+    height: 191px;
+}
+#guelcin {
+    margin-left: 430px;
+    margin-top: -275px;
+}
+#huedi {
+    margin-left: 660px;
+    margin-top: -275px;
 }
