@@ -10,7 +10,6 @@
 
 
     <div id="mitglieder">
-        <h2>Kontakt:</h2>
         <table>
             <tr>
                 <td></td>

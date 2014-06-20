@@ -498,10 +498,6 @@ ul#Navigation a:hover, ul#Navigation span {
            line-height:1.4em;
            font-size:1.0em;
 
-
-
-
-
 }
 
 #zuruckButton{
@@ -519,7 +515,6 @@ ul#Navigation a:hover, ul#Navigation span {
            line-height:1.4em;
            font-size:1.0em;
     border-radius: 4px;
-
 }
 
 
@@ -671,11 +666,7 @@ ul#Navigation a:hover, ul#Navigation span {
     line-height:1.4em;
     font-size:1.4em;
     margin-top: 20px;
-
-
 }
-
-
 
 #anmelden1 {
     background-color:#5365f2;
@@ -699,7 +690,6 @@ ul#Navigation a:hover, ul#Navigation span {
     position:relative;
     top:1px;
 }
-
 
 .abmelden1 {
     background-color:#5365f2;
@@ -740,8 +730,6 @@ ul#Navigation a:hover, ul#Navigation span {
 #los:active {
     position:relative;
     top:1px;
-
-
 }
 
 #los {
@@ -804,7 +792,9 @@ ul#Navigation a:hover, ul#Navigation span {
 }
 #sidi {
     margin-top:30px;
+    margin-left: 12px;
 }
+
 #seyma {
     margin-left: 430px;
     margin-top: -275px;

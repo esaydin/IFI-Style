@@ -16,7 +16,7 @@ $db = new DbConnection();
                 $sql = "SELECT email FROM benutzer WHERE email = '" . $_POST["email"] . "';";
                 $result = $db->connection($sql);
                 if (!empty($result)) {
-                    echo "Registrierung mit der angegebenen E-Mail existiert bereits.";
+                    echo "Die E-Mail Adresse existiert bereits.";
                     echo "<br><a href=\"registrieren.php\"> Zurück </a>";
                     exit();
                 }
@@ -25,11 +25,12 @@ $db = new DbConnection();
                 $sql = "SELECT benutzername FROM benutzer WHERE benutzername = '" . $_POST["benutzername"] . "';";
                 $result = $db->connection($sql);
                 if (!empty($result)) {
-                    echo "Registrierung mit dem angegebenen Benutzernamen existiert bereits.";
+                    echo "der Benutzername existiert bereits.";
                     echo "<br><a href=\"registrieren.php\"> Zurück </a>";
-                    exit();
+                     exit();
                 }
                 
+
                 //Die Daten von Formularfeldern, die über POST gekommen sind werden in einzelne neue Variablen gespeichert
                 //Durch md5 wird das Passwort in der Datenbank verschlüsselt
                 $pass = md5($_POST['kennwort']);
@@ -83,6 +84,7 @@ $db = new DbConnection();
             }
             ?>
         </div>
+        
     </div>
 </div>
 
