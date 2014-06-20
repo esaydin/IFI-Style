@@ -636,6 +636,7 @@ ul#Navigation a:hover, ul#Navigation span {
     margin-top: -50px;
     margin: 40px;
     margin-left: 50px;
+    margin-top: -30px;
 }
 #registrierung1:hover {
     background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #4951bd), color-stop(1, #5c62d6));
