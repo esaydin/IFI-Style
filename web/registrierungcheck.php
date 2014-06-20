@@ -11,7 +11,7 @@ $db = new DbConnection();
             <?php
             //Pflichtfelder
             if (!empty($_POST["benutzername"]) && !empty($_POST["kennwort"]) && !empty($_POST["kennwortwdhl"]) && !empty($_POST["vorname"]) && !empty($_POST["nachname"]) && !empty($_POST["email"])) {
-                //Da die Email adresse in der DB unique ist darf es nur einmal existieren, in diesem Abschnitt wird das überprüft
+                //Da die Email Adresse in der DB unique ist, darf es nur einmal existieren, in diesem Abschnitt wird das überprüft
                 //Falls die Adresse vorhanden ist wird es abgebrochen
                 $sql = "SELECT email FROM benutzer WHERE email = '" . $_POST["email"] . "';";
                 $result = $db->connection($sql);
