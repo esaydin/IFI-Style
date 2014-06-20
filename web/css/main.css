@@ -108,7 +108,7 @@ input, select {
 
 #prostud{
     margin-left:-20px; 
-    margin-top: -130px;
+    margin-top: -110px;
     height: 130px;
     width: 190px;
 }
@@ -803,8 +803,6 @@ ul#Navigation a:hover, ul#Navigation span {
 }
 #sidi {
     margin-top:30px;
-  
-
 }
 #seyma {
     margin-left: 430px;
@@ -814,4 +812,7 @@ ul#Navigation a:hover, ul#Navigation span {
 #nurhan {
     margin-left: 660px;
     margin-top: -275px;   
+}
+#mitglieder {
+    margin-left: 150px;
 }
