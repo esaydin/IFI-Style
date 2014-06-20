@@ -11,8 +11,8 @@ $connection = new DbConnection();
 <?php include_once 'auftraggeber_header.php'; ?>
 
 <div id='cssmenu'> 
-    <ul> 
-        <li><a href='page_auftraggeber.php.'><span>Start</span></a></li> 
+      <ul> 
+        <li class='active'><a href='page_auftraggeber.php.'><span>Start</span></a></li> 
         <li><a href='profil_auftraggeber.php'><span>Profil</span></a></li>
         <li><a href='suchestudenten.php'><span>Suche Student</span></a></li>
         <li><a href='projektanlegen.php'><span>Projekt Anlegen</span></a></li>

@@ -139,22 +139,13 @@ input, select {
 
 #inhalt {
     background-color:#F8F8ff;
-    margin-left:-5px;
+   
     padding: 20px;
-    margin-top: 0px;
-    height: 740;
+    height: 1800;
     width:770px;
 }
 
 
-#inhaltausgabe {
-    background-color:#F8F8ff;
-    margin-left:-5px;
-    padding: 20px;
-    margin-top: 0px;
-    height: auto;
-    width:770px;
-}
 #inhaltimpressum {
     background-color:#F8F8ff;
     margin-left:-5px;
@@ -180,10 +171,10 @@ input, select {
 #info {
     float: left;
     width:505px; 
-    height: 770px;
+    height: 1830px;
     padding: 5px;
     background-color: #F8F8ff;
-    margin-top: -780px;
+    margin-top: -1840px;
     margin-left:817px;
 }
 
@@ -631,7 +622,7 @@ ul#Navigation a:hover, ul#Navigation span {
     margin-top: -50px;
     margin: 40px;
     margin-left: 50px;
-    margin-top: -30px;
+ 
 }
 #registrierung1:hover {
     background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #4951bd), color-stop(1, #5c62d6));
@@ -769,7 +760,7 @@ ul#Navigation a:hover, ul#Navigation span {
     margin-top: -90px;
     font-weight: 100;
     width: 50%;
-    height: 20%;
+    height: 10%;
 
 }
 #kalender {
