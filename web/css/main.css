@@ -453,7 +453,13 @@ ul#Navigation a:hover, ul#Navigation span {
             margin-top: 70px;
 }
 
-#textcheck{text-align: center;}
+#textcheck{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif; 
+    letter-spacing:0.0em;
+    line-height:1.4em;
+    font-size:1.0em; 
+}
 
 .regtext1{font-family: 'Open Sans', sans-serif; text-align: center;
           margin-top: 30px;
@@ -797,4 +803,10 @@ ul#Navigation a:hover, ul#Navigation span {
 }
 #mitglieder {
     margin-left: 150px;
+}
+#fehler{
+   font-family: 'Open Sans', sans-serif; 
+    letter-spacing:0.0em;
+    line-height:1.4em;
+    font-size:1.0em; 
 }
