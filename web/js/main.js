@@ -16,7 +16,7 @@ function validate() {
         "email": false
     };
 
-    //alert("sd: "+ Object.keys(field).length);
+   // Regex der Eingabefelder für die Registrierung
     for (var key in field) {
 
         regextyp = key;
@@ -77,7 +77,7 @@ function validate() {
         $('registrierung').style.borderColor = "#FF0000";
     }
 
-
+    // Kennwort und Kennwortwdhl vergleichen nach länge und inhalt
     if ($('kennwort').value != $('kennwortwdhl').value)
     {
         $('kennwortwdhl').style.borderColor = "#FF0000";
@@ -92,6 +92,7 @@ function validate() {
         $('registrierung').removeAttribute("disabled");
         $('registrierung').style.borderColor = "";
     }
+    
     if ($('kennwortwdhl').value.length == 0 && $('kennwort').value == 0) {
         $('kennwortwdhl').style.borderColor = "";
         $('passmsg').innerHTML = "";
