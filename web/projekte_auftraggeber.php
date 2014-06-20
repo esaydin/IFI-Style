@@ -23,19 +23,37 @@ $db = new DbConnection();
 </div>
 <div id="inhalt">
     <div id="InhaltHöhe"></div>
-    
-   
+    <div id="profilDaten">
+
+
+        <h4 class="h4">Meine Projekte: </h4>
+        <?php
+        $sql = "SELECT projekt. * , group_concat( skill.skill ) AS skills 
+            FROM (SELECT projekt. *
+            FROM projektbenutzerzuordnung
+            LEFT JOIN projekt ON projekt.id = projektbenutzerzuordnung.idprojekt
+            WHERE idbenutzertyp = " . $_SESSION['idbenutzertyp'] . "
+            AND idbenutzer = " . $_SESSION['id'] . ") AS projekt
+            LEFT JOIN projektskillzuordnung ON projektskillzuordnung.idprojekt = projekt.id
+            LEFT JOIN skill ON skill.id = projektskillzuordnung.idskill
+            GROUP BY projekt.titel";
+
+
+        $result = $db->connection($sql);
+
+        if ($result) {
+            foreach ($result as $value) {
+
+                echo "Titel: " . $value["titel"] . "<br>"
+                . "Beschreibung: " . $value["beschreibung"] . "<br>"
+                . "Skills: " . $value["skills"] . "<br><br>";
+            }
+        }
+        ?>
+
+    </div>
 </div>
 
-<div id="info">
-      <div id="InhaltHöhe">
-
-    <?php               
-    //Textausgabe, je nach eingeloggter Benutzer
-    echo "<br>eingeloggt als: " . $_SESSION["benutzername"] . "<br>";
-    //Link zum Logout
-    echo "<a href=\"logout.php\">Logout</a>";
-    ?>
-      </div></div>
+        <?php include_once 'info.php'; ?>
 <!--Inkludieren vom Fussbereich-->
-<?php include_once 'footer.php'; ?>
+        <?php include_once 'footer.php'; ?>
