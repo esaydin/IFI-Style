@@ -16,10 +16,20 @@ $db = new DbConnection();
                 $sql = "SELECT email FROM benutzer WHERE email = '" . $_POST["email"] . "';";
                 $result = $db->connection($sql);
                 if (!empty($result)) {
-                    echo "Registrirung mit der angegebenen E-Mail existiert bereits.";
+                    echo "Registrierung mit der angegebenen E-Mail existiert bereits.";
                     echo "<br><a href=\"registrieren.php\"> Zurück </a>";
                     exit();
                 }
+                //Da der Benutzername in der DB unique ist darf es nur einmal existieren, in diesem Abschnitt wird das überprüft
+                //Falls der Benutzername vorhanden ist wird es abgebrochen
+                $sql = "SELECT benutzername FROM benutzer WHERE benutzername = '" . $_POST["benutzername"] . "';";
+                $result = $db->connection($sql);
+                if (!empty($result)) {
+                    echo "Registrierung mit dem angegebenen Benutzernamen existiert bereits.";
+                    echo "<br><a href=\"registrieren.php\"> Zurück </a>";
+                    exit();
+                }
+                
                 //Die Daten von Formularfeldern, die über POST gekommen sind werden in einzelne neue Variablen gespeichert
                 //Durch md5 wird das Passwort in der Datenbank verschlüsselt
                 $pass = md5($_POST['kennwort']);
