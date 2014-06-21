@@ -70,9 +70,9 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
         if (!empty($result)) {
             foreach ($result as $value) {
                 ?>
-                <br> Titel: <?php echo $value["titel"]; ?>
-                <br> Beschreibung: <?php echo $value["beschreibung"]; ?>
-                <br> Skills in Projekte: <?php echo $value["skills"]; ?>
+        <br> <font size="4">Titel:</font> <?php echo $value["titel"]; ?>
+                <br> <font size="4">Beschreibung:</font> <?php echo $value["beschreibung"]; ?>
+                <br> <font size="4">Skills in Projekte:</font> <?php echo $value["skills"]; ?>
                 <br>
                 <form action="projekt_teilnehmen_hinzufuegen.php" method="post">
                     <input name="proname" value="<?php echo $value["titel"]; ?>" hidden>

@@ -73,9 +73,11 @@ if (empty($_SESSION['id']) || empty($_SESSION['benutzername'])) {
             if (!empty($result)) {
                 foreach ($result as $value) {
                     ?>
-                    </br> Benutzer: <?php echo $value["benutzername"]; ?>
-                    </br> Skills: <?php echo $value["skills"]; ?>
+            </br><font size="4"> Benutzer:</font> <?php echo $value["benutzername"]; ?>
+                    </br><font size="4"> Skills:</font> <?php echo $value["skills"]; ?>
                     </br>
+                   </br>
+
                     <?php
                 }
             } else {

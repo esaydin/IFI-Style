@@ -44,9 +44,9 @@ $db = new DbConnection();
         if ($result) {
             foreach ($result as $value) {
 
-                echo "Titel: " . $value["titel"] . "<br>"
-                . "Beschreibung: " . $value["beschreibung"] . "<br>"
-                . "Skills: " . $value["skills"] . "<br><br>";
+                echo "<font size=\"4\">Titel: </font>" . $value["titel"] . "<br>". "<br>"
+                . "<font size=\"4\">Beschreibung: </font>" . $value["beschreibung"] . "<br>"
+                . "<font size=\"4\">Skills: </font>" . $value["skills"] . "<br><br><br>";
             }
         }
         ?>
